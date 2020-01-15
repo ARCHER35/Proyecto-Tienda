@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h3>Tiendas 2222</h3>
+    <h3>Tiendas 222233</h3>
   </div>
 </template>
 
