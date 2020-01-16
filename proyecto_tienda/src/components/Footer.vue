@@ -1,7 +1,7 @@
 <template>
 <footer class="bg-dark">
   <div class="container-fluid text-center text-md-left">
-    <div class="row text-light">
+    <div class="row text-light" style="padding:15px">
       <div class="col-md-6 mt-md-0 mt-3">
         <img src="http://www.esferalibros.com/uploads/imagenes/libros/principal/201605/principal-como-explicarte-el-mundo-cris-es_med.jpg" height="100px" width="300px">
         <p>Pedidos por Mayor y Menor Horarios de Atencion 6 am a 15pm</p>
@@ -11,7 +11,7 @@
         <h5 class="text-uppercase">Frial Cris</h5>
         <ul class="list-unstyled">
           <li>
-            <a href="#!" class="text-light">Dir: Capitan Victor Ustaris Km4 1 1/2</a>
+            <a href="#!" class="text-light">Direccion: Capitan Victor Ustaris Km 4 1/2</a>
           </li>
          
         </ul>
