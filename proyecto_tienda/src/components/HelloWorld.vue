@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h3 class="bg-danger">Tiendas 2222</h3>
     <Footer/>
   </div>
 </template>
