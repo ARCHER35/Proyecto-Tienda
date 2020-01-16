@@ -1,15 +1,13 @@
 <template>
   <div class="hello">
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Footer from '../components/Footer'
 export default {
   name: 'HelloWorld',
   components: {
-    Footer
+    
   }
 }
 </script>
