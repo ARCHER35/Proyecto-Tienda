@@ -1,14 +1,15 @@
 <template>
   <div class="hello">
-    <h3>Tiendas 222233</h3>
+    <Footer/>
   </div>
 </template>
 
 <script>
+import Footer from '../components/Footer'
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
+  components: {
+    Footer
   }
 }
 </script>
