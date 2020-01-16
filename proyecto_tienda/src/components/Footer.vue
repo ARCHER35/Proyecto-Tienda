@@ -8,7 +8,7 @@
       </div>
       <hr class="clearfix w-100 d-md-none pb-3">
       <div class="col-2"> 
-        <h5 class="text-uppercase">Carniceria Cris</h5>
+        <h5 class="text-uppercase">Frial Cris</h5>
         <ul class="list-unstyled">
           <li>
             <a href="#!" class="text-light">Dir: Capitan Victor Ustaris Km4 1 1/2</a>
@@ -18,7 +18,6 @@
       </div>
       <div class="col-md-3 mb-md-0 mb-3">
         <h5 class="text-uppercase">Contactanos Por</h5>
-        <i class="fas fa-cart-arrow-down"></i>
         <ul class="list-unstyled">
           <li>
             <img src="https://cdn.icon-icons.com/icons2/306/PNG/512/Facebook-Icon_34072.png" height="50px" alt="">
@@ -26,7 +25,7 @@
           </li>
           <li>
             <img src="https://cdn.icon-icons.com/icons2/306/PNG/512/Whatsapp-Icon_33936.png" height="50px" alt="">
-            <a class="text-light">72783477</a>
+            <a class="text-light">72783477 <i class="fas fa-cart-arrow-down"></i> </a>
           </li>
         </ul>
       </div>
