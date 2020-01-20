@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Aderezos</h1>
-    <div class="container">
+  <h1>Aderezos</h1>
+  <div class="container">
       <h1 align="left">Ketchup</h1>
     </div>
     <div class="container">
@@ -18,7 +18,9 @@
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{ket.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{ket.nombre}}</h3>
+              </b-card-text>
               <p>{{ket.descripcion}}</p>
               <p>Bs{{ket.precio}}</p>
               <a href="#" class="btn btn-primary">Agregar al Carrito</a>
@@ -44,7 +46,9 @@
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{mayo.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{mayo.nombre}}</h3>
+              </b-card-text>
               <p>{{mayo.descripcion}}</p>
               <p>Bs{{mayo.precio}}</p>
               <a href="#" class="btn btn-primary">Agregar al Carrito</a>
@@ -66,13 +70,15 @@
       >
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img v-bind:src="agra.portada" class="rounded-0"></b-card-img>
+            <b-card-img v-bind:src="most.portada" class="rounded-0"></b-card-img>
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{agra.nombre}}</h3></b-card-text>
-              <p>{{agra.descripcion}}</p>
-              <p>Bs{{agra.precio}}</p>
+              <b-card-text>
+                <h3>{{most.nombre}}</h3>
+              </b-card-text>
+              <p>{{most.descripcion}}</p>
+              <p>Bs{{most.precio}}</p>
               <a href="#" class="btn btn-primary">Agregar al Carrito</a>
             </b-card-body>
           </b-col>
@@ -80,25 +86,27 @@
       </b-card>
     </div>
     <div class="container">
-      <h1 align="left">Extracto de Tomate</h1>
+      <h1 align="left">Extracto</h1>
     </div>
     <div class="container">
       <b-card
         no-body
         class="overflow-hidden"
         style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(ex,index) of extracto"
+        v-for="(extra,index) of extracto"
         :Key="index"
       >
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img v-bind:src="ex.portada" class="rounded-0"></b-card-img>
+            <b-card-img v-bind:src="extra.portada" class="rounded-0"></b-card-img>
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{ex.nombre}}</h3></b-card-text>
-              <p>{{ex.descripcion}}</p>
-              <p>Bs{{ex.precio}}</p>
+              <b-card-text>
+                <h3>{{extra.nombre}}</h3>
+              </b-card-text>
+              <p>{{extra.descripcion}}</p>
+              <p>Bs{{extra.precio}}</p>
               <a href="#" class="btn btn-primary">Agregar al Carrito</a>
             </b-card-body>
           </b-col>
@@ -143,7 +151,7 @@ export default {
           precio:0,
           portada:""
         }
-      ]
+      ],
     }
   }
 }
