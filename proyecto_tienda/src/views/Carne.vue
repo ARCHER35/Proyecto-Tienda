@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <h1>Otros</h1>
+    <h1>Variedades</h1>
     <div>
       <b-card no-body class="container columtri overflow-hidden">
         <b-row no-gutters v-for="(o,index) of otros" :key="index">

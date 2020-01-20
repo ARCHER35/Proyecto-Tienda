@@ -62,7 +62,6 @@
         </b-row>
       </b-card>
     </div>
-<br>
     <div class="container">
       <h1 align="left">Pollo</h1>
     </div>

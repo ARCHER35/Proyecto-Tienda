@@ -24,13 +24,14 @@
               <b-dropdown-item to="/fideo">Fideos</b-dropdown-item>
               <b-dropdown-item to="/sal">Sal</b-dropdown-item>
               <b-dropdown-item to="/aceite">Aceite</b-dropdown-item>
-              <b-dropdown-item to="/adereso">Aderesos</b-dropdown-item>
+              <b-dropdown-item to="/adereso">Aderezos</b-dropdown-item>
               <b-dropdown-item to="/otro">Otros</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item to="/embutido">Embutidos</b-nav-item>
             <b-nav-item to="/condimento">Condimentos</b-nav-item>
             <b-nav-item to="/lacteo">Lacteos</b-nav-item>
             <b-nav-item to="/contacto">Contactos</b-nav-item>
+              <a href="#" class="btn btn-danger" align="center"><i class="fas fa-cart-arrow-down"></i></a>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
