@@ -1,35 +1,42 @@
 <template>
   <div>
     <h1>Carne de Res</h1>
-    <div class="contenedor tm container card mb-3">
-      <div class="row no-gutters" v-for="(c,index) of carnes" :key="index">
-        <div class="col-md-4">
-          <img v-bind:src="c.imagen" class="card-img" alt="..." />
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">{{c.titulo}}</h5>
-            <p class="card-text">{{c.descripcion}}.</p>
-            <h3>{{c.precio}} Bs</h3>
-
-            <button
-              class="btn btn-primary text-light btn-lg active"
-              aling="right"
-            >Agregar al Carrito</button>
-          </div>
-        </div>
-      </div>
+    <div class="contenedor container">
+      <b-card
+        no-body
+        class="overflow-hidden"
+        style="max-width: 500px; padding:15px; margin-bottom: 20px"
+        v-for="(c,index) of carnes"
+        :Key="index"
+      >
+        <b-row no-gutters>
+          <b-col md="6">
+            <b-card-img v-bind:src="c.imagen" class="rounded-0"></b-card-img>
+          </b-col>
+          <b-col md="6">
+            <b-card-body>
+              <b-card-text>
+                <h3>{{c.nombre}}</h3>
+              </b-card-text >
+              <p class="text-justify">{{c.descripcion}}</p>
+              <p>Bs{{c.precio}}</p>
+              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            </b-card-body>
+          </b-col>
+        </b-row>
+      </b-card>
     </div>
     <h1>Variedades</h1>
-    <div>
-      <b-card no-body class="container columtri overflow-hidden">
-        <b-row no-gutters v-for="(o,index) of otros" :key="index">
+    <div class="container">
+      <b-card no-body class="columtri overflow-hidden bg-success">
+        <b-row no-gutters v-for="(o,index) of otros" :key="index" style="margin-bottom: 20px;">
           <b-col md="6">
-            <b-card-img v-bind:src="o.imagen" class="rounded-0"></b-card-img>
+            <b-card-img v-bind:src="o.imagen" class="rounded-0" style="padding:10px"></b-card-img>
           </b-col>
           <b-col md="6">
             <b-card-body v-bind:title="o.titulo">
-              <b-card-text>{{o.descripcion}}</b-card-text>
+              <b-card-text class="text-justify">{{o.descripcion}}</b-card-text>
+              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
             </b-card-body>
           </b-col>
         </b-row>
@@ -130,7 +137,7 @@ export default {
           id: 1,
           titulo: "Carne de Cerdo",
           descripcion:
-            "Es una de las carnes más consumidas en el mundo. Algunas religiones la consideran un alimento prohibido.",
+            "Es una de las carnes más consumidas en el mundo.",
           precio: 0,
           imagen:
             "https://www.mercadodechamartin.es/madrid/wp-content/uploads/2018/01/Carne-de-cerdo.jpeg"
@@ -139,7 +146,7 @@ export default {
           id: 2,
           titulo: "Higado",
           descripcion:
-            "El hierro ayuda a las células a generar energía, desempeña un papel decisivo en la circulación del oxígeno en todo el cuerpo y también ayuda al sistema inmunológico a eliminar patógenos dañinos, como virus y bacterias.",
+            "El hierro ayuda a las células a generar energía.",
           precio: 0,
           imagen:
             "https://i1.wp.com/conservaciondealimentos.com/wp/wp-content/uploads/2018/08/higado-de-res.jpg"
@@ -148,7 +155,7 @@ export default {
           id: 3,
           titulo: "Panza",
           descripcion:
-            "Hecha a base del estómago y las tripas del cerdo o de la vaca, aunque se puede extender al resto de los rumiantes",
+            "Hecha a base del estómago y las tripas del cerdo o de la vaca.",
           precio: 0,
           imagen:
             "https://t1.uc.ltmcdn.com/images/7/9/5/img_42597_ins_3742764_600.jpg"
@@ -167,8 +174,5 @@ export default {
 .columtri {
   display: grid;
   grid-template-columns: auto auto auto;
-}
-.tm {
-  margin-bottom: 20px;
 }
 </style>
