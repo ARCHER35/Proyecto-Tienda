@@ -48,14 +48,27 @@
       <h1 align="left">Carnes</h1>
     </div>
     <div class="container">
-      <b-card no-body class="overflow-hidden bg-warning" style="max-width: 540px; padding:15px margin-bottom: 20px;" v-for="(car,index) of carne" :Key="index">
+      <b-card
+        no-body
+        class="overflow-hidden bg-warning"
+        style="max-width: 540px; padding:15px margin-bottom: 20px;"
+        v-for="(car,index) of carne"
+        :Key="index"
+      >
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img v-bind:src="car.portada" height="300px" style="padding:15px" class="rounded-0"></b-card-img>
+            <b-card-img
+              v-bind:src="car.portada"
+              height="300px"
+              style="padding:15px"
+              class="rounded-0"
+            ></b-card-img>
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{car.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{car.nombre}}</h3>
+              </b-card-text>
               <p>{{car.descripcion}}</p>
             </b-card-body>
           </b-col>
@@ -79,7 +92,9 @@
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{pol.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{pol.nombre}}</h3>
+              </b-card-text>
               <p>{{pol.descripcion}}</p>
             </b-card-body>
           </b-col>
@@ -104,7 +119,9 @@
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{ava.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{ava.nombre}}</h3>
+              </b-card-text>
               <p>{{ava.descripcion}}</p>
             </b-card-body>
           </b-col>
@@ -129,7 +146,9 @@
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{embu.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{embu.nombre}}</h3>
+              </b-card-text>
               <p>{{embu.descripcion}}</p>
             </b-card-body>
           </b-col>
@@ -154,14 +173,15 @@
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{cond.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{cond.nombre}}</h3>
+              </b-card-text>
               <p>{{cond.descripcion}}</p>
             </b-card-body>
           </b-col>
         </b-row>
       </b-card>
     </div>
-
     <div class="container">
       <h1 align="left">Lacteos</h1>
     </div>
@@ -179,7 +199,9 @@
           </b-col>
           <b-col md="6">
             <b-card-body>
-              <b-card-text><h3>{{lac.nombre}}</h3></b-card-text>
+              <b-card-text>
+                <h3>{{lac.nombre}}</h3>
+              </b-card-text>
               <p>{{lac.descripcion}}</p>
             </b-card-body>
           </b-col>
@@ -316,5 +338,19 @@ a {
 }
 .card {
   margin-bottom: 20px;
+}
+.col-md-6 img {
+  height: 300px;
+  width: 300px;
+  margin: 15px 0;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.col-md-6 img:hover {
+  height: 333px;
+  width: 400px;
+  margin-left: -50px;
 }
 </style>
