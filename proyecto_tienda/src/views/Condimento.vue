@@ -1,29 +1,41 @@
 <template>
   <div class="container">
     <h1>Condimentos</h1>
-    <div class="row row-cols-1 row-cols-md-3">
-      <div class="col mb-4" v-for="(c,index) of condimentos" :key="index">
-        <div class="card my-3">
-          <img v-bind:src="c.imagen" class="card-img-top" height="300px" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">{{c.descripcion}}</p>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-md-4" v-for="(c,index) of condimentos" :key="index">
+        <b-card
+          v-bind:title="c.titulo"
+          v-bind:img-src="c.imagen"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2"
+        >
+          <b-card-text>{{c.descripcion}}</b-card-text>
+
+          <b-button href="#" variant="primary">Agregar al Carrito</b-button>
+        </b-card>
       </div>
     </div>
     <h1>Aji</h1>
-    <div>
-      <div class="row row-cols-1 row-cols-md-2">
-        <div class="col mb-4" v-for="(a,index) of aji" :key="index">
-          <div class="card my-3">
-            <img v-bind:src="a.imagen" class="card-img-top" height="300px" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">{{a.titulo}}</h5>
-              <p class="card-text">{{a.descripcion}}</p>
-            </div>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-md-6" v-for="(a,index) of aji" :key="index">
+        <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+          <b-row no-gutters>
+            <b-col md="6">
+              <b-card-img v-bind:src="a.imagen" class="rounded-0"></b-card-img>
+            </b-col>
+            <b-col md="6">
+              <b-card-body v-bind:title="a.titulo">
+                <b-card-text>
+                  This is a wider card with supporting text as a natural lead-in to additional content.
+                  This content is a little bit longer.
+                </b-card-text>
+              </b-card-body>
+            </b-col>
+          </b-row>
+        </b-card>
       </div>
     </div>
     <h1>Ajo</h1>
