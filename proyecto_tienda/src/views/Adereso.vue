@@ -1,7 +1,7 @@
 <template>
   <div>
-  <h1>Aderezos</h1>
-  <div class="container">
+    <h1>Aderezos</h1>
+    <div class="container">
       <h1 align="left">Ketchup</h1>
     </div>
     <div class="container">
@@ -122,39 +122,39 @@ export default {
     return {
       ketchup: [
         {
-          nombre:"Ketchup",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre: "Ketchup",
+          descripcion: "Cant",
+          precio: 0,
+          portada: ""
         }
       ],
       mayonesa: [
         {
-          nombre:"Mayonesa",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre: "Mayonesa",
+          descripcion: "Cant",
+          precio: 0,
+          portada: ""
         }
       ],
       mostaza: [
         {
-          nombre:"Mostaza",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre: "Mostaza",
+          descripcion: "Cant",
+          precio: 0,
+          portada: ""
         }
       ],
       extracto: [
         {
-          nombre:"Extracto de Tomato",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre: "Extracto de Tomato",
+          descripcion: "Cant",
+          precio: 0,
+          portada: ""
         }
-      ],
-    }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style>

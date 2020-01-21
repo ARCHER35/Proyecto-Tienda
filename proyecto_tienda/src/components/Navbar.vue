@@ -24,7 +24,7 @@
               <b-dropdown-item to="/fideo">Fideos</b-dropdown-item>
               <b-dropdown-item to="/sal">Sal</b-dropdown-item>
               <b-dropdown-item to="/aceite">Aceite</b-dropdown-item>
-              <b-dropdown-item to="/adereso">Aderezos</b-dropdown-item>
+              <b-dropdown-item to="/adereso">Aderesos</b-dropdown-item>
               <b-dropdown-item to="/otro">Otros</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item to="/embutido">Embutidos</b-nav-item>
