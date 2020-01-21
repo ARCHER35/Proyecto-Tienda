@@ -3,7 +3,7 @@
     <h1>Contacto</h1>
     <div class="card">
       <div align=left class="container">
-        <h2>Telefono: 4587463</h2>
+        <h2>Telefono: 4401323</h2>
         <h2>Celular: 72783477</h2>
         <h2>Correo:</h2>
         <h2>Direccion: Direccion: Capitan Victor Ustaris Km 4 1/2</h2>
