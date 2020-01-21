@@ -339,7 +339,7 @@ a {
 .card {
   margin-bottom: 20px;
 }
-.col-md-6 img {
+.col-md-6 .card {
   height: 300px;
   width: 300px;
   margin: 15px 0;
@@ -348,7 +348,7 @@ a {
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
-.col-md-6 img:hover {
+.col-md-6 .card:hover {
   height: 333px;
   width: 400px;
   margin-left: -50px;
