@@ -2,12 +2,12 @@
   <footer class="bg-dark">
     <div class="container-fluid text-center text-md-left">
       <div class="row text-light" style="padding:15px">
-        <div class="col-md-6 mt-md-0 mt-3">
-          <img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.15752-9/82224605_612882182613239_6994560468685684736_n.png?_nc_cat=102&_nc_oc=AQk7xVm6wA7uhWDnTkc2CZmP3sgG1ZW9gPkAB4DDq4NuE99Ss3EKN3vYG2lxBBxcfJA&_nc_ht=scontent.fvvi1-2.fna&oh=09c32db08f2f613bdd89f82c704c05b6&oe=5EA0D4A8" height="100px" width="300px"/>
+        <div class="col-md-5 mt-md-0 mt-3">
+          <img class="col-sm" src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.15752-9/82224605_612882182613239_6994560468685684736_n.png?_nc_cat=102&_nc_oc=AQk7xVm6wA7uhWDnTkc2CZmP3sgG1ZW9gPkAB4DDq4NuE99Ss3EKN3vYG2lxBBxcfJA&_nc_ht=scontent.fvvi1-2.fna&oh=09c32db08f2f613bdd89f82c704c05b6&oe=5EA0D4A8" height="100px" width="300px"/>
           <p>Pedidos por Mayor y Menor Horarios de Atencion 6 am a 15pm</p>
         </div>
         <hr class="clearfix w-100 d-md-none pb-3" />
-        <div class="col-2">
+        <div class="col-3">
           <h5 class="text-uppercase">Frial Cris</h5>
           <ul class="list-unstyled">
             <li>

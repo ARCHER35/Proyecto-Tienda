@@ -99,4 +99,7 @@ export default {
 .card {
   margin-bottom: 20px;
 }
+.main {
+  box-sizing:border-box
+}
 </style>
