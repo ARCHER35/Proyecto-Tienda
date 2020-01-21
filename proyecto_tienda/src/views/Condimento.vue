@@ -1,84 +1,58 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Condimentos</h1>
-    <div class="columtri container">
-      <div class="card" v-for="(c,index) of condimentos" :key="index">
-        <img v-bind:src="c.imagen" class="card-img-top" height="200px" width="500px" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{{c.titulo}}</h5>
-          <p class="card-text">{{c.descripcion}}</p>
-          <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4" v-for="(c,index) of condimentos" :key="index">
+        <div class="card my-3">
+          <img v-bind:src="c.imagen" class="card-img-top" height="300px" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">{{c.descripcion}}</p>
+          </div>
         </div>
       </div>
     </div>
     <h1>Aji</h1>
-    <div class="contenedor container">
-      <b-card
-        v-for="(a,index) of aji"
-        :key="index"
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px;"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="a.imagen" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body v-bind:title="a.titulo">
-              <b-card-text>{{a.descripcion}}</b-card-text>
-              <h3>{{a.precio}} Bs</h3>
-              <button class="btn-primary">Agregar al Carrito</button>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+    <div>
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4" v-for="(a,index) of aji" :key="index">
+          <div class="card my-3">
+            <img v-bind:src="a.imagen" class="card-img-top" height="300px" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{a.titulo}}</h5>
+              <p class="card-text">{{a.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <h1>Ajo</h1>
-    <div class="contenedor container">
-      <b-card
-        v-for="(j,index) of ajo"
-        :key="index"
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px;"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="j.imagen" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body v-bind:title="j.titulo">
-              <b-card-text>{{j.descripcion}}</b-card-text>
-            </b-card-body>
-            <h3>{{j.precio}} Bs</h3>
-            <button class="btn-primary">Agregar al Carrito</button>
-          </b-col>
-        </b-row>
-      </b-card>
+    <div>
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4" v-for="(j,index) of ajo" :key="index">
+          <div class="card my-3">
+            <img v-bind:src="j.imagen" class="card-img-top" height="300px" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{j.titulo}}</h5>
+              <p class="card-text">{{j.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <h1>Canela</h1>
-    <div class="contenedor container">
-      <b-card
-        v-for="(l,index) of canela"
-        :key="index"
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px;"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="l.imagen" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body v-bind:title="l.titulo">
-              <b-card-text>{{l.descripcion}}</b-card-text>
-              <h3>{{l.precio}} Bs</h3>
-              <button class="btn-primary">Agregar al Carrito</button>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+    <div>
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4" v-for="(l,index) of canela" :key="index">
+          <div class="card my-3">
+            <img v-bind:src="l.imagen" class="card-img-top" height="300px" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{l.titulo}}</h5>
+              <p class="card-text">{{l.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -214,8 +188,5 @@ export default {
 .contenedor {
   display: grid;
   grid-template-columns: auto auto;
-}
-.card {
-  padding: 20px;
 }
 </style>
