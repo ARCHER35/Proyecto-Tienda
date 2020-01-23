@@ -1,24 +1,27 @@
 <template>
   <div>
-    <h1>Vista Huevo</h1>
-    <div class="contenedor">
-      <div v-for="(h, index) of huevo" :key="index" class="card">
-        <img v-bind:src="h.imagen" class="card-img-top" style="max-width: 200px;" />
-        <div class="card-body">
-          <h5 class="card-title text-primary">{{h.titulo}}</h5>
-          <div>
-            <h2 class="text-danger">Bs {{h.precio}}</h2>
-          </div>
-          <p class="card-text">{{h.descripcion}}</p>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-warning text-light btn-lg active">Agregar a tu carro</button>
+    <h1>Huevo</h1>
+    <div class="container">
+      <div class="row">
+        <div v-for="(h,index) of huevo" :key="index" class="col-md-6">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="h.imagen" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="h.titulo">
+                  <b-card-text>{{h.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -56,7 +59,7 @@ export default {
 </script>
 
 <style>
-.contenedor{
+.contenedor {
   display: grid;
   grid-template-columns: auto auto;
 }

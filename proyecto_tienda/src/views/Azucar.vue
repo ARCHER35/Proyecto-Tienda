@@ -2,39 +2,22 @@
   <div>
     <h1>Azucar</h1>
     <div class="container">
-      <b-card no-body class="overflow-hidden" style="max-width: 500px; padding:15px; margin-bottom: 20px" v-for="(azu,index) of azucar" :Key="index">
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="azu.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text><h3>{{azu.nombre}}</h3></b-card-text>
-              <p>{{azu.descripcion}}</p>
-              <p>Bs{{azu.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </div>
-    <h1>Azucar Morena</h1>
-    <div class="container">
-      <b-card no-body class="overflow-hidden" style="max-width: 500px; padding:15px; margin-bottom: 20px" v-for="(more,index) of morena" :Key="index">
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="more.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text><h3>{{more.nombre}}</h3></b-card-text>
-              <p>{{more.descripcion}}</p>
-              <p>Bs{{more.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(a,index) of azucar" :key="index" class="col-md-6">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="a.portada" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="a.nombre">
+                  <b-card-text>{{a.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -42,26 +25,26 @@
 <script>
 export default {
   data() {
-    return{
+    return {
       azucar: [
         {
-          nombre:"Azucar",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
-        }
-      ],
-      morena:[
+          nombre: "Azucar",
+          descripcion: "Cant",
+          precio: 0,
+          portada:
+            "https://www.midespensa.com.bo/wp-content/uploads/2019/06/AZUCAR-GUABIRA-5K.png"
+        },
         {
-          nombre:"Azucar Morena",
-          descripcion:"cant",
-          precio:0,
-          portada:""
+          nombre: "Azucar Morena",
+          descripcion: "cant",
+          precio: 0,
+          portada:
+            "https://www.midespensa.com.bo/wp-content/uploads/2019/06/AZUCAR-MORENA.png"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

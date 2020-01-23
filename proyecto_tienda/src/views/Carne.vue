@@ -1,46 +1,47 @@
 <template>
   <div>
-    <h1>Carne de Res</h1>
-    <div class="contenedor container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(c,index) of carnes"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="c.imagen" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{c.nombre}}</h3>
-              </b-card-text >
-              <p class="text-justify">{{c.descripcion}}</p>
-              <p>Bs{{c.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+    <h1>Carne</h1>
+    <div class="container">
+      <div class="row">
+        <div v-for="(c,index) of carnes" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="c.imagen" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body title="Horizontal Card">
+                  <b-card-text>
+                    This is a wider card with supporting text as a natural lead-in to additional content.
+                    This content is a little bit longer.
+                  </b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
     <h1>Variedades</h1>
     <div class="container">
-      <b-card no-body class="columtri overflow-hidden bg-success">
-        <b-row no-gutters v-for="(o,index) of otros" :key="index" style="margin-bottom: 20px;">
-          <b-col md="6">
-            <b-card-img v-bind:src="o.imagen" class="rounded-0" style="padding:10px"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body v-bind:title="o.titulo">
-              <b-card-text class="text-justify">{{o.descripcion}}</b-card-text>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(o,index) of otros" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="o.imagen" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="o.titulo">
+                  <b-card-text>{{o.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -136,8 +137,7 @@ export default {
         {
           id: 1,
           titulo: "Carne de Cerdo",
-          descripcion:
-            "Es una de las carnes más consumidas en el mundo.",
+          descripcion: "Es una de las carnes más consumidas en el mundo.",
           precio: 0,
           imagen:
             "https://www.mercadodechamartin.es/madrid/wp-content/uploads/2018/01/Carne-de-cerdo.jpeg"
@@ -145,8 +145,7 @@ export default {
         {
           id: 2,
           titulo: "Higado",
-          descripcion:
-            "El hierro ayuda a las células a generar energía.",
+          descripcion: "El hierro ayuda a las células a generar energía.",
           precio: 0,
           imagen:
             "https://i1.wp.com/conservaciondealimentos.com/wp/wp-content/uploads/2018/08/higado-de-res.jpg"
@@ -167,12 +166,4 @@ export default {
 </script>
 
 <style>
-.contenedor {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.columtri {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
 </style>
