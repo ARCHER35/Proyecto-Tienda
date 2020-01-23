@@ -1,7 +1,7 @@
 <template>
   <div>
-  <h1>Aderezos</h1>
-  <div class="container">
+    <h1>Aderezos</h1>
+    <div class="container">
       <h1 align="left">Ketchup</h1>
     </div>
     <div class="container">
@@ -187,10 +187,10 @@ export default {
           precio:5,
           portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
-      ],
-    }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style>
