@@ -13,8 +13,7 @@
           class="mb-2"
         >
           <b-card-text>{{c.descripcion}}</b-card-text>
-
-          <b-button href="#" variant="primary">Agregar al Carrito</b-button>
+          <a href="#" class="btn btn-primary">Agregar al Carrito</a>
         </b-card>
       </div>
     </div>
@@ -28,10 +27,8 @@
             </b-col>
             <b-col md="6">
               <b-card-body v-bind:title="a.titulo">
-                <b-card-text>
-                  This is a wider card with supporting text as a natural lead-in to additional content.
-                  This content is a little bit longer.
-                </b-card-text>
+                <b-card-text>{{a.descripcion}}</b-card-text>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>
               </b-card-body>
             </b-col>
           </b-row>
@@ -47,6 +44,7 @@
             <div class="card-body">
               <h5 class="card-title">{{j.titulo}}</h5>
               <p class="card-text">{{j.descripcion}}</p>
+              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
             </div>
           </div>
         </div>
@@ -61,6 +59,7 @@
             <div class="card-body">
               <h5 class="card-title">{{l.titulo}}</h5>
               <p class="card-text">{{l.descripcion}}</p>
+              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
             </div>
           </div>
         </div>

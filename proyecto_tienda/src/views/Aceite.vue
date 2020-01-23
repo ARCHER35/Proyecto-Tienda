@@ -67,23 +67,23 @@ export default {
       aceite: [
         {
           nombre: "Aceite Fino",
-          descripcion: "Ltrs",
-          precio: 0,
-          portada: ""
+          descripcion: "900 ml",
+          precio: 15,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre: "Aceite Fino 2",
           descripcion: "Ltrs",
           precio: 0,
-          portada: ""
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       agranel: [
         {
           nombre: "Aceite Agranel",
-          descripcion: "Ltrs",
-          precio: 0,
-          portada: ""
+          descripcion: "Litro",
+          precio: 9,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ]
     };

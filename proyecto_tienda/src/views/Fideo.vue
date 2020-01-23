@@ -88,25 +88,49 @@ export default {
       famosa: [
         {
           nombre: "Fideos Famosa",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          descripcion: "Cuarilla",
+          precio: 20,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre: "Fideo 1",
+          descripcion: "Unidad",
+          precio:4,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Fideo 2",
+          descripcion: "Unidad",
+          precio: 4,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       lazzaroni: [
         {
-          nombre: "Fideos Lazzaroni",
-          descripcion: "cant",
-          precio: 0,
-          portada: ""
-        }
+          nombre: "Espageti Lazzaroni",
+          descripcion: "3 Unidades",
+          precio: 10,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre: "Fideo 1",
+          descripcion: "Unidad",
+          precio:4,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
       ],
       pais: [
         {
           nombre: "Fideos del Pais",
-          descripcion: "cant",
-          precio: 0,
-          portada: ""
+          descripcion: "Libra",
+          precio: 5,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre: "Fideo 1",
+          descripcion: "Libra",
+          precio:5,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ]
     };

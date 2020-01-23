@@ -67,49 +67,61 @@ export default {
       chorizo: [
         {
           nombre:"Chorizo Sofia",
-          descripcion:"cant",
+          descripcion:"Paquete",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Chorizo Sofia Agranel",
+          descripcion:"Kilo",
+          precio:0,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre:"Chorizo Agranel",
-          descripcion:"cant",
+          descripcion:"Kilo",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre:"Chorizo Parrillero",
-          descripcion:"cant",
+          descripcion:"Kilo",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       mortadela: [
         {
           nombre:"Mortadela Sofia",
-          descripcion:"cant",
+          descripcion:"Paquete",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mortadela Sofia",
+          descripcion:"Kilo",
+          precio:0,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre:"Mortadela Maxi",
           descripcion:"cant",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       pasta: [
         {
-          nombre:"pasta",
-          descripcion:"cant",
+          nombre:"Pate de Pollo",
+          descripcion:"200g",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre:"pasta",
           descripcion:"cant",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ]
     }

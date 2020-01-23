@@ -59,7 +59,7 @@ export default {
           titulo: "Leche Normal",
           descripcion:
             "Es un producto elaborado con leche fresca controlada y seleccionada, la cual es higienizada, homogenizada, estandarizada y ultrapasteurizada. ... Es un producto UHT de mediana vida.",
-          precio: 0,
+          precio: 5,
           imagen:
             "https://pilandina.com.bo/wp-content/uploads/2019/07/leche-fresca-2.png"
         },
@@ -77,24 +77,24 @@ export default {
         {
           id: 1,
           titulo: "Queso Rio Grande",
-          descripcion: "Queso del Rio Grande",
-          precio: 0,
+          descripcion: "Kilo",
+          precio: 28,
           imagen:
             "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_9aa26c32-0dac-4c00-bda5-93105aaf4aae.jpg"
         },
         {
           id: 2,
-          titulo: "Queso Musarela",
-          descripcion: "Queso para recetas",
-          precio: 0,
+          titulo: "Queso Muzzarella",
+          descripcion: "Kilo",
+          precio: 23,
           imagen:
             "https://i5-unileverar.a8e.net.br/gg/queso-mozzarella-la-paulina-1kg_172831826_20096.jpg"
         },
         {
           id: 3,
           titulo: "Quesillo",
-          descripcion: "Quesillo casero",
-          precio: 0,
+          descripcion: "Unidad",
+          precio: 5,
           imagen:
             "https://www.elimparcial.com/__export/1557182428561/sites/elimparcial/img/2015/12/14/1323369-N.JPG_1359985867.jpg"
         }

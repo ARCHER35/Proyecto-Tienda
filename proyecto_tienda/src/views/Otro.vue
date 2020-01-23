@@ -139,48 +139,84 @@ export default {
     return {
       salsasoya: [
         {
-          nombre:"Salsasoya",
-          descripcion:"Cant",
+          nombre:"Salsasoya Trisoy Toscana",
+          descripcion:"235 ml",
+          precio:2.50,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Salsasoya Trisoy Toscana",
+          descripcion:"470 ml",
+          precio:5,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Salsasoya Trisoy Toscana",
+          descripcion:"940 ml",
           precio:0,
-          portada:""
-        }
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Salsasoya Trisoy Toscana",
+          descripcion:"5000 ml",
+          precio:0,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
       ],
       limonero: [
         {
           nombre:"Harry El Limonero",
-          descripcion:"Cant",
+          descripcion:"330 ml",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Harry El Limonero",
+          descripcion:"700 ml",
+          precio:0,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       vinagre: [
         {
-          nombre:"Vinagre Blanco",
-          descripcion:"Cant",
+          nombre:"Vinagre Blanco Trisoy Toscana",
+          descripcion:"330 ml",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
-          nombre:"Vinagre Rojo",
-          descripcion:"Cant",
+          nombre:"Vinagre Blanco Trisoy Toscana",
+          descripcion:"1500",
           precio:0,
-          portada:""
-        }
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Vinagre Rojo Trisoy Toscana",
+          descripcion:"330 ml",
+          precio:0,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Vinagre Rojo Trisoy Toscana",
+          descripcion:"1500 ml",
+          precio:0,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
       ],
       carbon: [
         {
-          nombre:"Carbon",
-          descripcion:"Cant",
+          nombre:"Carbon La Preferida",
+          descripcion:"Unidad",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       servilleta: [
         {
-          nombre:"Servilletas",
-          descripcion:"Cant",
+          nombre:"Servilletas Perlita",
+          descripcion:"Paquete",
           precio:0,
-          portada:""
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ]
     }
