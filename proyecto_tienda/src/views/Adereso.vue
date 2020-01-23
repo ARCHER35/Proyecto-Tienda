@@ -122,34 +122,70 @@ export default {
     return {
       ketchup: [
         {
-          nombre:"Ketchup",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre:"Ketchup Pequeño",
+          descripcion:"50cm",
+          precio:2,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Ketchup Mediano",
+          descripcion:"230cm",
+          precio:7,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Ketchup Grande",
+          descripcion:"1 Kilo",
+          precio:28,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       mayonesa: [
         {
-          nombre:"Mayonesa",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre:"Mayonesa Pequeña",
+          descripcion:"50cm",
+          precio:2,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mayonesa Mediana",
+          descripcion:"230cm",
+          precio:7,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mayonesa Grande",
+          descripcion:"1 Kilo",
+          precio:28,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       mostaza: [
         {
-          nombre:"Mostaza",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre:"Mostaza Pequeña",
+          descripcion:"50cm",
+          precio:2,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mostaza Mediana", 
+          descripcion:"230cm",
+          precio:7,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mostaza Grande",
+          descripcion:"1 Kilo",
+          precio:28,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       extracto: [
         {
-          nombre:"Extracto de Tomato",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre:"Extracto de Tomato Cajamar",
+          descripcion:"Unidad",
+          precio:5,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
     }
