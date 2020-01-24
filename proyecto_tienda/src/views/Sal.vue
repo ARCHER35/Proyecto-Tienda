@@ -1,81 +1,23 @@
 <template>
   <div>
-      <h1>Sal Yodada</h1>
-      <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(sal1,index) of sal1"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="sal1.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{sal1.nombre}}</h3>
-              </b-card-text>
-              <p>{{sal1.descripcion}}</p>
-              <p>Bs{{sal1.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </div>
-    <h1>Sal Fina</h1>
+    <h1>Sal</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(sal2,index) of sal2"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="sal2.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{sal2.nombre}}</h3>
-              </b-card-text>
-              <p>{{sal2.descripcion}}</p>
-              <p>Bs{{sal2.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </div>
-    <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(sal3,index) of sal3"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="sal3.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{sal3.nombre}}</h3>
-              </b-card-text>
-              <p>{{sal3.descripcion}}</p>
-              <p>Bs{{sal3.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(s,index) of sal" :key="index" class="col-md-4">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="s.nombre">
+                  <b-card-text>{{s.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -84,33 +26,29 @@
 export default {
   data() {
     return {
-      sal1: [
+      sal: [
         {
-          nombre:"Sal Yodada",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
-        }
-      ],
-      sal2: [
+          nombre: "Sal Yodada",
+          descripcion: "Cant",
+          precio: 0,
+          portada: ""
+        },
         {
-          nombre:"Sal Fina",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
-        }
-      ],
-      sal3: [
+          nombre: "Sal Fina",
+          descripcion: "Cant",
+          precio: 0,
+          portada: ""
+        },
         {
-          nombre:"Sal Parrillera",
-          descripcion:"Cant",
-          precio:0,
-          portada:""
+          nombre: "Sal Parrillera",
+          descripcion: "Cant",
+          precio: 0,
+          portada: ""
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

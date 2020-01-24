@@ -2,56 +2,37 @@
   <div>
     <h1>Aceites</h1>
     <div class="container">
-      <h1 align="left">Variedad de Aceites Fino</h1>
+      <div class="row">
+        <div v-for="(f,index) of fino" :key="index" class="col-md-6">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body title="Horizontal Card">
+                  <b-card-text>
+                    {{f.descripcion}}
+                  </b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </div>
+      </div>
     </div>
-    <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(acei,index) of aceite"
-        :Key="index"
-      >
+    <h1>Agranel</h1>
+    <div class="container" v-for="(a,index) of agranel" :key="index">
+      <b-card no-body class="overflow-hidden" style="max-width: 540px;">
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img v-bind:src="acei.portada" class="rounded-0"></b-card-img>
+            <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
           </b-col>
           <b-col md="6">
-            <b-card-body>
+            <b-card-body v-bind:title="a.nombre">
               <b-card-text>
-                <h3>{{acei.nombre}}</h3>
+                {{a.descripcion}}
               </b-card-text>
-              <p>{{acei.descripcion}}</p>
-              <p>Bs{{acei.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </div>
-    <div class="container">
-      <h1 align="left">Aceite Agranel</h1>
-    </div>
-    <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(agra,index) of agranel"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="agra.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{agra.nombre}}</h3>
-              </b-card-text>
-              <p>{{agra.descripcion}}</p>
-              <p>Bs{{agra.precio}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
             </b-card-body>
           </b-col>
         </b-row>
@@ -64,7 +45,7 @@
 export default {
   data() {
     return {
-      aceite: [
+      fino: [
         {
           nombre: "Aceite Fino",
           descripcion: "Ltrs",
@@ -100,6 +81,6 @@ export default {
   margin-bottom: 20px;
 }
 .main {
-  box-sizing:border-box
+  box-sizing: border-box;
 }
 </style>

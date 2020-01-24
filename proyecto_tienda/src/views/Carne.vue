@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="bg-light">
     <h1>Carne</h1>
-    <div class="container">
+    <div class="container efectos">
       <div class="row">
         <div v-for="(c,index) of carnes" :key="index" class="col-md-4 col-sm-6 col-xs-12">
-          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+          <b-card no-body class="btn-outline-primary overflow-hidden" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="c.imagen" class="rounded-0"></b-card-img>
+                <b-card-img v-bind:src="c.imagen" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body title="Horizontal Card">
@@ -40,6 +40,30 @@
             </b-row>
           </b-card>
           <br />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h1>Cartas</h1>
+      <div class="container">
+        <div class="card">
+          <img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" />
+          <h4>Paisaje</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In adipisci iusto veniam ex? Ipsam, sapiente maiores mollitia unde ad consequatur numquam incidunt necessitatibus eveniet explicabo similique porro exercitationem, sunt dolor.</p>
+          <a href="#">Leer mas</a>
+        </div>
+        <div class="card">
+          <img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" />
+          <h4>Paisaje</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In adipisci iusto veniam ex? Ipsam, sapiente maiores mollitia unde ad consequatur numquam incidunt necessitatibus eveniet explicabo similique porro exercitationem, sunt dolor.</p>
+          <a href="#">Leer mas</a>
+        </div>
+        <div class="card">
+          <img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" />
+          <h4>Paisaje</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In adipisci iusto veniam ex? Ipsam, sapiente maiores mollitia unde ad consequatur numquam incidunt necessitatibus eveniet explicabo similique porro exercitationem, sunt dolor.</p>
+          <a href="#">Leer mas</a>
         </div>
       </div>
     </div>
@@ -166,4 +190,9 @@ export default {
 </script>
 
 <style>
+.efectos .card:hover {
+  transition: all 0.55s;
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2)
+}
 </style>
