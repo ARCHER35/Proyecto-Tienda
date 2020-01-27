@@ -1,22 +1,25 @@
 <template>
-  <div class="container">
+  <div>
     <h1>Condimentos</h1>
-    <div class="row">
-      <div class="col-md-4" v-for="(c,index) of condimentos" :key="index">
-        <b-card
-          v-bind:title="c.titulo"
-          v-bind:img-src="c.imagen"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem;"
-          class="mb-2"
-        >
-          <b-card-text>{{c.descripcion}}</b-card-text>
-          <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-        </b-card>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" v-for="(c,index) of condimentos" :key="index">
+          <b-card
+            v-bind:title="c.titulo"
+            v-bind:img-src="c.imagen"
+            img-alt="Image"
+            img-top
+            tag="article"
+            style="max-width: 20rem;"
+            class="mb-2"
+          >
+            <b-card-text>{{c.descripcion}}</b-card-text>
+            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+          </b-card>
+        </div>
       </div>
     </div>
+
     <h1>Aji</h1>
     <div class="row">
       <div class="col-md-6" v-for="(a,index) of aji" :key="index">

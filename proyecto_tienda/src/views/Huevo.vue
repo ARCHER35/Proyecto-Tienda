@@ -1,19 +1,27 @@
 <template>
-  <div class="container">
-    <div class="contenedor">
-<b-card style="max-width: 20rem;" v-for="(h, index) of huevo" :key="index">
-  <img v-bind:src="h.imagen" height="200px" width="200px">
-    <b-card-text>
-      <h5 class="card-title text-primary">{{h.titulo}}</h5>
-            <h3 class="card-text">{{h.descripcion}}</h3>
-            <h2 class="text-danger">Bs {{h.precio}}</h2>
-    </b-card-text>
-    <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-  </b-card>
+  <div>
+    <h1>Huevo</h1>
+    <div class="container">
+      <div class="row">
+        <div v-for="(h,index) of huevo" :key="index" class="col-md-4">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="h.imagen" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="h.titulo">
+                  <b-card-text>{{h.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -51,7 +59,7 @@ export default {
 </script>
 
 <style>
-.contenedor{
+.contenedor {
   display: grid;
   grid-template-columns: auto auto auto;
 }

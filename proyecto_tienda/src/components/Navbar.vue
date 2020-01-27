@@ -47,26 +47,4 @@ export default {};
 </script>
 
 <style>
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {display: inline-block;}
-ul li:hover {background: rgba(0, 0, 0, 0.733)}
-ul li:hover ul {display: block;}
-ul li ul {
-  position: absolute;
-  width: 200px;
-  display: none;
-}
-ul li ul li { 
-  background: rgba(252, 6, 6, 0.849); 
-  display: block; 
-}
-ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: rgba(6, 252, 178, 0.849);}
-nav {
-  background: black;
-}
 </style>

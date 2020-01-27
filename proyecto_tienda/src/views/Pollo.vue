@@ -2,56 +2,43 @@
   <div>
     <h1>Pollo Selccionado</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px;"
-        v-for="(pol,index) of pollo"
-        :key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="pol.portada" class="rounded-0" style="padding:10px"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{pol.nombre}}</h3>
-                <h3>{{pol.descripcion}}</h3>
-                <h3>Bs {{pol.precio}}</h3>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-              </b-card-text>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(p,index) of pollo" :key="index" class="col-md-6">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="p.nombre">
+                  <b-card-text>{{p.descripcion}}</b-card-text>
+                  <b-button href="#" variant="primary">Agregar al Carrito</b-button>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </div>
+      </div>
     </div>
     <h1>Pollo Trozado</h1>
-
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px;"
-        v-for="(poll,index) of pollo2"
-        :key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="5">
-            <b-card-img v-bind:src="poll.portada" class="rounded-0" style="padding:10px"></b-card-img>
-          </b-col>
-          <b-col md="7">
-            <b-card-body>
-              <b-card-text>
-                <h1>{{poll.nombre}}</h1>
-                <h3>{{poll.descripcion}}</h3>
-                <h3>Bs {{poll.precio}}</h3>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-              </b-card-text>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(p2,index) of pollo2" :key="index" class="col-md-4">
+          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="p2.nombre">
+                  <b-card-text>{{p2.descripcion}}</b-card-text>
+                  <b-button href="#" variant="primary">Agregar al Carrito</b-button>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </div>
+      </div>
     </div>
   </div>
 </template>
