@@ -12,6 +12,8 @@
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
                   <b-card-text>{{a.descripcion}}</b-card-text>
+                  <p>Bs{{a.precio}}</p>
+                  <a href="#" class="btn btn-primary">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -28,21 +30,14 @@ export default {
     return {
       azucar: [
         {
-          nombre: "Azucar",
-          descripcion: "Cant",
-          precio: 0,
+          nombre: "Azucar Belgica",
+          descripcion: "Kilo",
+          precio: 14,
           portada:
-            "https://www.midespensa.com.bo/wp-content/uploads/2019/06/AZUCAR-GUABIRA-5K.png"
-        },
-        {
-          nombre: "Azucar Morena",
-          descripcion: "cant",
-          precio: 0,
-          portada:
-            "https://www.midespensa.com.bo/wp-content/uploads/2019/06/AZUCAR-MORENA.png"
+            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
-      ]
-    };
+      ],
+    }
   }
 };
 </script>

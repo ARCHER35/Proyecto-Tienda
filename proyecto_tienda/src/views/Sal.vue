@@ -29,23 +29,33 @@ export default {
       sal: [
         {
           nombre: "Sal Yodada",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          descripcion: "Kilo",
+          precio: 2,
+          portada:
+            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
-          nombre: "Sal Fina",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          nombre: "Sal Yodada",
+          descripcion: "5 Kilos",
+          precio: 6,
+          portada:
+            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
-          nombre: "Sal Parrillera",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          nombre: "Sal Parrillera El Torrito",
+          descripcion: "Unidad",
+          precio: 3,
+          portada:
+            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre: "Sal Parrillera Alnat",
+          descripcion: "Unidad",
+          precio: 15,
+          portada:
+            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
-      ]
+      ],
     };
   }
 };

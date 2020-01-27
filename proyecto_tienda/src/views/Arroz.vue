@@ -28,10 +28,10 @@ export default {
     return {
       arroz: [
         {
-          nombre: "Arroz",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          nombre:"Arroz Frano de Oro",
+          descripcion:"Cuartilla",
+          precio:20,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ]
     };

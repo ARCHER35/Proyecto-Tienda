@@ -44,9 +44,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <div class="container">
-      <h1 align="left">Carnes</h1>
-    </div>
+    <h1>Carnes</h1>
     <div class="container">
       <b-card
         no-body
@@ -59,7 +57,6 @@
           <b-col md="6">
             <b-card-img
               v-bind:src="car.portada"
-              height="300px"
               style="padding:15px"
               class="rounded-0"
             ></b-card-img>
@@ -75,9 +72,7 @@
         </b-row>
       </b-card>
     </div>
-    <div class="container">
-      <h1 align="left">Pollo</h1>
-    </div>
+    <h1>Pollo</h1>
     <div class="container">
       <b-card
         no-body
@@ -101,10 +96,7 @@
         </b-row>
       </b-card>
     </div>
-
-    <div class="container">
-      <h1 align="left">Avarrotes</h1>
-    </div>
+    <h1>Avarrotes</h1>
     <div class="container">
       <b-card
         no-body
@@ -128,10 +120,7 @@
         </b-row>
       </b-card>
     </div>
-
-    <div class="container">
-      <h1 align="left">Embutidos</h1>
-    </div>
+    <h1>Embutidos</h1>
     <div class="container">
       <b-card
         no-body
@@ -155,10 +144,7 @@
         </b-row>
       </b-card>
     </div>
-
-    <div class="container">
-      <h1 align="left">Condimentos</h1>
-    </div>
+    <h1>Condimentos</h1>
     <div class="container">
       <b-card
         no-body
@@ -182,9 +168,7 @@
         </b-row>
       </b-card>
     </div>
-    <div class="container">
-      <h1 align="left">Lacteos</h1>
-    </div>
+    <h1 align=center>Lacteos</h1>
     <div class="container">
       <b-card
         no-body
@@ -317,40 +301,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.container {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.card {
-  margin-bottom: 20px;
-}
-.col-md-6 img {
-  height: 300px;
-  width: 300px;
-  margin: 15px 0;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.col-md-6 img:hover {
-  height: 333px;
-  width: 400px;
-  margin-left: -50px;
-}
+<style>
 </style>

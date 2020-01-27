@@ -31,9 +31,11 @@
             <b-nav-item to="/condimento">Condimentos</b-nav-item>
             <b-nav-item to="/lacteo">Lacteos</b-nav-item>
             <b-nav-item to="/contacto">Contactos</b-nav-item>
-              <a href="#" class="btn btn-danger" align="center"><i class="fas fa-cart-arrow-down"></i></a>
           </b-navbar-nav>
         </b-collapse>
+        <a href="#" class="btn btn-danger" align="center"><i class="fas fa-cart-arrow-down"></i></a>
+        <h1>|</h1>
+        <h3 class="text-danger">Frial Cris</h3>
       </b-navbar>
     </div>
     <router-view />
@@ -45,23 +47,4 @@ export default {};
 </script>
 
 <style>
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {display: inline-block;}
-ul li:hover {background: rgba(0, 0, 0, 0.733)}
-ul li:hover ul {display: block;}
-ul li ul {
-  position: absolute;
-  width: 200px;
-  display: none;
-}
-ul li ul li { 
-  background:  rgb(3, 177, 90);; 
-  display: block; 
-}
-ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: rgb(3, 177, 90);}
 </style>

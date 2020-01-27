@@ -50,47 +50,47 @@ export default {
       pollo: [
         {
           nombre: "Pollos Enteros",
-          descripcion: "kilos",
-          precio: 0,
-          portada: ""
+          descripcion: "kilo",
+          precio: 15,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
-          nombre: "Tipos de Pollos",
-          descripcion: "Kilos",
-          precio: 0,
-          portada: ""
+          nombre:"Tipos de Pollos",
+          descripcion: "Kilo",
+          precio: 15,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       pollo2: [
         {
           nombre: "Alitas",
-          descripcion: "kilos",
-          precio: 0,
-          portada: ""
+          descripcion: "kilo",
+          precio: 18,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre: "Piernas",
-          descripcion: "kilos",
-          precio: 0,
-          portada: ""
+          descripcion: "kilo",
+          precio: 18,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre: "Pecho",
-          descripcion: "kilos",
-          precio: 0,
-          portada: ""
+          descripcion: "kilo",
+          precio: 18,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre: "Menudencia",
-          descripcion: "kilos",
-          precio: 0,
-          portada: ""
+          descripcion: "kilo",
+          precio: 7,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
           nombre: "Carne Molida de Pollo",
-          descripcion: "kilos",
-          precio: 0,
-          portada: ""
+          descripcion: "kilo",
+          precio: 22,
+          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ]
     };

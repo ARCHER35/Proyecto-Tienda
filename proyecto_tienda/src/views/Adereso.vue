@@ -3,7 +3,7 @@
     <h1>Aderezos</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(a,index) of aderesos" :key="index" class="col-md-4">
+        <div v-for="(a,index) of ketchup" :key="index" class="col-md-4">
           <b-card no-body class="overflow-hidden" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
@@ -44,32 +44,72 @@
 export default {
   data() {
     return {
-      aderesos: [
+      ketchup: [
         {
-          nombre: "Mayonesa",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          nombre:"Ketchup Pequeño",
+          descripcion:"50cm",
+          precio:2,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
-          nombre: "Ketchup",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          nombre:"Ketchup Mediano",
+          descripcion:"230cm",
+          precio:7,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         },
         {
-          nombre: "Mostaza",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          nombre:"Ketchup Grande",
+          descripcion:"1 Kilo",
+          precio:28,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        }
+      ],
+      mayonesa: [
+        {
+          nombre:"Mayonesa Pequeña",
+          descripcion:"50cm",
+          precio:2,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mayonesa Mediana",
+          descripcion:"230cm",
+          precio:7,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mayonesa Grande",
+          descripcion:"1 Kilo",
+          precio:28,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        }
+      ],
+      mostaza: [
+        {
+          nombre:"Mostaza Pequeña",
+          descripcion:"50cm",
+          precio:2,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mostaza Mediana", 
+          descripcion:"230cm",
+          precio:7,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+        },
+        {
+          nombre:"Mostaza Grande",
+          descripcion:"1 Kilo",
+          precio:28,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ],
       otros: [
         {
-          nombre: "Extracto de Tomato",
-          descripcion: "Cant",
-          precio: 0,
-          portada: ""
+          nombre:"Extracto de Tomato Cajamar",
+          descripcion:"Unidad",
+          precio:5,
+          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
         }
       ]
     };
