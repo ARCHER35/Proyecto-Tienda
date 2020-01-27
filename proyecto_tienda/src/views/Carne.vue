@@ -1,10 +1,14 @@
 <template>
-  <div>
+  <div class="bg-light">
     <h1>Carne</h1>
     <div class="container efectos">
       <div class="row">
         <div v-for="(c,index) of carnes" :key="index" class="col-md-4 col-sm-6 col-xs-12">
-          <b-card no-body class="btn-outline-primary overflow-hidden text-dark" style="max-width: 540px;">
+          <b-card
+            no-body
+            class="btn-outline-primary overflow-hidden text-dark"
+            style="max-width: 540px;"
+          >
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img v-bind:src="c.imagen" class="rounded-circle"></b-card-img>
@@ -35,7 +39,7 @@
                 <b-card-body v-bind:title="o.titulo">
                   <b-card-text>{{o.descripcion}}</b-card-text>
                   <p>Bs{{o.precio}}</p>
-              <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>

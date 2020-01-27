@@ -18,7 +18,7 @@
               <b-dropdown-item to="/pollo">Pollo</b-dropdown-item>
               <b-dropdown-item to="/huevo">Huevo</b-dropdown-item>
             </b-nav-item-dropdown>
-            <b-nav-item-dropdown text="Abarrotes">
+            <b-nav-item-dropdown text="Abarrotes" class="btn-outline-primary">
               <b-dropdown-item to="/arroz">Arroz</b-dropdown-item>
               <b-dropdown-item to="/azucar">Azucar</b-dropdown-item>
               <b-dropdown-item to="/fideo">Fideos</b-dropdown-item>
