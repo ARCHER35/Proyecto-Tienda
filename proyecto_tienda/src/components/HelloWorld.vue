@@ -48,7 +48,7 @@
     <div class="container">
       <b-card
         no-body
-        class="overflow-hidden bg-warning"
+        class="overflow-hidden"
         style="max-width: 540px; padding:15px margin-bottom: 20px;"
         v-for="(car,index) of carne"
         :Key="index"
