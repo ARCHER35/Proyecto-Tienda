@@ -4,10 +4,10 @@
     <div class="container">
       <div class="row">
         <div v-for="(h,index) of huevo" :key="index" class="col-md-4">
-          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="h.imagen" class="rounded-0"></b-card-img>
+                <b-card-img v-bind:src="h.imagen" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="h.titulo">
@@ -29,12 +29,11 @@ export default {
       huevo: [
         {
           id: 1,
-        titulo: "Maple de Huevo",
-        descripcion:
-          "Rolon",
-        precio: 20,
-        imagen:
-          "http://www.avicolacarger.com.bo/avicolacarger/wp-content/uploads/2015/03/eggs-3.png"
+          titulo: "Maple de Huevo",
+          descripcion: "Rolon",
+          precio: 20,
+          imagen:
+            "http://www.avicolacarger.com.bo/avicolacarger/wp-content/uploads/2015/03/eggs-3.png"
         },
         {
           id: 2,
@@ -59,12 +58,11 @@ export default {
 </script>
 
 <style>
-.contenedor {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-.card {
-  padding: 20px;
-  margin-bottom: 20px;
+.efc:hover {
+  background: #a0e4ff;
+  color: #1d272b;
+  transition: all 0.55s;
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 </style>

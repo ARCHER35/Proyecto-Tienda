@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="10000">
@@ -46,151 +46,123 @@
     </div>
     <h1>Carnes</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden bg-warning"
-        style="max-width: 540px; padding:15px margin-bottom: 20px;"
-        v-for="(car,index) of carne"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img
-              v-bind:src="car.portada"
-              style="padding:15px"
-              class="rounded-0"
-            ></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{car.nombre}}</h3>
-              </b-card-text>
-              <p>{{car.descripcion}}</p>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(c,index) of carne" :key="index" class="col-md-6 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="c.portada" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="c.nombre">
+                  <b-card-text>{{c.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
     <h1>Pollo</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px; padding:15px; margin-bottom: 20px"
-        v-for="(pol,index) of pollo"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="pol.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{pol.nombre}}</h3>
-              </b-card-text>
-              <p>{{pol.descripcion}}</p>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(p,index) of pollo" :key="index" class="col-md-6 col-xs-12">
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="p.portada" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="p.nombre">
+                  <b-card-text>{{p.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
     <h1>Avarrotes</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px; padding:15px; margin-bottom: 20px"
-        v-for="(ava,index) of abarrotes"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="ava.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{ava.nombre}}</h3>
-              </b-card-text>
-              <p>{{ava.descripcion}}</p>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(a,index) of abarrotes" :key="index" class="col-md-4 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="a.portada" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="a.nombre">
+                  <b-card-text>{{a.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
     <h1>Embutidos</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(embu,index) of embutidos"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="embu.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{embu.nombre}}</h3>
-              </b-card-text>
-              <p>{{embu.descripcion}}</p>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(e,index) of embutidos" :key="index" class="col-md-6 col-xs-12">
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="e.portada" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="e.nombre">
+                  <b-card-text>{{e.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
     <h1>Condimentos</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(cond,index) of condimentos"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="cond.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{cond.nombre}}</h3>
-              </b-card-text>
-              <p>{{cond.descripcion}}</p>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(con,index) of condimentos" :key="index" class="col-md-6 col-xs-12">
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="con.portada" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="con.nombre">
+                  <b-card-text>{{con.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
-    <h1 align=center>Lacteos</h1>
+    <h1>Lacteos</h1>
     <div class="container">
-      <b-card
-        no-body
-        class="overflow-hidden"
-        style="max-width: 500px; padding:15px; margin-bottom: 20px"
-        v-for="(lac,index) of lacteos"
-        :Key="index"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="lac.portada" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body>
-              <b-card-text>
-                <h3>{{lac.nombre}}</h3>
-              </b-card-text>
-              <p>{{lac.descripcion}}</p>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+      <div class="row">
+        <div v-for="(l,index) of lacteos" :key="index" class="col-md-6 col-xs-12">
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="l.portada" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="l.nombre">
+                  <b-card-text>{{l.descripcion}}</b-card-text>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -300,6 +272,12 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.efc:hover {
+  background: #a0e4ff;
+  color: #1d272b;
+  transition: all 0.55s;
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
 </style>

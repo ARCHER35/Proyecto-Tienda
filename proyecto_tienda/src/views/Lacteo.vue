@@ -1,50 +1,48 @@
 <template>
   <div>
     <h1>Leche Pil</h1>
-    <div class="contenedor container">
-      <b-card
-        v-for="(l,index) of leche"
-        :key="index"
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px;"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="l.imagen" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body v-bind:title="l.titulo">
-              <b-card-text>{{l.descripcion}}</b-card-text>
-              <h3>{{l.precio}} Bs</h3>
-              <button class="btn-primary">Agregar al Carrito</button>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+    <div class="container">
+      <div class="row">
+        <div v-for="(l,index) of leche" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="l.imagen" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="l.titulo">
+                  <b-card-text>{{l.descripcion}}</b-card-text>
+                  <p>Bs{{l.precio}}</p>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
     <h1>Queso</h1>
-    <div class="contetri container">
-      <b-card
-        v-for="(q,index) of queso"
-        :key="index"
-        no-body
-        class="overflow-hidden"
-        style="max-width: 540px;"
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img v-bind:src="q.imagen" class="rounded-0"></b-card-img>
-          </b-col>
-          <b-col md="6">
-            <b-card-body v-bind:title="q.titulo">
-              <b-card-text>{{q.descripcion}}</b-card-text>
-              <h3>{{q.precio}} Bs</h3>
-              <button class="btn-primary">Agregar al Carrito</button>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
+    <div class="container">
+      <div class="row">
+        <div v-for="(q,index) of queso" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="q.imagen" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="q.titulo">
+                  <b-card-text>{{q.descripcion}}</b-card-text>
+                  <p>Bs{{q.precio}}</p>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -61,7 +59,7 @@ export default {
             "Es un producto elaborado con leche fresca controlada y seleccionada, la cual es higienizada, homogenizada, estandarizada y ultrapasteurizada. ... Es un producto UHT de mediana vida.",
           precio: 5,
           imagen:
-            "https://pilandina.com.bo/wp-content/uploads/2019/07/leche-fresca-2.png"
+            "https://pilandina.com.bo/wp-content/uploads/2019/06/Leche-Fresca-Natural-sachet-946-ml-600x600.jpg"
         },
         {
           id: 2,
