@@ -7,11 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-<<<<<<< HEAD
-                <b-card-img v-bind:src="p.portada" height="250px" style="padding:10px" class="rounded-0"></b-card-img>
-=======
                 <b-card-img v-bind:src="p.imagen" class="rounded-circle"></b-card-img>
->>>>>>> 9bb528de4cc4a241433827bf2676c72be52bd926
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="p.titulo">

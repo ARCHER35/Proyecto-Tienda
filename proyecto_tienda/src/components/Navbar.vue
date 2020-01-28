@@ -35,7 +35,7 @@
         </b-collapse>
         <a href="#" class="btn btn-danger" align="center"><i class="fas fa-cart-arrow-down"></i></a>
         <h1>|</h1>
-        <h3 class="text-danger">Frial Cris</h3>
+        <h3 class="text-primary">Frial Cris</h3>
       </b-navbar>
     </div>
     <router-view />
