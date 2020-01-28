@@ -4,10 +4,10 @@
     <div class="container">
       <div class="row">
         <div v-for="(f,index) of famosa" :key="index" class="col-md-6">
-          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="f.portada" height="250px" class="rounded-0"></b-card-img>
+                <b-card-img v-bind:src="f.portada" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="f.nombre">
@@ -24,10 +24,10 @@
     <div class="container">
       <div class="row">
         <div v-for="(l,index) of lazzaroni" :key="index" class="col-md-6">
-          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="l.portada" height="250px" class="rounded-0"></b-card-img>
+                <b-card-img v-bind:src="l.portada" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre">
@@ -130,5 +130,12 @@ export default {
 <style>
 .card {
   margin-bottom: 20px;
+}
+.efc:hover {
+  background: #a0e4ff;
+  color: #1d272b;
+  transition: all 0.55s;
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 </style>

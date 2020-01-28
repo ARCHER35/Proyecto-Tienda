@@ -43,8 +43,7 @@
 </template>
 
 <script>
-export default {};
-</script>
 
+</script>
 <style>
 </style>
