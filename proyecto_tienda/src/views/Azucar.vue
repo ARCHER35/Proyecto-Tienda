@@ -34,7 +34,14 @@ export default {
           descripcion: "Kilo",
           precio: 14,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "http://2.bp.blogspot.com/-r0fOHp10020/TWBv0IXjC8I/AAAAAAAAASQ/LIEYYl9QV-w/s320/azucarbelgica.jpg"
+        },
+        {
+          nombre: "Azucar Belgica",
+          descripcion: "Kilo",
+          precio: 14,
+          portada:
+            "https://elchacoinforma.com/wp-content/uploads/2018/10/AZ.jpg"
         }
       ],
     }

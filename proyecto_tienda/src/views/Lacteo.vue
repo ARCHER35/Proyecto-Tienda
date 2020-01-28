@@ -78,7 +78,7 @@ export default {
           descripcion: "Kilo",
           precio: 28,
           imagen:
-            "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_9aa26c32-0dac-4c00-bda5-93105aaf4aae.jpg"
+            "https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.0-9/26439_120484354628492_5366959_n.jpg?_nc_cat=100&_nc_ohc=IjaBQ8EV02sAX8PBygY&_nc_ht=scontent.fvvi1-2.fna&oh=f90dd11be18641c719ed954cdb9d7b76&oe=5EA459CD"
         },
         {
           id: 2,

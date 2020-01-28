@@ -6,12 +6,13 @@
         <div v-for="(h,index) of huevo" :key="index" class="col-md-4">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
-              <b-col md="6">
+              <b-col md="7">
                 <b-card-img v-bind:src="h.imagen" class="rounded-circle"></b-card-img>
               </b-col>
-              <b-col md="6">
+              <b-col md="5">
                 <b-card-body v-bind:title="h.titulo">
                   <b-card-text>{{h.descripcion}}</b-card-text>
+                  <a href="#" class="btn btn-primary">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>

@@ -49,22 +49,20 @@
 
 <script>
 export default {
-  data() {
+   data() {
     return {
       pollo: [
         {
           nombre: "Pollos Enteros",
           descripcion: "kilo",
           precio: 15,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada:"https://i1.wp.com/lopezdoriga.com/wp-content/uploads/2018/10/pollo-crudo.jpg?resize=980%2C550&ssl=1"
         },
         {
           nombre: "Tipos de Pollos",
           descripcion: "Kilo",
           precio: 15,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada:"https://laverdadnoticias.com/__export/1559826653244/sites/laverdad/img/2019/06/06/nota_1.jpg_1834093470.jpg"
         }
       ],
       pollo2: [
@@ -72,37 +70,38 @@ export default {
           nombre: "Alitas",
           descripcion: "kilo",
           precio: 18,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "https://st.depositphotos.com/1004373/2648/i/950/depositphotos_26488953-stock-photo-raw-chicken-wings.jpg"
         },
         {
           nombre: "Piernas",
           descripcion: "kilo",
           precio: 18,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "https://image.freepik.com/foto-gratis/partes-pollo-crudo-diferentes-ingredientes_23-2148189854.jpg"
         },
         {
           nombre: "Pecho",
           descripcion: "kilo",
           precio: 18,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
-        },
-        {
-          nombre: "Menudencia",
-          descripcion: "kilo",
-          precio: 7,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "https://mejorconsalud.com/wp-content/uploads/2018/07/pechugas-pollo-500x334.jpg"
         },
         {
           nombre: "Carne Molida de Pollo",
           descripcion: "kilo",
           precio: 22,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
-        }
+          portada: "https://marcianosmx.com/wp-content/uploads/2011/08/4e075a8bb93795700700000a_ground-turkey-CORT.jpg"
+        },
+        {
+          nombre: "Filete de Pollo",
+          descripcion: "kilo",
+          precio: 20,
+          portada: "https://laverdadnoticias.com/export/sites/laverdad/img/2019/06/06/nota_01.jpg_2073374873.jpg"
+        },
+        {
+          nombre: "Menudencia",
+          descripcion: "kilo",
+          precio: 7,
+          portada: "https://www.polloandino.com/uploads/productos/5c58ac0993b4a755504949.png"
+        },
       ]
     };
   }

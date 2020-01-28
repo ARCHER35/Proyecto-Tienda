@@ -98,7 +98,7 @@ export default {
           descripcion: "Kilo",
           precio: 45,
           imagen:
-            "https://static3.eldiariomontanes.es/www/pre2017/multimedia/noticias/201609/11/media/cortadas/webternera-k61C--575x493@Diario%20Montanes.jpg"
+            "https://okdiario.com/img/recetas/2017/02/28/lomo-cerdo.jpg"
         },
         {
           id: 7,

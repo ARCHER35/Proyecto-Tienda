@@ -7,14 +7,13 @@
           <b-card no-body class="overflow-hidden" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+                <b-card-img v-bind:src="f.portada" style="padding:10px" class="rounded-0"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body title="Horizontal Card">
-                  <b-card-text>
-                    {{f.descripcion}}
-                  </b-card-text>
                 </b-card-body>
+                <b-card-text>{{f.descripcion}}</b-card-text>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>
@@ -26,14 +25,13 @@
       <b-card no-body class="overflow-hidden" style="max-width: 540px;">
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+            <b-card-img v-bind:src="a.portada" style="padding:10px" class="rounded-0"></b-card-img>
           </b-col>
           <b-col md="6">
             <b-card-body v-bind:title="a.nombre">
-              <b-card-text>
-                {{a.descripcion}}
-              </b-card-text>
             </b-card-body>
+                <b-card-text>{{a.descripcion}}</b-card-text>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>
           </b-col>
         </b-row>
       </b-card>
@@ -50,13 +48,13 @@ export default {
           nombre: "Aceite Fino",
           descripcion: "900 ml",
           precio: 15,
-          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "https://www.ketal.com.bo/18211-home_default/aceite-fino-vegetal-girasol-900ml.jpg"
         },
         {
           nombre: "Aceite Fino 2",
-          descripcion: "Ltrs",
-          precio: 0,
-          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          descripcion: "4.5 ltrs",
+          precio: 56,
+          portada: "https://www.ketal.com.bo/18214-home_default/aceite-fino-vegetal-c-girasol-45lt.jpg"
         }
       ],
       agranel: [
@@ -64,7 +62,7 @@ export default {
           nombre: "Aceite Agranel",
           descripcion: "Litro",
           precio: 9,
-          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "https://cdn.bolivia.com/sdi/2015/11/10/9c3ec748fa8346d7ba1ee2df595f00d8.jpg"
         }
       ]
     };
