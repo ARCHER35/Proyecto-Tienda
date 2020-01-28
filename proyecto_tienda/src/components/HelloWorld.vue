@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light">
+  <div>
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="10000">
@@ -45,16 +45,16 @@
       </a>
     </div>
     <h1>Carnes</h1>
-    <div class="container efectos">
+    <div class="container">
       <div class="row">
         <div v-for="(c,index) of carne" :key="index" class="col-md-6 col-xs-12">
-          <b-card no-body class="btn-outline-primary overflow-hidden" style="max-width: 540px;">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img v-bind:src="c.portada" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body class="text-dark" v-bind:title="c.nombre">
+                <b-card-body v-bind:title="c.nombre">
                   <b-card-text>{{c.descripcion}}</b-card-text>
                 </b-card-body>
               </b-col>
@@ -65,14 +65,10 @@
       </div>
     </div>
     <h1>Pollo</h1>
-    <div class="container efectos">
+    <div class="container">
       <div class="row">
         <div v-for="(p,index) of pollo" :key="index" class="col-md-6 col-xs-12">
-          <b-card
-            no-body
-            class="btn-outline-primary overflow-hidden text-dark"
-            style="max-width: 540px;"
-          >
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img v-bind:src="p.portada" class="rounded-circle"></b-card-img>
@@ -89,14 +85,10 @@
       </div>
     </div>
     <h1>Avarrotes</h1>
-    <div class="container efectos">
+    <div class="container">
       <div class="row">
         <div v-for="(a,index) of abarrotes" :key="index" class="col-md-4 col-xs-12">
-          <b-card
-            no-body
-            class="btn-outline-primary overflow-hidden text-dark"
-            style="max-width: 540px;"
-          >
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img v-bind:src="a.portada" class="rounded-circle"></b-card-img>
@@ -113,14 +105,10 @@
       </div>
     </div>
     <h1>Embutidos</h1>
-    <div class="container efectos">
+    <div class="container">
       <div class="row">
         <div v-for="(e,index) of embutidos" :key="index" class="col-md-6 col-xs-12">
-          <b-card
-            no-body
-            class="btn-outline-primary overflow-hidden text-dark"
-            style="max-width: 540px;"
-          >
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img v-bind:src="e.portada" class="rounded-circle"></b-card-img>
@@ -137,14 +125,10 @@
       </div>
     </div>
     <h1>Condimentos</h1>
-    <div class="container efectos">
+    <div class="container">
       <div class="row">
         <div v-for="(con,index) of condimentos" :key="index" class="col-md-6 col-xs-12">
-          <b-card
-            no-body
-            class="btn-outline-primary overflow-hidden text-dark"
-            style="max-width: 540px;"
-          >
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img v-bind:src="con.portada" class="rounded-circle"></b-card-img>
@@ -161,14 +145,10 @@
       </div>
     </div>
     <h1>Lacteos</h1>
-    <div class="container efectos">
+    <div class="container">
       <div class="row">
         <div v-for="(l,index) of lacteos" :key="index" class="col-md-6 col-xs-12">
-          <b-card
-            no-body
-            class="btn-outline-primary overflow-hidden text-dark"
-            style="max-width: 540px;"
-          >
+          <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img v-bind:src="l.portada" class="rounded-circle"></b-card-img>
@@ -293,7 +273,9 @@ export default {
 </script>
 
 <style>
-.efectos .card:hover {
+.efc:hover {
+  background: #a0e4ff;
+  color: #1d272b;
   transition: all 0.55s;
   transform: translateY(-15px);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);

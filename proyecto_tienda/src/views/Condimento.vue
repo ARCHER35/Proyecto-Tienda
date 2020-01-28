@@ -3,68 +3,88 @@
     <h1>Condimentos</h1>
     <div class="container">
       <div class="row">
-        <div class="col-md-4" v-for="(c,index) of condimentos" :key="index">
-          <b-card
-            v-bind:title="c.titulo"
-            v-bind:img-src="c.imagen"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="mb-2"
-          >
-            <b-card-text>{{c.descripcion}}</b-card-text>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+        <div v-for="(c,index) of condimentos" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="c.imagen" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="c.titulo">
+                  <b-card-text>{{c.descripcion}}</b-card-text>
+                  <p>Bs{{c.precio}}</p>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                </b-card-body>
+              </b-col>
+            </b-row>
           </b-card>
+          <br />
         </div>
       </div>
     </div>
-
     <h1>Aji</h1>
-    <div class="row">
-      <div class="col-md-6" v-for="(a,index) of aji" :key="index">
-        <b-card no-body class="overflow-hidden" style="max-width: 540px;">
-          <b-row no-gutters>
-            <b-col md="6">
-              <b-card-img v-bind:src="a.imagen" class="rounded-0"></b-card-img>
-            </b-col>
-            <b-col md="6">
-              <b-card-body v-bind:title="a.titulo">
-                <b-card-text>{{a.descripcion}}</b-card-text>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-              </b-card-body>
-            </b-col>
-          </b-row>
-        </b-card>
+    <div class="container">
+      <div class="row">
+        <div v-for="(a,index) of aji" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="a.imagen" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="a.titulo">
+                  <b-card-text>{{a.descripcion}}</b-card-text>
+                  <p>Bs{{a.precio}}</p>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
+        </div>
       </div>
     </div>
     <h1>Ajo</h1>
-    <div>
-      <div class="row row-cols-1 row-cols-md-2">
-        <div class="col mb-4" v-for="(j,index) of ajo" :key="index">
-          <div class="card my-3">
-            <img v-bind:src="j.imagen" class="card-img-top" height="300px" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">{{j.titulo}}</h5>
-              <p class="card-text">{{j.descripcion}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </div>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div v-for="(j,index) of ajo" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="j.imagen" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="j.titulo">
+                  <b-card-text>{{j.descripcion}}</b-card-text>
+                  <p>Bs{{j.precio}}</p>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
         </div>
       </div>
     </div>
     <h1>Canela</h1>
-    <div>
-      <div class="row row-cols-1 row-cols-md-2">
-        <div class="col mb-4" v-for="(l,index) of canela" :key="index">
-          <div class="card my-3">
-            <img v-bind:src="l.imagen" class="card-img-top" height="300px" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">{{l.titulo}}</h5>
-              <p class="card-text">{{l.descripcion}}</p>
-              <a href="#" class="btn btn-primary">Agregar al Carrito</a>
-            </div>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div v-for="(l,index) of canela" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="l.imagen" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="l.titulo">
+                  <b-card-text>{{l.descripcion}}</b-card-text>
+                  <p>Bs{{l.precio}}</p>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
         </div>
       </div>
     </div>
@@ -195,12 +215,4 @@ export default {
 </script>
 
 <style>
-.columtri {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-.contenedor {
-  display: grid;
-  grid-template-columns: auto auto;
-}
 </style>
