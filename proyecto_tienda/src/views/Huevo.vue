@@ -12,6 +12,7 @@
               <b-col md="5">
                 <b-card-body v-bind:title="h.titulo">
                   <b-card-text>{{h.descripcion}}</b-card-text>
+                  <h3>Bs {{h.precio}}</h3>
                   <a href="#" class="btn btn-primary">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>

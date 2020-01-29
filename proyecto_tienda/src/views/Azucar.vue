@@ -7,12 +7,12 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="a.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="a.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
                   <b-card-text>{{a.descripcion}}</b-card-text>
-                  <p>Bs{{a.precio}}</p>
+                  <h3>Bs{{a.precio}}</h3>
                   <a href="#" class="btn btn-primary">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>

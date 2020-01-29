@@ -7,12 +7,12 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p.imagen" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="p.portada" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="p.titulo">
+                <b-card-body v-bind:title="p.nombre">
                   <b-card-text>{{p.descripcion}}</b-card-text>
-                  <p>Bs{{p.precio}}</p>
+                  <h3>Bs{{p.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -29,12 +29,12 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p2.imagen" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="p2.portada" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="p2.titulo">
+                <b-card-body v-bind:title="p2.nombre">
                   <b-card-text>{{p2.descripcion}}</b-card-text>
-                  <p>Bs{{p2.precio}}</p>
+                  <h3>Bs{{p2.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>

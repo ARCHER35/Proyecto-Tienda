@@ -12,7 +12,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="l.titulo">
                   <b-card-text>{{l.descripcion}}</b-card-text>
-                  <p>Bs{{l.precio}}</p>
+                  <h3>Bs{{l.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -34,7 +34,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="q.titulo">
                   <b-card-text>{{q.descripcion}}</b-card-text>
-                  <p>Bs{{q.precio}}</p>
+                  <h3>Bs{{q.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -56,8 +56,8 @@ export default {
           id: 1,
           titulo: "Leche Normal",
           descripcion:
-            "Es un producto elaborado con leche fresca controlada y seleccionada, la cual es higienizada, homogenizada, estandarizada y ultrapasteurizada. ... Es un producto UHT de mediana vida.",
-          precio: 5,
+            "Unidad",
+          precio: 6,
           imagen:
             "https://pilandina.com.bo/wp-content/uploads/2019/06/Leche-Fresca-Natural-sachet-946-ml-600x600.jpg"
         },
@@ -65,8 +65,8 @@ export default {
           id: 2,
           titulo: "Leche Deslactosada",
           descripcion:
-            "es “deslactosada” sobre la base de un proceso enzimático adecuadamente controlado, es un producto homogeneizado y ultrapasteurizado.",
-          precio: 0,
+            "Unidad",
+          precio: 7,
           imagen:
             "https://pilandina.com.bo/wp-content/uploads/2019/06/lechedeslactosada-600x600.png"
         }
@@ -103,12 +103,4 @@ export default {
 </script>
 
 <style>
-.contenedor {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.contetri {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
 </style>
