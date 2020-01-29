@@ -9,6 +9,7 @@
               <b-col md="6">
                 <b-card-img
                   src="https://previews.123rf.com/images/tigatelu/tigatelu1312/tigatelu131200178/24469361-tel%C3%A9fono-de-llamada-inteligente-de-dibujos-animados.jpg"
+                  style="padding:10px"
                   class="rounded-0"
                   height="250px"
                 ></b-card-img>

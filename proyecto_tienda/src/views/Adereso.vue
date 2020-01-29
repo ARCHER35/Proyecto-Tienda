@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="mayo.portada" height="230px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="mayo.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="mayo.nombre"></b-card-body>
@@ -27,7 +27,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="a.portada" height="230px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="a.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre"></b-card-body>
@@ -47,7 +47,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="moz.portada" height="230px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="moz.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="moz.nombre"></b-card-body>
@@ -67,7 +67,7 @@
         <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
           <b-row no-gutters>
             <b-col md="6">
-              <b-card-img v-bind:src="o.portada" height="230px" class="rounded-circle"></b-card-img>
+              <b-card-img v-bind:src="o.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
             </b-col>
             <b-col md="6">
               <b-card-body v-bind:title="o.nombre"></b-card-body>

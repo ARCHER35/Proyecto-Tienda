@@ -1,16 +1,16 @@
 <template>
   <footer class="bg-dark">
-    <div class="container-fluid text-center text-md-left">
+    <div class="container-fluid text-center text-md-left col-sm">
       <div class="row text-light" style="padding:15px">
         <div class="col-md-4 mt-md-0 mt-3">
           <b-img :src="require('../assets/logo2.png')" height="100px" width="300px"></b-img>
           <p>Pedidos por Mayor y Menor Horarios de Atencion 6:00 am a 17:00 pm</p>
         </div>
         <hr class="clearfix w-100 d-md-none pb-3" />
-        <div class="col-4">
+        <div class="col-md-4">
           <h5 class="text-uppercase">Frial Cris</h5>
           <ul class="list-unstyled">
-            <li>
+            <li class="col">
               <a href="#!" class="text-light">Direccion: Capitan Victor Ustaris Km 4 1/2</a>
             </li>
           </ul>
