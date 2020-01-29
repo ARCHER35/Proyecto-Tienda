@@ -3,7 +3,7 @@
     <div class="container-fluid text-center text-md-left">
       <div class="row text-light" style="padding:15px">
         <div class="col-md-4 mt-md-0 mt-3">
-          <img class="col-sm text-monospace" src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.15752-9/82224605_612882182613239_6994560468685684736_n.png?_nc_cat=102&_nc_oc=AQk7xVm6wA7uhWDnTkc2CZmP3sgG1ZW9gPkAB4DDq4NuE99Ss3EKN3vYG2lxBBxcfJA&_nc_ht=scontent.fvvi1-2.fna&oh=09c32db08f2f613bdd89f82c704c05b6&oe=5EA0D4A8" height="100px" width="300px"/>
+          <b-img :src="require('../assets/logo2.png')" height="100px" width="300px"></b-img>
           <p>Pedidos por Mayor y Menor Horarios de Atencion 6:00 am a 17:00 pm</p>
         </div>
         <hr class="clearfix w-100 d-md-none pb-3" />
@@ -19,24 +19,14 @@
           <h5 class="text-uppercase">Contactanos Por</h5>
           <ul class="list-unstyled">
             <li>
-              <img
-                class="img"
-                src="https://cdn.icon-icons.com/icons2/306/PNG/512/Facebook-Icon_34072.png"
-                height="50px"
-              />
+              <b-img :src="require('../assets/Facebook-Icon_34072.png')" height="50px" width="50px"></b-img>
               <a
                 href="https://www.facebook.com/cristina.zenteno.1675?epa=SEARCH_BOX"
                 class="text-light"
-              >Facebook</a>
+              >Facebook <i class="fas fa-cart-arrow-down"></i></a>
             </li>
-            |
             <li>
-              <img
-                class="img"
-                src="https://cdn.icon-icons.com/icons2/306/PNG/512/Whatsapp-Icon_33936.png"
-                height="50px"
-                alt
-              />
+              <b-img :src="require('../assets/Whatsapp-Icon_33936.png')" height="50px" width="50px"></b-img>
               <a class="text-light">
                 72783477
                 <i class="fas fa-cart-arrow-down"></i>

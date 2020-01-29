@@ -2,12 +2,8 @@
   <div>
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info">
-        <img
-          src="https://edu.glogster.com/proxy?url=http%3A%2F%2Fwww.vender-online.org%2Fblog%2Fwp-content%2Fuploads%2F2014%2F02%2Ftienda.jpg"
-          alt
-          height="70px"
-          width="100px"
-        />
+        
+        <b-img :src="require('../assets/logo-toro.png')" height="100px" width="150px"></b-img>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
