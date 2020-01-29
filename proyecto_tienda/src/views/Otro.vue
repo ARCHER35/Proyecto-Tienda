@@ -12,7 +12,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="s.nombre">
                   <b-card-text>{{s.descripcion}}</b-card-text>
-                  <p>Bs{{s.precio}}</p>
+                  <h3>Bs{{s.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -34,7 +34,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre">
                   <b-card-text>{{l.descripcion}}</b-card-text>
-                  <p>Bs{{l.precio}}</p>
+                  <h3>Bs{{l.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -56,7 +56,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="v.nombre">
                   <b-card-text>{{v.descripcion}}</b-card-text>
-                  <p>Bs{{v.precio}}</p>
+                  <h3>Bs{{v.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -78,7 +78,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
                   <b-card-text>{{c.descripcion}}</b-card-text>
-                  <p>Bs{{c.precio}}</p>
+                  <h3>Bs{{c.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -100,7 +100,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="s.nombre">
                   <b-card-text>{{s.descripcion}}</b-card-text>
-                  <p>Bs{{s.precio}}</p>
+                  <h3>Bs{{s.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>

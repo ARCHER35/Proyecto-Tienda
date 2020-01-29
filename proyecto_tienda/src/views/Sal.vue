@@ -3,16 +3,22 @@
     <h1>Sal</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(s,index) of sal" :key="index" class="col-md-4">
-          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+        <div v-for="(s,index) of sal" :key="index" class="col-md-6">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="s.portada" style="padding:10px" height="210px" class="rounded-0"></b-card-img>
+                <b-card-img
+                  v-bind:src="s.portada"
+                  style="padding:10px"
+                  height="210px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="s.nombre">
                   <b-card-text>{{s.descripcion}}</b-card-text>
-                  <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                  <h3>Bs{{s.precio}}</h3>
+                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -46,8 +52,7 @@ export default {
           nombre: "Sal Parrillera El Torrito",
           descripcion: "Unidad",
           precio: 3,
-          portada:
-            "https://promabol.com/wp-content/uploads/2018/09/sal2.jpg"
+          portada: "https://promabol.com/wp-content/uploads/2018/09/sal2.jpg"
         },
         {
           nombre: "Sal Parrillera Alnat",
@@ -56,7 +61,7 @@ export default {
           portada:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlmahRqLepq6sbvZVGrt1DfdVrVEzyEugzOEDkIiYKczJNeZ5m_A&s"
         }
-      ],
+      ]
     };
   }
 };

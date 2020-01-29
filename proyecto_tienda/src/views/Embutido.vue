@@ -12,7 +12,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
                   <b-card-text>{{c.descripcion}}</b-card-text>
-                  <p>Bs{{c.precio}}</p>
+                  <h3>Bs{{c.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -34,7 +34,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="m.nombre">
                   <b-card-text>{{m.descripcion}}</b-card-text>
-                  <p>Bs{{m.precio}}</p>
+                  <h3>Bs{{m.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
@@ -56,7 +56,7 @@
               <b-col md="6">
                 <b-card-body v-bind:title="p.nombre">
                   <b-card-text>{{p.descripcion}}</b-card-text>
-                  <p>Bs{{p.precio}}</p>
+                  <h3>Bs{{p.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
