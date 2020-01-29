@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="f.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="f.portada" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="f.nombre"></b-card-body>
@@ -27,7 +27,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="l.portada" height="250px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="l.portada" height="250px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre"></b-card-body>

@@ -87,6 +87,11 @@ const routes = [
     path: '/contacto',
     name: 'contacto',
     component: () => import(/** */ '@/views/Contacto.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/** */ '@/views/Login.vue')
   }
 ]
 

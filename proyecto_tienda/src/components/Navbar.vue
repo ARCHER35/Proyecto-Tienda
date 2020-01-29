@@ -3,7 +3,7 @@
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info">
         
-        <b-img :src="require('../assets/logo-toro.png')" height="100px" width="150px"></b-img>
+        <b-img :src="require('../assets/logo-toro.png')" height="80px" width="150px"></b-img>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
@@ -29,9 +29,11 @@
             <b-nav-item to="/contacto">Contactos</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
-        <a href="#" class="btn btn-danger" align="center"><i class="fas fa-cart-arrow-down"></i></a>
+        <a href="#" class="btn btn-dark" align="center"><i class="fas fa-cart-arrow-down"></i></a>
         <h1>|</h1>
-        <h3 class="pedido">Pedidos</h3>
+        <b-navbar-nav>
+          <b-nav-item to="/login"><b-button pill variant="danger">Iniciar Sesion</b-button></b-nav-item>
+        </b-navbar-nav>
       </b-navbar>
     </div>
     <router-view />
@@ -42,7 +44,7 @@
 
 </script>
 <style>
-.pedido text {
+b {
   background: black;
 }
 </style>
