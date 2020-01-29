@@ -31,7 +31,7 @@
         </b-collapse>
         <a href="#" class="btn btn-danger" align="center"><i class="fas fa-cart-arrow-down"></i></a>
         <h1>|</h1>
-        <h3 class="text-primary">Frial Cris</h3>
+        <h3 class="pedido">Pedidos</h3>
       </b-navbar>
     </div>
     <router-view />
@@ -42,4 +42,7 @@
 
 </script>
 <style>
+.pedido text {
+  background: black;
+}
 </style>
