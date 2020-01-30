@@ -35,16 +35,17 @@
           <b-nav-item to="/login"><b-button pill variant="danger">Iniciar Sesion</b-button></b-nav-item>
         </b-navbar-nav>
       </b-navbar>
+      <div></div>
     </div>
     <router-view />
   </div>
 </template>
 
 <script>
-
 </script>
 <style>
 b {
   background: black;
 }
+
 </style>
