@@ -19,7 +19,7 @@
                   </b-button>
                    <div v-bind="c.ventana" v-if="c.ventana">
                       <b-form-select v-model="selected" :options="c.cant"></b-form-select>
-                      <a href="#" class="btn btn-dark" @click.prevent="c.ventana=false">enviar</a>
+                      <a href="#" class="banner btn btn-dark" @click.prevent="c.ventana=false">enviar</a>
                    </div>
 
                 </b-card-body>
@@ -59,9 +59,8 @@
         </div>
       </div>
     </div>
-  </div>
+   </div>
 </template>
-
 <script>
 export default {
   data() {
