@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="mayo.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/aderezos/'+mayo.portada)" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="mayo.nombre"></b-card-body>
@@ -27,7 +27,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="a.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/aderezos/'+a.portada)" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre"></b-card-body>
@@ -47,7 +47,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="moz.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/aderezos/'+moz.portada)" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="moz.nombre"></b-card-body>
@@ -62,23 +62,25 @@
     </div>
 
     <h1>Otros</h1>
-    <div class="container">
-      <div v-for="(o,index) of otros" :key="index">
-        <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
-          <b-row no-gutters>
-            <b-col md="6">
-              <b-card-img v-bind:src="o.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
-            </b-col>
-            <b-col md="6">
-              <b-card-body v-bind:title="o.nombre"></b-card-body>
-              <b-card-text>{{o.descripcion}}</b-card-text>
-              <h3>Bs{{o.precio}}</h3>
-              <a href="#" class="btn btn-dark">Agregar al Carrito</a>
-            </b-col>
-          </b-row>
-        </b-card>
+    <center>
+      <div class="container">
+        <div v-for="(o,index) of otros" :key="index">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="require('../assets/aderezos/'+o.portada)" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="o.nombre"></b-card-body>
+                <b-card-text>{{o.descripcion}}</b-card-text>
+                <h3>Bs{{o.precio}}</h3>
+                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+              </b-col>
+            </b-row>
+          </b-card>
+        </div>
       </div>
-    </div>
+    </center>
   </div>
 </template>
 
@@ -92,28 +94,28 @@ export default {
           descripcion: "50cm",
           precio: 2,
           portada:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYJZwM9kRhIQx73_zvNUcEeVDugseF-AE12HAAFlf6ROxiqg8Cng&s"
+            "ketchup1.jpg"
         },
         {
           nombre: "Ketchup Mediano",
           descripcion: "230cm",
           precio: 7,
           portada:
-            "https://www.ketal.com.bo/17883-large_default/ketchup-kris-200gr.jpg"
+            "ketchup2.jpg"
         },
         {
           nombre: "Ketchup 500gr",
           descripcion: "500gr",
           precio: 12,
           portada:
-            "https://www.ketal.com.bo/19775-large_default/ketchup-kris-500gr-doypack.jpg"
+            "ketchup3.jpg"
         },
         {
           nombre: "Ketchup Grande",
           descripcion: "1 Kilo",
           precio: 28,
           portada:
-            "https://www.ketal.com.bo/18220-home_default/aderezo-kris-doypack-1100cm.jpg"
+            "ketchup4.jpg"
         }
       ],
       mayonesa: [
@@ -121,28 +123,28 @@ export default {
           nombre: "Mayonesa Pequeña",
           descripcion: "50cm",
           precio: 2,
-          portada: "https://www.grupovenado.com/images/02.jpg"
+          portada: "mayo1.jpg"
         },
         {
           nombre: "Mayonesa Mediana",
           descripcion: "380cm",
           precio: 7,
           portada:
-            "https://www.midespensa.bo/wp-content/uploads/2019/06/MAYONESA-SACHET.png"
+            "mayo2.png"
         },
         {
           nombre: "Mayonesa 500gr",
           descripcion: "500 gr",
           precio: 12,
           portada:
-            "https://www.ketal.com.bo/18225-large_default/mayonesa-kris-doypack-500gr.jpg"
+            "mayo3.jpg"
         },
         {
           nombre: "Mayonesa Grande",
           descripcion: "1 Kilo",
           precio: 28,
           portada:
-            "https://www.ketal.com.bo/18224-large_default/mayonesa-kris-doypack-1000gr.jpg"
+            "mayo4.jpg"
         }
       ],
       mostaza: [
@@ -150,28 +152,28 @@ export default {
           nombre: "Mostaza Pequeña",
           descripcion: "50cm",
           precio: 2,
-          portada: "https://www.grupovenado.com/images/06.jpg"
+          portada: "mos1.jpg"
         },
         {
           nombre: "Mostaza Mediana",
           descripcion: "200cm",
           precio: 7,
           portada:
-            "https://www.midespensa.bo/wp-content/uploads/2019/06/MOSTAZA-SACHET.png"
+            "mos2.png"
         },
         {
           nombre: "Mostaza 500gr",
           descripcion: "500 gr",
           precio: 12,
           portada:
-            "https://www.ketal.com.bo/19776-home_default/mostaza-kris-doypack-500gr.jpg"
+            "mos3.jpg"
         },
         {
           nombre: "Mostaza Grande",
           descripcion: "1 Kilo",
           precio: 28,
           portada:
-            "https://www.ketal.com.bo/18226-home_default/mostaza-kris-doypack-1000gr.jpg"
+            "mos4.jpg"
         }
       ],
       otros: [
@@ -180,7 +182,7 @@ export default {
           descripcion: "Unidad",
           precio: 5,
           portada:
-            "https://www.midespensa.com.bo/wp-content/uploads/2019/06/EXTRACTO-DE-TOMATE.png"
+            "cajamar.png"
         }
       ]
     };

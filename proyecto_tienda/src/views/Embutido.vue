@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="c.portada" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/enbutidos/'+c.portada)" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
@@ -25,11 +25,11 @@
     <h1>Mortadela</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(m,index) of mortadela" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+        <div v-for="(m,index) of mortadela" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="m.portada" height="200px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/enbutidos/'+m.portada)" height="200px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="m.nombre">
@@ -51,7 +51,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p.portada" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/enbutidos/'+ p.portada)" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="p.nombre">
@@ -79,28 +79,28 @@ export default {
           descripcion: "Paquete",
           precio: 10,
           portada:
-            "http://sofia.com.bo/wp-content/uploads/2014/13/Salchicha-Viena-al-Vaciogrande.png"
+            "chori1.png"
         },
         {
           nombre: "Chorizo Sofia Agranel",
           descripcion: "Kilo",
           precio: 28,
           portada:
-            "http://sofia.com.bo/wp-content/uploads/2014/13/Salchicha-Viena-de-Pelar-a-Granelgrande.png"
+            "chori2.png"
         },
         {
           nombre: "Chorizo Agranel Viena",
           descripcion: "Kilo",
           precio: 32,
           portada:
-            "https://sofia.com.bo/wp-content/uploads/2014/13/Salchicha-Viena-a-Granelgrande.png"
+            "chori3.png"
         },
         {
           nombre: "Chorizo Parrillero",
           descripcion: "Kilo",
           precio: 36,
           portada:
-            "https://sofia.com.bo/wp-content/uploads/2014/13/Chorizo-Churrasquero-a-Granelgrande.png"
+            "chori4.png"
         }
       ],
       mortadela: [
@@ -109,28 +109,28 @@ export default {
           descripcion: "Paquete",
           precio: 8,
           portada:
-            "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-Jamonada-al-Vaciogrande.png"
+            "chori5.png"
         },
         {
           nombre: "Mortadela de Pollo al Vacío",
           descripcion: "Paquete",
           precio: 8,
           portada:
-            "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-de-Pollo-al-Vaciogrande.png"
+            "chori6.png"
         },
         {
           nombre: "Mortadela de Gallina en Barra",
           descripcion: "Kilo",
           precio: 30,
           portada:
-            "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-de-Gallina-en-Barra-500-grs.png"
+            "chori7.png"
         },
         {
           nombre: "Mortadela Jamonada en Barra",
           descripcion: "Kilo",
           precio: 30,
           portada:
-            "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-Jamonada-en-Barra-500-grs.png"
+            "chori8.png"
         }
       ],
       pasta: [
@@ -139,14 +139,14 @@ export default {
           descripcion: "200g",
           precio: 6,
           portada:
-            "https://sofia.com.bo/wp-content/uploads/2014/13/Pate-de-Higado-de-Pollo-de-100-grsgrande.png"
+            "chori9.png"
         },
         {
           nombre: "Pate de Cerdo",
           descripcion: "cant",
           precio: 6,
           portada:
-            "http://sofia.com.bo/wp-content/uploads/2014/13/Pate-de-Higado-de-Cerdo-de-200-grs..png"
+            "chori10.png"
         }
       ]
     };

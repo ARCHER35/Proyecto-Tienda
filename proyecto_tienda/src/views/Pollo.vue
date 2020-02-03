@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/pollo/'+p.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="p.nombre">
@@ -25,14 +25,14 @@
     <h1>Pollo Trozado</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(p2,index) of pollo2" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+        <div v-for="(p2,index) of pollo2" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p2.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/pollo/'+p2.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="p2.nombre">
+                <b-card-body class="col-sm" v-bind:title="p2.nombre">
                   <b-card-text>{{p2.descripcion}}</b-card-text>
                   <h3>Bs{{p2.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
@@ -56,13 +56,13 @@ export default {
           nombre: "Pollos Enteros",
           descripcion: "kilo",
           precio: 15,
-          portada:"https://i1.wp.com/lopezdoriga.com/wp-content/uploads/2018/10/pollo-crudo.jpg?resize=980%2C550&ssl=1"
+          portada:"pollo1.jpg"
         },
         {
-          nombre: "Tipos de Pollos",
+          nombre: "Pollo",
           descripcion: "Kilo",
           precio: 15,
-          portada:"https://laverdadnoticias.com/__export/1559826653244/sites/laverdad/img/2019/06/06/nota_1.jpg_1834093470.jpg"
+          portada:"pollo2.jpg"
         }
       ],
       pollo2: [
@@ -70,37 +70,37 @@ export default {
           nombre: "Alitas",
           descripcion: "kilo",
           precio: 18,
-          portada: "https://st.depositphotos.com/1004373/2648/i/950/depositphotos_26488953-stock-photo-raw-chicken-wings.jpg"
+          portada: "pollo3.jpg"
         },
         {
           nombre: "Piernas",
           descripcion: "kilo",
           precio: 18,
-          portada: "https://image.freepik.com/foto-gratis/partes-pollo-crudo-diferentes-ingredientes_23-2148189854.jpg"
+          portada: "pollo4.jpg"
         },
         {
           nombre: "Pecho",
           descripcion: "kilo",
           precio: 18,
-          portada: "https://mejorconsalud.com/wp-content/uploads/2018/07/pechugas-pollo-500x334.jpg"
+          portada: "pollo5.jpg"
         },
         {
           nombre: "Carne Molida de Pollo",
           descripcion: "kilo",
           precio: 22,
-          portada: "https://marcianosmx.com/wp-content/uploads/2011/08/4e075a8bb93795700700000a_ground-turkey-CORT.jpg"
+          portada: "pollo6.jpg"
         },
         {
           nombre: "Filete de Pollo",
           descripcion: "kilo",
           precio: 20,
-          portada: "https://laverdadnoticias.com/export/sites/laverdad/img/2019/06/06/nota_01.jpg_2073374873.jpg"
+          portada: "pollo7.jpg"
         },
         {
           nombre: "Menudencia",
           descripcion: "kilo",
           precio: 7,
-          portada: "https://www.polloandino.com/uploads/productos/5c58ac0993b4a755504949.png"
+          portada: "pollo8.png"
         },
       ]
     };

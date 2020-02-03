@@ -13,7 +13,7 @@
           <h5 class="text-uppercase">Frial Cris</h5>
           <ul class="list-unstyled">
             <li class="col">
-              <p class="text-light">Direccion: Capitan Victor Ustaris Km 4 1/2</p>
+            <p class="text-light"><img src="../assets/spacefm_103907.png" height="50px" alt="">Direccion: Capitan Victor Ustaris Km 4 1/2</p>
             </li>
           </ul>
           <div class="footer-copyright text-center py-3 text-light">
