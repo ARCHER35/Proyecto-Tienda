@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Leche Pil</h1>
+    <h1>Leche</h1>
     <div class="container">
       <div class="row">
         <div v-for="(l,index) of leche" :key="index" class="col-md-6 col-sm-6 col-xs-12">

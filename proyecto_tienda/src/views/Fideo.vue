@@ -94,8 +94,8 @@ export default {
       lazzaroni: [
         {
           nombre: "Espageti Lazzaroni",
-          descripcion: "3 Unidades",
-          precio: 10,
+          descripcion: "Unidad",
+          precio: 5,
           portada:
             "http://vcie.produccion.gob.bo/siexco/web/bundles/comunes/UieRuex/fotos/1023.a.2.jpg"
         },

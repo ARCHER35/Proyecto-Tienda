@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Aceites</h1>
+    <h1>Aceite Fino</h1>
     <div class="container">
       <div class="row">
         <div v-for="(f,index) of fino" :key="index" class="col-md-6">

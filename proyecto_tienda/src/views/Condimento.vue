@@ -100,7 +100,7 @@ export default {
           id: 1,
           titulo: "Aji Panquita",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 1.5,
           imagen:
             "https://www.tienda-peruana.com/1497-home_default/panquita-aji-panca-especial-sin-picante-sibarita-sabor-del-peru.jpg"
         },
@@ -108,7 +108,7 @@ export default {
           id: 2,
           titulo: "Aji Amarillo",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 1.5,
           imagen:
             "https://www.que-rico.nl/wp-content/uploads/2014/07/amarillin-31g.jpg"
         }
@@ -118,7 +118,7 @@ export default {
           id: 1,
           titulo: "Comino",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 0.50,
           imagen:
             "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Cumin_Seeds.jpg/251px-Cumin_Seeds.jpg"
         },
@@ -126,14 +126,14 @@ export default {
           id: 2,
           titulo: "Oregano",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 1,
           imagen: "http://supracorpsac.com/wp-content/uploads/oregano.jpg"
         },
         {
           id: 3,
           titulo: "Colorante",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 1,
           imagen:
             "https://crujienteyaldente.com/wp-content/uploads/2018/02/colorantes-naturales.jpg"
         },
@@ -141,7 +141,7 @@ export default {
           id: 4,
           titulo: "Pasas Uva",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 1,
           imagen:
             "https://unisima.com/wp-content/uploads/2014/07/uvas-pasas-15.jpg"
         },
@@ -149,7 +149,7 @@ export default {
           id: 5,
           titulo: "Anis",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 1,
           imagen:
             "http://www.elrincondelosaromas.com/image/cache/catalog/Infusiones/An%C3%ADs%20verde-500x500.jpg"
         },
@@ -157,7 +157,7 @@ export default {
           id: 6,
           titulo: "Hoja de Laurel",
           descripcion: "Unidad",
-          precio: 0,
+          precio: 1,
           imagen:
             "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Avrovii-list2.jpg/251px-Avrovii-list2.jpg"
         }
