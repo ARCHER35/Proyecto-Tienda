@@ -27,9 +27,10 @@
             <b-nav-item to="/condimento">Condimentos</b-nav-item>
             <b-nav-item to="/lacteo">Lacteos</b-nav-item>
             <b-nav-item to="/contacto">Contactos</b-nav-item>
+            <b-nav-item to="/carrito">Carrito</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
-        <a href="#" class="btn btn-dark" align="center"><i class="fas fa-cart-arrow-down"></i></a>
+        <a href="#" to="/carrito" class="nav-item btn btn-dark" align="center"><i class="fas fa-cart-arrow-down"></i></a>
         <h1>|</h1>
         <b-navbar-nav>
           <b-nav-item to="/login"><b-button pill variant="danger">Iniciar Sesion</b-button></b-nav-item>

@@ -13,7 +13,7 @@
                 <b-card-body v-bind:title="h.titulo">
                   <b-card-text>{{h.descripcion}}</b-card-text>
                   <h3>Bs {{h.precio}}</h3>
-                  <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                  <button class="btn btn-dark" @click="postCarrito(h)">Agregar</button>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -25,12 +25,25 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
+  methods: {
+    postCarrito(h) {
+      axios
+        .post("http://localhost:3000/motos/", h)
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => console.log(error));
+    }
+  },
   data() {
     return {
+      numero: 0,
+      carrito: [],
       huevo: [
         {
-          id: 1,
+          id_huevo:1,
           titulo: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 20,
@@ -38,7 +51,7 @@ export default {
             "http://www.avicolacarger.com.bo/avicolacarger/wp-content/uploads/2015/03/eggs-3.png"
         },
         {
-          id: 2,
+          id_huevo:2,
           titulo: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 18,
@@ -46,7 +59,7 @@ export default {
             "https://paralelo32.com.ar/wp-content/uploads/2017/12/huevos.jpg"
         },
         {
-          id: 3,
+          id_huevo:3,
           titulo: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 16,
