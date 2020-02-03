@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="f.portada" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/fideo/'+f.portada)" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="f.nombre"></b-card-body>
@@ -27,7 +27,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="l.portada" height="250px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/fideo/'+l.portada)" height="250px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre"></b-card-body>
@@ -52,43 +52,43 @@ export default {
           nombre: "Fideo Anillito",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://famosa.com.bo/web/wp-content/uploads/2015/05/111.jpg"
+          portada: "fide1.jpg"
         },
         {
           nombre: "Fideo Codo Mediano Rigatti",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://famosa.com.bo/web/wp-content/uploads/2015/05/122.jpg"
+          portada: "fide2.jpg"
         },
         {
           nombre: "Fideo Codo Grande Rigatti",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://famosa.com.bo/web/wp-content/uploads/2015/05/13.jpg"
+          portada: "fide3.jpg"
         },
         {
           nombre: "Fideo Tirabuzon",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://famosa.com.bo/web/wp-content/uploads/2015/05/151.jpg"
+          portada: "fide4.jpg"
         },
         {
           nombre: "Fideo Espagueti",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://famosa.com.bo/web/wp-content/uploads/2015/05/301.jpg"
+          portada: "fide5.jpg"
         },
         {
           nombre: "Fideo Corbatitas",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://famosa.com.bo/web/wp-content/uploads/2015/05/341.jpg"
+          portada: "fide6.jpg"
         },
         {
           nombre: "Fideo Letritas",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://famosa.com.bo/web/wp-content/uploads/2015/05/611.jpg"
+          portada: "fide7.jpg"
         }
       ],
       lazzaroni: [
@@ -97,27 +97,27 @@ export default {
           descripcion: "Unidad",
           precio: 5,
           portada:
-            "http://vcie.produccion.gob.bo/siexco/web/bundles/comunes/UieRuex/fotos/1023.a.2.jpg"
+            "fide10.jpg"
         },
         {
           nombre: "Fideo Aritos",
           descripcion: "Unidad",
           precio: 5,
           portada:
-            "http://vcie.produccion.gob.bo/siexco/web/bundles/comunes/UieRuex/fotos/1023.a.1.jpg"
+            "fide12.jpg"
         },
         {
           nombre: "Fideo Moño",
           descripcion: "Unidad",
           precio: 5,
           portada:
-            "https://www.multimerc.com/wp-content/uploads/2019/08/08e53708-98a2-4eaf-804b-d050ef6933cc-2.jpg"
+            "fide13.jpg"
         },
         {
           nombre: "Fideos Nido",
           descripcion: "Unidad",
           precio: 5,
-          portada: "http://www.actiweb.es/lazzaroni/imagen5.jpg?1205142200"
+          portada: "fide14.jpg"
         }
       ]
     };

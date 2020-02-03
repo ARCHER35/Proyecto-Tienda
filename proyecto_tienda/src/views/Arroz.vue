@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="a.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/arroz/'+a.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
@@ -33,13 +33,13 @@ export default {
           nombre:"Arroz Grano de Oro",
           descripcion:"Cuartilla",
           precio:20,
-          portada:"https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.0-9/19731867_482622442090287_612681557740600857_n.png?_nc_cat=106&_nc_ohc=9eOzNsaBR8EAX9sk0Lh&_nc_ht=scontent.fvvi1-2.fna&oh=613ab41f0b65b71c00c5058b4e54d91a&oe=5EC4E2AD"
+          portada:"arroz1.png"
         },
         {
           nombre:"Arroz Grano de Oro",
           descripcion:"Cuartilla",
           precio:20,
-          portada:"http://lapatriaenlinea.com/fotos/05_2013/142972_1_05.jpg"
+          portada:"arroz2.jpg"
         }
       ]
     };
