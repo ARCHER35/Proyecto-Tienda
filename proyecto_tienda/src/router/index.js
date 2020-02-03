@@ -92,6 +92,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () => import(/** */ '@/views/Login.vue')
+  },
+  {
+    path: '/admi',
+    name:'admi',
+    component: () => import('../components/Admi.vue')
   }
 ]
 

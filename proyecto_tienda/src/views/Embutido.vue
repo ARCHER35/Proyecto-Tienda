@@ -77,28 +77,28 @@ export default {
         {
           nombre: "Chorizo Sofia",
           descripcion: "Paquete",
-          precio: 0,
+          precio: 10,
           portada:
             "http://sofia.com.bo/wp-content/uploads/2014/13/Salchicha-Viena-al-Vaciogrande.png"
         },
         {
           nombre: "Chorizo Sofia Agranel",
           descripcion: "Kilo",
-          precio: 0,
+          precio: 28,
           portada:
             "http://sofia.com.bo/wp-content/uploads/2014/13/Salchicha-Viena-de-Pelar-a-Granelgrande.png"
         },
         {
-          nombre: "Chorizo Agranel",
+          nombre: "Chorizo Agranel Viena",
           descripcion: "Kilo",
-          precio: 0,
+          precio: 32,
           portada:
             "https://sofia.com.bo/wp-content/uploads/2014/13/Salchicha-Viena-a-Granelgrande.png"
         },
         {
           nombre: "Chorizo Parrillero",
           descripcion: "Kilo",
-          precio: 0,
+          precio: 36,
           portada:
             "https://sofia.com.bo/wp-content/uploads/2014/13/Chorizo-Churrasquero-a-Granelgrande.png"
         }
@@ -107,51 +107,44 @@ export default {
         {
           nombre: "Mortadela Jamonada al Vacío",
           descripcion: "Paquete",
-          precio: 0,
+          precio: 8,
           portada:
             "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-Jamonada-al-Vaciogrande.png"
         },
         {
           nombre: "Mortadela de Pollo al Vacío",
           descripcion: "Paquete",
-          precio: 0,
+          precio: 8,
           portada:
             "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-de-Pollo-al-Vaciogrande.png"
         },
         {
           nombre: "Mortadela de Gallina en Barra",
           descripcion: "Kilo",
-          precio: 0,
+          precio: 30,
           portada:
             "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-de-Gallina-en-Barra-500-grs.png"
         },
         {
           nombre: "Mortadela Jamonada en Barra",
           descripcion: "Kilo",
-          precio: 0,
+          precio: 30,
           portada:
             "http://sofia.com.bo/wp-content/uploads/2014/13/Mortadela-Jamonada-en-Barra-500-grs.png"
-        },
-        {
-          nombre: "Mortadela Maxi",
-          descripcion: "cant",
-          precio: 0,
-          portada:
-            "http://dillmann.com.bo/images/sampledata/dillman/MORTADELAS/MORTADELA-CAZADOR-200G.png"
         }
       ],
       pasta: [
         {
           nombre: "Pate de Pollo",
           descripcion: "200g",
-          precio: 0,
+          precio: 6,
           portada:
             "https://sofia.com.bo/wp-content/uploads/2014/13/Pate-de-Higado-de-Pollo-de-100-grsgrande.png"
         },
         {
           nombre: "Pate de Cerdo",
           descripcion: "cant",
-          precio: 0,
+          precio: 6,
           portada:
             "http://sofia.com.bo/wp-content/uploads/2014/13/Pate-de-Higado-de-Cerdo-de-200-grs..png"
         }
