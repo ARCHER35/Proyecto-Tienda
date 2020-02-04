@@ -97,6 +97,11 @@ const routes = [
     path: '/Carrito',
     name: 'Carrito',
     component: () => import(/** */ '@/views/Carrito.vue')
+  },
+  {  
+    path: '/admi',
+    name:'admi',
+    component: () => import('../components/Admi.vue')
   }
 ]
 

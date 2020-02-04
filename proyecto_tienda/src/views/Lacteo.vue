@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Leche Pil</h1>
+    <h1>Leche</h1>
     <div class="container">
       <div class="row">
         <div v-for="(l,index) of leche" :key="index" class="col-md-6 col-sm-6 col-xs-12">
@@ -10,7 +10,7 @@
                 <b-card-img v-bind:src="l.imagen" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="l.titulo">
+                <b-card-body v-bind:title="l.nombre">
                   <b-card-text>{{l.descripcion}}</b-card-text>
                   <h3>Bs{{l.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
@@ -32,7 +32,7 @@
                 <b-card-img v-bind:src="q.imagen" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="q.titulo">
+                <b-card-body v-bind:title="q.nombre">
                   <b-card-text>{{q.descripcion}}</b-card-text>
                   <h3>Bs{{q.precio}}</h3>
                   <a href="#" class="btn btn-dark">Agregar al Carrito</a>
@@ -54,7 +54,7 @@ export default {
       leche: [
         {
           id: 1,
-          titulo: "Leche Normal",
+          nombre: "Leche Normal",
           descripcion:
             "Unidad",
           precio: 6,
@@ -63,7 +63,7 @@ export default {
         },
         {
           id: 2,
-          titulo: "Leche Deslactosada",
+          nombre: "Leche Deslactosada",
           descripcion:
             "Unidad",
           precio: 7,
@@ -74,7 +74,7 @@ export default {
       queso: [
         {
           id: 1,
-          titulo: "Queso Rio Grande",
+          nombre: "Queso Rio Grande",
           descripcion: "Kilo",
           precio: 28,
           imagen:
@@ -82,7 +82,7 @@ export default {
         },
         {
           id: 2,
-          titulo: "Queso Muzzarella",
+          nombre: "Queso Muzzarella",
           descripcion: "Kilo",
           precio: 23,
           imagen:
@@ -90,7 +90,7 @@ export default {
         },
         {
           id: 3,
-          titulo: "Quesillo",
+          nombre: "Quesillo",
           descripcion: "Unidad",
           precio: 5,
           imagen:

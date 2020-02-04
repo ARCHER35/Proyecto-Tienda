@@ -2,8 +2,7 @@
   <div>
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info">
-        
-        <b-img :src="require('../assets/logo-toro.png')" height="80px" width="150px"></b-img>
+        <b-img :src="require('../assets/logo-toro-2.png')" height="80px" width="150px"></b-img>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
@@ -27,26 +26,33 @@
             <b-nav-item to="/condimento">Condimentos</b-nav-item>
             <b-nav-item to="/lacteo">Lacteos</b-nav-item>
             <b-nav-item to="/contacto">Contactos</b-nav-item>
-            <b-nav-item to="/carrito">Carrito</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
-        <a href="#" to="/carrito" class="nav-item btn btn-dark" align="center"><i class="fas fa-cart-arrow-down"></i></a>
-        <h1>|</h1>
         <b-navbar-nav>
-          <b-nav-item to="/login"><b-button pill variant="danger">Iniciar Sesion</b-button></b-nav-item>
+          <b-button variant="dark" @click="boton()">
+            <i class="fas fa-cart-arrow-down text-light"></i>
+          </b-button>
+          <b-nav-item to="/login">
+            <b-button pill variant="danger">Iniciar Sesion</b-button>
+          </b-nav-item>
         </b-navbar-nav>
       </b-navbar>
-      <div></div>
     </div>
     <router-view />
   </div>
 </template>
 
 <script>
+export default {
+  methods:{
+    boton(){
+      this.$router.push('/carrito')
+    }
+  }
+};
 </script>
 <style>
 b {
   background: black;
 }
-
 </style>

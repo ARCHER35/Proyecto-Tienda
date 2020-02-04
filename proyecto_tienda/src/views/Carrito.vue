@@ -6,10 +6,10 @@
         <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
           <b-row no-gutters>
             <b-col md="7">
-              <b-card-img v-bind:src="c.imagen" class="rounded-circle"></b-card-img>
+              <b-card-img v-bind:src="require('../assets/'+c.portada)" class="rounded-circle"></b-card-img>
             </b-col>
             <b-col md="5">
-              <b-card-body v-bind:title="c.titulo">
+              <b-card-body v-bind:title="c.nombre">
                 <b-card-text>{{c.descripcion}}</b-card-text>
                 <h3>Bs {{c.precio}}</h3>
                 <button @click="eliminar(c)">Eliminar del carrito</button>
@@ -32,7 +32,7 @@ export default {
   computed: {
     total() {
       for (let x of this.carrito) {
-        this.monto = x.precio
+        this.monto = this.monto + x.precio;
       }
     }
   },
@@ -55,7 +55,7 @@ export default {
     },
     async getCarrito() {
       axios
-        .get("http://localhost:3000/motos")
+        .get("http://localhost:3000/carrito")
         .then(respuesta => {
           console.log(respuesta.data);
           this.carrito = respuesta.data;
@@ -65,7 +65,7 @@ export default {
     },
     async deleteCarrito(id) {
       try {
-        const res = await axios.delete("http://localhost:3000/motos/" + id);
+        const res = await axios.delete("http://localhost:3000/carrito/" + id);
         const index = this.carrito.findIndex(T => T.id === res.data.id);
         this.carrito.splice(index, 1);
         this.getCarrito();
@@ -74,12 +74,11 @@ export default {
       }
     },
     eliminar(c) {
-      let url = "http://localhost:3000/motos/" + c.id;
+      let url = "http://localhost:3000/carrito/" + c.id;
       axios
         .delete(url)
         .then(response => {
           this.getCarrito();
-          return this.monto = this.monto - response.precio
         })
         .catch(error => console.log(error));
     }

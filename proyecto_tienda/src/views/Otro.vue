@@ -67,49 +67,53 @@
       </div>
     </div>
     <h1>Carbon</h1>
-    <div class="container">
-      <div class="row">
-        <div v-for="(c,index) of carbon" :key="index" class="col-md-6 col-sm-6 col-xs-12">
-          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
-            <b-row no-gutters>
-              <b-col md="6">
-                <b-card-img v-bind:src="c.portada" class="rounded-circle"></b-card-img>
-              </b-col>
-              <b-col md="6">
-                <b-card-body v-bind:title="c.nombre">
-                  <b-card-text>{{c.descripcion}}</b-card-text>
-                  <h3>Bs{{c.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
-                </b-card-body>
-              </b-col>
-            </b-row>
-          </b-card>
-          <br />
+    <center>
+      <div class="container">
+        <div class="row">
+          <div v-for="(c,index) of carbon" :key="index" class="col-sm">
+            <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+              <b-row no-gutters>
+                <b-col md="6">
+                  <b-card-img v-bind:src="c.portada" class="rounded-circle"></b-card-img>
+                </b-col>
+                <b-col md="6">
+                  <b-card-body v-bind:title="c.nombre">
+                    <b-card-text>{{c.descripcion}}</b-card-text>
+                    <h3>Bs{{c.precio}}</h3>
+                    <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                  </b-card-body>
+                </b-col>
+              </b-row>
+            </b-card>
+            <br />
+          </div>
         </div>
       </div>
-    </div>
+    </center>
     <h1>Servilletas</h1>
-    <div class="container">
-      <div class="row">
-        <div v-for="(s,index) of servilleta" :key="index" class="col-md-6 col-sm-6 col-xs-12">
-          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
-            <b-row no-gutters>
-              <b-col md="6">
-                <b-card-img v-bind:src="s.portada" class="rounded-circle"></b-card-img>
-              </b-col>
-              <b-col md="6">
-                <b-card-body v-bind:title="s.nombre">
-                  <b-card-text>{{s.descripcion}}</b-card-text>
-                  <h3>Bs{{s.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
-                </b-card-body>
-              </b-col>
-            </b-row>
-          </b-card>
-          <br />
+    <center>
+      <div class="container">
+        <div class="row">
+          <div v-for="(s,index) of servilleta" :key="index" class="col-sm">
+            <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+              <b-row no-gutters>
+                <b-col md="6">
+                  <b-card-img v-bind:src="s.portada" class="rounded-circle"></b-card-img>
+                </b-col>
+                <b-col md="6">
+                  <b-card-body v-bind:title="s.nombre">
+                    <b-card-text>{{s.descripcion}}</b-card-text>
+                    <h3>Bs{{s.precio}}</h3>
+                    <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                  </b-card-body>
+                </b-col>
+              </b-row>
+            </b-card>
+            <br />
+          </div>
         </div>
       </div>
-    </div>
+    </center>
   </div>
 </template>
 
