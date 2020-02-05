@@ -52,15 +52,12 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img
-                  v-bind:src="require('../assets/' + c.portada)"
-                  height="250px"
-                  class="rounded-circle"
-                ></b-card-img>
+                <p>{{c.portada}}</p>
+                <b-card-img v-bind:src="require('../assets/home/'+ c.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
-                  <b-card-text>{{c.descripcion}}</b-card-text>
+                  <b-card-text class="text-justify">{{c.descripcion}}</b-card-text>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -76,11 +73,11 @@
           <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p.portada" height="250px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/home/'+  p.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="p.nombre">
-                  <b-card-text>{{p.descripcion}}</b-card-text>
+                  <b-card-text class="text-justify">{{p.descripcion}}</b-card-text>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -92,15 +89,15 @@
     <h1>Avarrotes</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(a,index) of abarrotes" :key="index" class="col-md-4 col-xs-12">
+        <div v-for="(a,index) of abarrotes" :key="index" class="col-md-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="a.portada" height="250px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/home/' +a.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
-                  <b-card-text>{{a.descripcion}}</b-card-text>
+                  <b-card-text class="text-justify">{{a.descripcion}}</b-card-text>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -116,11 +113,11 @@
           <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="e.portada" height="250px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/home/'+e.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="e.nombre">
-                  <b-card-text>{{e.descripcion}}</b-card-text>
+                  <b-card-text class="text-justify">{{e.descripcion}}</b-card-text>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -136,11 +133,11 @@
           <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="con.portada" height="250px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/home/'+con.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="con.nombre">
-                  <b-card-text>{{con.descripcion}}</b-card-text>
+                  <b-card-text class="text-justify">{{con.descripcion}}</b-card-text>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -156,11 +153,11 @@
           <b-card no-body class="overflow-hidden text-dark efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="l.portada" height="250px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/home/'+l.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre">
-                  <b-card-text>{{l.descripcion}}</b-card-text>
+                  <b-card-text class="text-justify">{{l.descripcion}}</b-card-text>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -182,25 +179,28 @@ export default {
           nombre: "Carne Molida",
           descripcion:
             "La carne picada o carne molida es una preparación de la carne con objetivos culinarios, para la cual se desmenuzan y se cortan finamente los músculos, grasas y nervios mediante máquina de picar carne, cuchillo, etc.",
-          portada: "alitas.jpg"
+          portada: "molida.jpg"
         },
         {
           nombre: "Chuleta",
           descripcion:
             "Una chuleta es un corte de la carne situada justo encima de la costilla de un animal, ya sea cerdo, vacuno, cordero o carnero.",
-          portada: "alitas.jpg"
+          portada:
+            "chuleta.jpg"
         },
         {
           nombre: "Pulpa",
           descripcion:
             "Es un corte en equilibrio entre carne, grasa y demas componentes. El bife de chorizo es la costeleta sin hueso ubicada en la cara externa del lomo del animal. Al ser separado del hueso, antes de cortarse en bifes.",
-          portada: "alitas.jpg"
+          portada:
+            "pulpa.jpg"
         },
         {
           nombre: "Lomo",
           descripcion:
             "Es un músculo de soporte, que se ubica en el lomo anterior de la canal bovina (Res), es de forma cilíndrica corresponde a la sección delantera del lomo, a la cual se le removio el lomo de aguja. Presenta una gran suavidad.",
-          portada: "alitas.jpg"
+          portada:
+            "lomo.jpg"
         }
       ],
       pollo: [
@@ -208,75 +208,74 @@ export default {
           nombre: "Alitas de Pollo",
           descripcion:
             "Si estás buscando botanas fáciles de preparar que sean deliciosas y puedas cocinar con variedad, compra alitas de pollo; lleva la cantidad que desees.",
-          portada: ""
+          portada:
+            "alitas.jpg"
         },
         {
           nombre: "Piernas de Pollo",
-          descripcion:
-            "Si estás buscando botanas fáciles de preparar que sean deliciosas y puedas cocinar con variedad, Piernas de Pollo.",
-          portada: ""
+          descripcion: "Si estás buscando botanas fáciles de preparar que sean deliciosas y puedas cocinar con variedad, Piernas de Pollo.",
+          portada:
+            "piernaspollo.jpg"
         }
       ],
       abarrotes: [
         {
           nombre: "Arroz",
-          descripcion:
-            "El arroz es una constante en las cocinas de todas las culturas. las recetas adecuadas a cada variedad.",
-          portada: ""
+          descripcion:"El arroz es una constante en las cocinas de todas las culturas. las recetas adecuadas a cada variedad.",
+          portada:
+            "arros.jpg"
         },
         {
           nombre: "Azucar",
-          descripcion:
-            "Es otra constante en las cocinas de todas las culturas especialmente en los desayunos.",
-          portada: ""
+          descripcion:"Es otra constante en las cocinas de todas las culturas especialmente en los desayunos.",
+          portada:
+            "azucar.jpg"
         },
         {
           nombre: "Aceite",
-          descripcion:
-            "Aceites vegetales comestibles de soya, girasol y mezcla de soya/girasol. Marcas comerciales: FINO Vegetal, FINO Light y FINO Mental Activ.",
-          portada: ""
+          descripcion:"Aceites vegetales comestibles de soya, girasol y mezcla de soya/girasol. Marcas comerciales: FINO Vegetal, FINO Light y FINO Mental Activ.",
+          portada:
+            "Aceite1-2.jpg"
         }
       ],
       embutidos: [
         {
           nombre: "Chorizo",
-          descripcion:
-            "Chorizos. Ingredientes: Carne y tocino de cerdo, carne de pollo, sal y especias naturales. ",
-          portada: ""
+          descripcion:"Chorizos. Ingredientes: Carne y tocino de cerdo, carne de pollo, sal y especias naturales. ",
+          portada:
+            "chori1.png"
         },
         {
           nombre: "Mortadela",
-          descripcion:
-            "Mortadelas. Ingredientes: Carne y tocino de cerdo, carne de pollo, sal y especias naturales. ",
-          portada: ""
+          descripcion:"Mortadelas. Ingredientes: Carne y tocino de cerdo, carne de pollo, sal y especias naturales. ",
+          portada:
+            "mortadela-sofia.jpg"
         }
       ],
       condimentos: [
         {
           nombre: "Oregano",
-          descripcion:
-            "Especia esencial en algunas comidas al momento de cocinar",
-          portada: ""
+          descripcion:"Especia esencial en algunas comidas al momento de cocinar",
+          portada: "oregano.jpg"
         },
         {
           nombre: "Pimienta, Comino, Ajo",
-          descripcion:
-            "Condimentos esenciales al momento de dar sabor a las comidas",
-          portada: ""
+          descripcion:"Condimentos esenciales al momento de dar sabor a las comidas",
+          portada:
+            "condimentos.jpg"
         }
       ],
       lacteos: [
         {
           nombre: "Leche",
-          descripcion:
-            "Es un producto elaborado con leche fresca controlada y seleccionada, la cual es higienizada, homogenizada, estandarizada y ultrapasteurizada.",
-          portada: ""
+          descripcion:"Es un producto elaborado con leche fresca controlada y seleccionada, la cual es higienizada, homogenizada, estandarizada y ultrapasteurizada.",
+          portada: "leche.jpg"
         },
         {
           nombre: "Queso",
-          descripcion:
-            "Queso es el producto fresco o madurado obtenido por la coagulación y separación de la leche, nata, leche parcialmente desnatada, mazada o por una mezcla de estos productos.",
-          portada: ""
+          descripcion:"Queso es el producto fresco o madurado obtenido por la coagulación y separación de la leche, nata, leche parcialmente desnatada, mazada o por una mezcla de estos productos.",
+          portada:
+            "queso.jpg"
         }
       ]
     };
@@ -300,6 +299,6 @@ export default {
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 .card {
-  padding: 10px;
+  padding:10px;
 }
 </style>

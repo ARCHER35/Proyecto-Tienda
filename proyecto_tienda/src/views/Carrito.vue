@@ -6,7 +6,7 @@
         <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
           <b-row no-gutters>
             <b-col md="7">
-              <b-card-img v-bind:src="require('../assets/'+c.portada)" class="rounded-circle"></b-card-img>
+              <b-card-img v-bind:src="require('../assets/' +c.portada)" class="rounded-circle"></b-card-img>
             </b-col>
             <b-col md="5">
               <b-card-body v-bind:title="c.nombre">
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div>
-      <h3>Total {{total}} {{monto}}</h3>
+      <h3 >Total {{total}}  {{monto}}</h3>
     </div>
   </div>
 </template>
@@ -33,8 +33,9 @@ export default {
     total() {
       for (let x of this.carrito) {
         this.monto = this.monto + x.precio;
+        
       }
-    }
+    },
   },
   data() {
     return {
@@ -79,6 +80,7 @@ export default {
         .delete(url)
         .then(response => {
           this.getCarrito();
+          this.total()
         })
         .catch(error => console.log(error));
     }

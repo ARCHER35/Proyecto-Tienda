@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="a.portada" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/azucar/'+a.portada)" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
@@ -34,14 +34,14 @@ export default {
           descripcion: "Kilo",
           precio: 14,
           portada:
-            "http://2.bp.blogspot.com/-r0fOHp10020/TWBv0IXjC8I/AAAAAAAAASQ/LIEYYl9QV-w/s320/azucarbelgica.jpg"
+            "azu1.jpg"
         },
         {
           nombre: "Azucar Belgica",
           descripcion: "Kilo",
           precio: 14,
           portada:
-            "https://elchacoinforma.com/wp-content/uploads/2018/10/AZ.jpg"
+            "zu2.jpg"
         }
       ],
     }

@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="s.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/otros/'+s.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="s.nombre">
@@ -29,7 +29,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="l.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/otros/'+l.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre">
@@ -51,7 +51,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="v.portada" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/otros/'+v.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="v.nombre">
@@ -74,7 +74,7 @@
             <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
               <b-row no-gutters>
                 <b-col md="6">
-                  <b-card-img v-bind:src="c.portada" class="rounded-circle"></b-card-img>
+                  <b-card-img v-bind:src="require('../assets/otros/'+c.portada)" class="rounded-circle"></b-card-img>
                 </b-col>
                 <b-col md="6">
                   <b-card-body v-bind:title="c.nombre">
@@ -98,7 +98,7 @@
             <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
               <b-row no-gutters>
                 <b-col md="6">
-                  <b-card-img v-bind:src="s.portada" class="rounded-circle"></b-card-img>
+                  <b-card-img v-bind:src="require('../assets/otros/'+s.portada)" class="rounded-circle"></b-card-img>
                 </b-col>
                 <b-col md="6">
                   <b-card-body v-bind:title="s.nombre">
@@ -127,28 +127,21 @@ export default {
           descripcion: "235 ml",
           precio: 2.5,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "soya1.jpg"
         },
         {
           nombre: "Salsasoya Trisoy Toscana",
           descripcion: "470 ml",
           precio: 5,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "soya2.jpg"
         },
         {
           nombre: "Salsasoya Trisoy Toscana",
-          descripcion: "940 ml",
+          descripcion: "Grande",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
-        },
-        {
-          nombre: "Salsasoya Trisoy Toscana",
-          descripcion: "5000 ml",
-          precio: 0,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "soya3.jpg"
         }
       ],
       limonero: [
@@ -157,44 +150,37 @@ export default {
           descripcion: "330 ml",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "harry1.jpg"
         },
         {
           nombre: "Harry El Limonero",
           descripcion: "700 ml",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "harry2.jpg"
         }
       ],
       vinagre: [
         {
           nombre: "Vinagre Blanco Trisoy Toscana",
-          descripcion: "330 ml",
+          descripcion: "1500 ml",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
-        },
-        {
-          nombre: "Vinagre Blanco Trisoy Toscana",
-          descripcion: "1500",
-          precio: 0,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "vina3.jpg"
         },
         {
           nombre: "Vinagre Rojo Trisoy Toscana",
           descripcion: "330 ml",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "vina1.jpg"
         },
         {
           nombre: "Vinagre Rojo Trisoy Toscana",
           descripcion: "1500 ml",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "vina2.jpg"
         }
       ],
       carbon: [
@@ -203,7 +189,7 @@ export default {
           descripcion: "Unidad",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "carbon.jpg"
         }
       ],
       servilleta: [
@@ -212,7 +198,7 @@ export default {
           descripcion: "Paquete",
           precio: 0,
           portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+            "servi.jpg"
         }
       ]
     };
