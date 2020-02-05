@@ -355,7 +355,10 @@ export default {
             "car13.jpg"
         }
       ]
-    };
+    }
+  },
+  mounted() {
+    this.$emit('nombre',this.nombre)
   }
 };
 </script>
