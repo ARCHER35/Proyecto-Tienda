@@ -3,7 +3,7 @@
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info">
         
-        <b-img :src="require('../assets/logo-toro-2.png')" height="80px" width="150px"></b-img>
+        <b-img :src="require('../assets/logo-toro-2.png')" height="80px" width="130px"></b-img>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
