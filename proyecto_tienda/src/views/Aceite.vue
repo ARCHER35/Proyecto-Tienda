@@ -21,7 +21,6 @@
       </div>
     </div>
     <h1>Agranel</h1>
-    <center>
       <div class="container" v-for="(a,index) of agranel" :key="index">
         <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
           <b-row no-gutters>
@@ -37,7 +36,6 @@
           </b-row>
         </b-card>
       </div>
-    </center>
   </div>
 </template>
 
