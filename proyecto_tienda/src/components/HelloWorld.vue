@@ -3,26 +3,19 @@
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="10000">
-          <img
-            src="https://blog.aulaformativa.com/wp-content/uploads/2014/03/creacion-de-paginas-web-blanco-como-fondo.jpg"
-            class="d-block w-100 h-350px"
-            height="350px"
-            alt="..."
-          />
+          <img :src="require('../assets/caru0.jpg')" class="d-block w-100 h-350px" height="350px" alt="..."/>
         </div>
         <div class="carousel-item" data-interval="2000">
-          <img
-            src="https://previews.123rf.com/images/povareshka3/povareshka31706/povareshka3170600093/80699491-composici%C3%B3n-de-flores-flores-de-lila-sobre-fondo-blanco-vista-plana.jpg"
-            class="d-block w-100 h-350px"
-            height="350px"
-          />
+          <img :src="require('../assets/caru1.jpg')" class="d-block w-100 h-350px" height="350px"/>
         </div>
         <div class="carousel-item">
-          <img
-            src="https://blog.aulaformativa.com/wp-content/uploads/2014/03/creacion-de-paginas-web-blanco-como-fondo.jpg"
-            class="d-block w-100 h-350px"
-            height="350px"
-          />
+          <img :src="require('../assets/caru2.jpg')" class="d-block w-100 h-350px" height="350px"/>
+        </div>
+        <div class="carousel-item">
+          <img :src="require('../assets/comi.jpg')" class="d-block w-100 h-350px" height="350px" alt="">
+        </div>
+        <div class="carousel-item">
+          <img :src="require('../assets/caruu.jpg')" class="d-block w-100 h-350px" height="350px" alt="">
         </div>
       </div>
       <a

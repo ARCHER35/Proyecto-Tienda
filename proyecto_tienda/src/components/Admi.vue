@@ -35,7 +35,7 @@
                           <input type="text" placeholder="Nombre" class="inp" />
                           <input type="text" placeholder="Descripcion" class="inp" />
                           <input type="number" placeholder="Precio" class="inp" />
-                          <input type="file" placeholder="Portada" class="inp col" />
+                          <input type="file" placeholder="Portada" class="inp col btb btn-success" />
                           <b-button class="bg-primary">Enviar</b-button>
                         </div>
                       </div>

@@ -67,7 +67,6 @@
       </div>
     </div>
     <h1>Carbon</h1>
-    <center>
       <div class="container">
         <div class="row">
           <div v-for="(c,index) of carbon" :key="index" class="col-sm">
@@ -89,9 +88,7 @@
           </div>
         </div>
       </div>
-    </center>
     <h1>Servilletas</h1>
-    <center>
       <div class="container">
         <div class="row">
           <div v-for="(s,index) of servilleta" :key="index" class="col-sm">
@@ -113,7 +110,6 @@
           </div>
         </div>
       </div>
-    </center>
   </div>
 </template>
 
