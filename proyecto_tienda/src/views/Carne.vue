@@ -1,15 +1,14 @@
 <template>
   <div class="bg-light">
     <h1>Carne</h1>
-    <input type="file">
     <div class="container">
       <div class="row">
-        <div v-for="(c,index) of carnes" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div v-for="(c,index) of productoCarne" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img
-                  v-bind:src="require('../assets/carne/'+c.portada)"
+                  v-bind:src="require('../assets/'+c.portada)"
                   class="rounded-circle"
                 ></b-card-img>
               </b-col>
@@ -36,12 +35,12 @@
     <h1>Variedades</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(o,index) of otros" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+        <div v-for="(o,index) of productoVariedad" :key="index" class="col-md-4 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
                 <b-card-img
-                  v-bind:src="require('../assets/carne/'+o.portada)"
+                  v-bind:src="require('../assets/'+o.portada)"
                   class="rounded-circle"
                 ></b-card-img>
               </b-col>
@@ -53,10 +52,6 @@
                     Agregar
                     <i class="fas fa-cart-arrow-down text-light"></i>
                   </b-button>
-                  <b-collapse id="collapse-1" class="mt-2">
-                    <b-form-select v-model="selected" :options="o.cant"></b-form-select>
-                    <button class="btn btn-dark">enviar</button>
-                  </b-collapse>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -68,9 +63,38 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    productoCarne() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "CARNE";
+      });
+    },
+    productoVariedad(){
+      return this.producto.filter(function(p){
+        return p.variedad == "VARIEDAD"
+      })
+    }
+  },
+  methods: {
+    getProducto() {
+      axios
+        .get("http://localhost:3500/api/producto")
+        .then(respuesta => {
+          console.log(respuesta.data);
+          this.producto = respuesta.data;
+          console.log(this.producto);
+        })
+        .catch(error => console.log(error));
+    }
+  },
   data() {
     return {
+      producto: [],
       carnes: [
         {
           id: 1,
@@ -167,9 +191,6 @@ export default {
         }
       ]
     };
-  },
-  mounted() {
-    this.$emit("nombre", this.nombre);
   }
 };
 </script>

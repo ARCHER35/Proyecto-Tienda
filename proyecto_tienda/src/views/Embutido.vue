@@ -3,11 +3,15 @@
     <h1>Chorizo</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(c,index) of chorizo" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div v-for="(c,index) of productoChorizo" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/enbutidos/'+c.portada)" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+c.portada)"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
@@ -25,11 +29,16 @@
     <h1>Mortadela</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(m,index) of mortadela" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div v-for="(m,index) of productoMortadela" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/enbutidos/'+m.portada)" height="200px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+m.portada)"
+                  height="200px"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="m.nombre">
@@ -47,11 +56,15 @@
     <h1>Pastas</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(p,index) of pasta" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div v-for="(p,index) of productoPasta" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/enbutidos/'+ p.portada)" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+ p.portada)"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="p.nombre">
@@ -70,37 +83,67 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    productoChorizo() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "CHORIZO";
+      });
+    },
+    productoMortadela() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "MORTADELA";
+      });
+    },
+    productoPasta() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "PASTA";
+      });
+    }
+  },
+  methods: {
+    getProducto() {
+      axios
+        .get("http://localhost:3500/api/producto")
+        .then(respuesta => {
+          console.log(respuesta.data);
+          this.producto = respuesta.data;
+          console.log(this.producto);
+        })
+        .catch(error => console.log(error));
+    }
+  },
   data() {
     return {
+      producto: [],
       chorizo: [
         {
           nombre: "Chorizo Sofia",
           descripcion: "Paquete",
           precio: 10,
-          portada:
-            "chori1.png"
+          portada: "chori1.png"
         },
         {
           nombre: "Chorizo Sofia Agranel",
           descripcion: "Kilo",
           precio: 28,
-          portada:
-            "chori2.png"
+          portada: "chori2.png"
         },
         {
           nombre: "Chorizo Agranel Viena",
           descripcion: "Kilo",
           precio: 32,
-          portada:
-            "chori3.png"
+          portada: "chori3.png"
         },
         {
           nombre: "Chorizo Parrillero",
           descripcion: "Kilo",
           precio: 36,
-          portada:
-            "chori4.png"
+          portada: "chori4.png"
         }
       ],
       mortadela: [
@@ -108,29 +151,25 @@ export default {
           nombre: "Mortadela Jamonada al Vacío",
           descripcion: "Paquete",
           precio: 8,
-          portada:
-            "chori5.png"
+          portada: "chori5.png"
         },
         {
           nombre: "Mortadela de Pollo al Vacío",
           descripcion: "Paquete",
           precio: 8,
-          portada:
-            "chori6.png"
+          portada: "chori6.png"
         },
         {
           nombre: "Mortadela de Gallina en Barra",
           descripcion: "Kilo",
           precio: 30,
-          portada:
-            "chori7.png"
+          portada: "chori7.png"
         },
         {
           nombre: "Mortadela Jamonada en Barra",
           descripcion: "Kilo",
           precio: 30,
-          portada:
-            "chori8.png"
+          portada: "chori8.png"
         }
       ],
       pasta: [
@@ -138,15 +177,13 @@ export default {
           nombre: "Pate de Pollo",
           descripcion: "200g",
           precio: 6,
-          portada:
-            "chori9.png"
+          portada: "chori9.png"
         },
         {
           nombre: "Pate de Cerdo",
           descripcion: "cant",
           precio: 6,
-          portada:
-            "chori10.png"
+          portada: "chori10.png"
         }
       ]
     };

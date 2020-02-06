@@ -3,11 +3,11 @@
     <h1>Leche</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(l,index) of leche" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div v-for="(l,index) of productoLeche" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/lacteos/'+l.imagen)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+l.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre">
@@ -25,11 +25,11 @@
     <h1>Queso</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(q,index) of queso" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+        <div v-for="(q,index) of productoQueso" :key="index" class="col-md-4 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/lacteos/'+q.imagen)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+q.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="q.nombre">
@@ -48,9 +48,38 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    productoLeche() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "LECHE";
+      });
+    },
+    productoQueso(){
+      return this.producto.filter(function(p){
+        return p.variedad == "QUESO"
+      })
+    }
+  },
+  methods: {
+    getProducto() {
+      axios
+        .get("http://localhost:3500/api/producto")
+        .then(respuesta => {
+          console.log(respuesta.data);
+          this.producto = respuesta.data;
+          console.log(this.producto);
+        })
+        .catch(error => console.log(error));
+    }
+  },
   data() {
     return {
+      producto:[],
       leche: [
         {
           id: 1,
