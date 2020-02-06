@@ -1,13 +1,17 @@
 <template>
   <div class="bg-light">
     <h1>Carne</h1>
+    <input type="file">
     <div class="container">
       <div class="row">
         <div v-for="(c,index) of carnes" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/carne/'+c.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/carne/'+c.portada)"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
@@ -36,7 +40,10 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/VariedadesC/'+o.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/carne/'+o.portada)"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="o.nombre">
@@ -70,210 +77,70 @@ export default {
           nombre: "Carne Molida",
           descripcion: "Kilo",
           precio: 25,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car1.jpg"
+          portada: "car1.jpg"
         },
         {
           id: 2,
           nombre: "Chuleta",
           descripcion: "Kilo",
           precio: 28,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car2.jpg"
+          portada: "car2.jpg"
         },
         {
           id: 3,
           nombre: "Churrasco",
           descripcion: "Kilo",
           precio: 28,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car3.jpg"
+          portada: "car3.jpg"
         },
         {
           id: 4,
           nombre: "Pulpa",
           descripcion: "Kilo",
           precio: 36,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car4.jpg"
+          portada: "car4.jpg"
         },
         {
           id: 5,
           nombre: "Lomo",
           descripcion: "Kilo",
           precio: 38,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car5.jpg"
+          portada: "car5.jpg"
         },
         {
           id: 6,
           nombre: "Filete de Lomo",
           descripcion: "Kilo",
           precio: 45,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada: 
-          "car6.jpg"
+          portada: "car6.jpg"
         },
         {
           id: 7,
           nombre: "Tira Asado",
           descripcion: "Kilo",
           precio: 25,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car7.jpg"
+          portada: "car7.jpg"
         },
         {
           id: 8,
           nombre: "Blandita",
           descripcion: "Kilo",
           precio: 36,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car8.jpg"
+          portada: "car8.jpg"
         },
         {
           id: 9,
           nombre: "Bife Chorizo",
           descripcion: "Kilo",
           precio: 45,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car9.jpg"
+          portada: "car9.jpg"
         },
         {
           id: 10,
           nombre: "Sice",
           descripcion: "Kilo",
           precio: 28,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car10.jpg"
+          portada: "car10.jpg"
         }
       ],
       otros: [
@@ -282,66 +149,27 @@ export default {
           nombre: "Carne de Cerdo",
           descripcion: "Kilo",
           precio: 22,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car11.jpeg"
+          portada: "car11.jpeg"
         },
         {
           id: 2,
           nombre: "Higado",
           descripcion: "Kilo",
           precio: 16,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car12.jpg"
+          portada: "car12.jpg"
         },
         {
           id: 3,
           nombre: "Panza",
           descripcion: "Kilo",
           precio: 20,
-          cant: [
-            { value: null, text: "Pedido" },
-            { value: "1", text: "1" },
-            { value: "2", text: "2" },
-            { value: "3", text: "3" },
-            { value: "4", text: "4" },
-            { value: "5", text: "5" },
-            { value: "6", text: "6" },
-            { value: "7", text: "7" },
-            { value: "8", text: "8" },
-            { value: "9", text: "9" },
-            { value: "10", text: "10" }
-          ],
-          portada:
-            "car13.jpg"
+          portada: "car13.jpg"
         }
       ]
     };
+  },
+  mounted() {
+    this.$emit("nombre", this.nombre);
   }
 };
 </script>

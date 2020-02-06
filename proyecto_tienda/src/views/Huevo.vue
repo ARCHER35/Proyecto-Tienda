@@ -7,7 +7,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="7">
-                <b-card-img  type="image" :src="require('../assets/'+h.portada)" class="rounded-circle" />
+                <b-card-img v-bind:src="require('../assets/huevo/'+h.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="5">
                 <b-card-body v-bind:title="h.nombre">
@@ -61,21 +61,24 @@ export default {
           nombre: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 20,
-          portada: "huevo/hue2.jpg"
+          portada:
+            "hue2.jpg"
         },
         {
           id_huevo: 2,
           nombre: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 18,
-          portada: "huevo/hue2.jpg"
+          portada:
+            "hue3.jpg"
         },
         {
           id_huevo: 3,
           nombre: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 16,
-          portada: "huevo/hue2.jpg"
+          portada:
+            "hue1.png"
         }
       ]
     };

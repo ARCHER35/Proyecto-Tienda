@@ -16,22 +16,5 @@
   "profile": {
     "name": "typicode"
   },
-  "carrito": [
-    {
-      "id_huevo": 1,
-      "nombre": "Maple de Huevo",
-      "descripcion": "Rolon",
-      "precio": 20,
-      "portada": "huevo/hue2.jpg",
-      "id": 3
-    },
-    {
-      "id_huevo": 1,
-      "nombre": "Maple de Huevo",
-      "descripcion": "Rolon",
-      "precio": 20,
-      "portada": "huevo/hue2.jpg",
-      "id": 4
-    }
-  ]
+  "carrito": []
 }

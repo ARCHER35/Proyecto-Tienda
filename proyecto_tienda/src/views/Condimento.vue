@@ -197,6 +197,13 @@ export default {
           titulo: "Ajo",
           descripcion: "Unidad",
           precio: 0,
+          portada: "ajo2.jpg"
+        },
+        {
+          id: 3,
+          titulo: "Ajo",
+          descripcion: "Unidad",
+          precio: 0,
           portada: "ajo.jpg"
         }
       ],
