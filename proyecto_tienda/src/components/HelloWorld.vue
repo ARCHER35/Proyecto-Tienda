@@ -44,7 +44,6 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <input type="file">
     <h1>Carnes</h1>
     <div class="container">
       <div class="row">
@@ -52,7 +51,6 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <p>{{c.portada}}</p>
                 <b-card-img v-bind:src="require('../assets/home/'+ c.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
