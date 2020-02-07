@@ -18,7 +18,7 @@
                       </strong>
                     </a>
                     <div id="openModal" class="modalDialog col-xs-12">
-                      <div class="tabla col-xs-12 bg-info">
+                      <div class="tabla col-xs-12 bg-info" he>
                         <a href="#" title="Close" class="close">X</a>
                         <h3 align="center">Agregar Producto</h3>
                         <div align="center">
