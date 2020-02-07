@@ -3,17 +3,20 @@
     <h1>Fideos Famosa</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(f,index) of famosa" :key="index" class="col-md-6">
+        <div v-for="(f,index) of productoFideo1" :key="index" class="col-md-6">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/fideo/'+f.portada)" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+f.portada)"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="f.nombre"></b-card-body>
                 <b-card-text>{{f.descripcion}}</b-card-text>
                 <h3>Bs{{f.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>
@@ -23,17 +26,21 @@
     <h1>Fideos Lazzaroni</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(l,index) of lazzaroni" :key="index" class="col-md-6">
+        <div v-for="(l,index) of productoFideo2" :key="index" class="col-md-6">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/fideo/'+l.portada)" height="250px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+l.portada)"
+                  height="250px"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre"></b-card-body>
                 <b-card-text>{{l.descripcion}}</b-card-text>
                 <h3>Bs{{l.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>
@@ -44,9 +51,38 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    productoFideo1() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "FIDEOS FAMOSA";
+      });
+    },
+    productoFideo2() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "FIDEOS LAZZARONI";
+      });
+    }
+  },
+  methods: {
+    getProducto() {
+      axios
+        .get("http://localhost:3500/api/producto")
+        .then(respuesta => {
+          console.log(respuesta.data);
+          this.producto = respuesta.data;
+          console.log(this.producto);
+        })
+        .catch(error => console.log(error));
+    }
+  },
   data() {
     return {
+      producto:[],
       famosa: [
         {
           nombre: "Fideo Anillito",
@@ -96,22 +132,19 @@ export default {
           nombre: "Espageti Lazzaroni",
           descripcion: "Unidad",
           precio: 5,
-          portada:
-            "fide10.jpg"
+          portada: "fide10.jpg"
         },
         {
           nombre: "Fideo Aritos",
           descripcion: "Unidad",
           precio: 5,
-          portada:
-            "fide12.jpg"
+          portada: "fide12.jpg"
         },
         {
           nombre: "Fideo Moño",
           descripcion: "Unidad",
           precio: 5,
-          portada:
-            "fide13.jpg"
+          portada: "fide13.jpg"
         },
         {
           nombre: "Fideos Nido",

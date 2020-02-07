@@ -94,10 +94,15 @@ const routes = [
     component: () => import(/** */ '@/views/Login.vue')
   },
   {
-    path: '/admi',
-    name:'admi',
-    component: () => import('../components/Admi.vue')
-  }
+    path: '/Carrito',
+    name: 'Carrito',
+    component: () => import(/** */ '@/views/Carrito.vue')
+  },
+  {  
+    path: '/administrador',
+    name:'administrador',
+    component: () => import('../components/Administrador.vue')
+  },
 ]
 
 const router = new VueRouter({
