@@ -3,17 +3,16 @@
     <h1>Pollo Selccionado</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(p,index) of pollo" :key="index" class="col-md-6 col-xs-12">
+        <div v-for="(p,index) of productoPollo" :key="index" class="col-md-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/pollo/'+p.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+p.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="p.nombre">
                   <b-card-text>{{p.descripcion}}</b-card-text>
                   <h3>Bs{{p.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -25,17 +24,16 @@
     <h1>Pollo Trozado</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(p2,index) of pollo2" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div v-for="(p2,index) of productoPollo2" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/pollo/'+p2.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+p2.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body class="col-sm" v-bind:title="p2.nombre">
                   <b-card-text>{{p2.descripcion}}</b-card-text>
                   <h3>Bs{{p2.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -48,21 +46,50 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-   data() {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    productoPollo() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "POLLO SELECCIONADO";
+      });
+    },
+    productoPollo2() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "POLLO TROZADO";
+      });
+    }
+  },
+  methods: {
+    getProducto() {
+      axios
+        .get("http://localhost:3500/api/producto")
+        .then(respuesta => {
+          console.log(respuesta.data);
+          this.producto = respuesta.data;
+          console.log(this.producto);
+        })
+        .catch(error => console.log(error));
+    }
+  },
+  data() {
     return {
+      producto: [],
       pollo: [
         {
           nombre: "Pollos Enteros",
           descripcion: "kilo",
           precio: 15,
-          portada:"pollo1.jpg"
+          portada: "pollo1.jpg"
         },
         {
           nombre: "Pollo",
           descripcion: "Kilo",
           precio: 15,
-          portada:"pollo2.jpg"
+          portada: "pollo2.jpg"
         }
       ],
       pollo2: [
@@ -101,7 +128,7 @@ export default {
           descripcion: "kilo",
           precio: 7,
           portada: "pollo8.png"
-        },
+        }
       ]
     };
   }

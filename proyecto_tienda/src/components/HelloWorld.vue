@@ -273,10 +273,10 @@ export default {
   },
   methods: {
     getImgUrl(portada) {
-    return require('../assets/'+portada)
-    console.log(require('../assets/'+portada))
-    console.log(hola)
-}
+      return require("../assets/" + portada);
+      console.log(require("../assets/" + portada));
+      console.log(hola);
+    }
   }
 };
 </script>
