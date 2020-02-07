@@ -17,7 +17,6 @@
                 <b-card-body v-bind:title="f.nombre"></b-card-body>
                 <b-card-text>{{f.descripcion}}</b-card-text>
                 <h3>Bs{{f.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>
@@ -42,7 +41,6 @@
                 <b-card-body v-bind:title="l.nombre"></b-card-body>
                 <b-card-text>{{l.descripcion}}</b-card-text>
                 <h3>Bs{{l.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>

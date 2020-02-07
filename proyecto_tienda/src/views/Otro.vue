@@ -16,7 +16,7 @@
                 <b-card-body v-bind:title="s.nombre">
                   <b-card-text>{{s.descripcion}}</b-card-text>
                   <h3>Bs{{s.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                  
                 </b-card-body>
               </b-col>
             </b-row>
@@ -41,8 +41,7 @@
                 <b-card-body v-bind:title="l.nombre">
                   <b-card-text>{{l.descripcion}}</b-card-text>
                   <h3>Bs{{l.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
-                </b-card-body>
+                  </b-card-body>
               </b-col>
             </b-row>
           </b-card>
@@ -66,7 +65,6 @@
                 <b-card-body v-bind:title="v.nombre">
                   <b-card-text>{{v.descripcion}}</b-card-text>
                   <h3>Bs{{v.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -76,7 +74,6 @@
       </div>
     </div>
     <h1>Carbon</h1>
-    <center>
       <div class="container">
         <div class="row">
           <div v-for="(c,index) of productoCarbon" :key="index" class="col-sm">
@@ -92,7 +89,6 @@
                   <b-card-body v-bind:title="c.nombre">
                     <b-card-text>{{c.descripcion}}</b-card-text>
                     <h3>Bs{{c.precio}}</h3>
-                    <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                   </b-card-body>
                 </b-col>
               </b-row>
@@ -101,9 +97,7 @@
           </div>
         </div>
       </div>
-    </center>
     <h1>Servilletas</h1>
-    <center>
       <div class="container">
         <div class="row">
           <div v-for="(s,index) of productoServilletas" :key="index" class="col-sm">
@@ -119,7 +113,6 @@
                   <b-card-body v-bind:title="s.nombre">
                     <b-card-text>{{s.descripcion}}</b-card-text>
                     <h3>Bs{{s.precio}}</h3>
-                    <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                   </b-card-body>
                 </b-col>
               </b-row>
@@ -128,7 +121,6 @@
           </div>
         </div>
       </div>
-    </center>
   </div>
 </template>
 

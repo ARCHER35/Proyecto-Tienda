@@ -13,25 +13,6 @@
                 <b-card-body v-bind:title="p.nombre">
                   <b-card-text>{{p.descripcion}}</b-card-text>
                   <h3>Bs{{p.precio}}</h3>
-                  <div>
-                    <b-button
-                      :class="p.estado? null : 'collapsed btn-dark'"
-                      :aria-expanded="p.estado ? 'true' : 'false'"
-                      aria-controls="collapse-4"
-                      @click="p.estado = !p.estado"
-                    >
-                      Agregar
-                      <i class="fas fa-cart-arrow-down text-light"></i>
-                    </b-button>
-                    <b-collapse id="collapse-4" v-model="p.estado" class="mt-2">
-                      <b-card>I should start open!</b-card>
-                      <select name id>
-                        <option value>1</option>
-                        <option value>2</option>
-                        <option value>3</option>
-                      </select>
-                    </b-collapse>
-                  </div>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -53,7 +34,6 @@
                 <b-card-body class="col-sm" v-bind:title="p2.nombre">
                   <b-card-text>{{p2.descripcion}}</b-card-text>
                   <h3>Bs{{p2.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>

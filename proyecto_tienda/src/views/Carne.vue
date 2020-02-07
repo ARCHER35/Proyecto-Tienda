@@ -7,23 +7,12 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img
-                  v-bind:src="require('../assets/'+c.portada)"
-                  class="rounded-circle"
-                ></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+c.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
                   <b-card-text>{{c.descripcion}}</b-card-text>
-                  <p>Bs{{c.precio}}</p>
-                  <b-button @click.prevent="c.ventana=true" variant="dark">
-                    Agregar
-                    <i class="fas fa-cart-arrow-down text-light"></i>
-                  </b-button>
-                  <div v-bind="c.ventana" v-if="c.ventana">
-                    <b-form-select v-model="selected" :options="c.cant"></b-form-select>
-                    <a href="#" class="banner btn btn-dark" @click.prevent="c.ventana=false">enviar</a>
-                  </div>
+                  <h3>Bs{{c.precio}}</h3>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -39,19 +28,12 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img
-                  v-bind:src="require('../assets/'+o.portada)"
-                  class="rounded-circle"
-                ></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+o.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="o.nombre">
                   <b-card-text>{{o.descripcion}}</b-card-text>
-                  <p>Bs{{o.precio}}</p>
-                  <b-button v-b-toggle.collapse-1 variant="dark">
-                    Agregar
-                    <i class="fas fa-cart-arrow-down text-light"></i>
-                  </b-button>
+                  <h3>Bs{{o.precio}}</h3>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -74,10 +56,10 @@ export default {
         return p.variedad == "CARNE";
       });
     },
-    productoVariedad(){
-      return this.producto.filter(function(p){
-        return p.variedad == "VARIEDAD"
-      })
+    productoVariedad() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "VARIEDAD";
+      });
     }
   },
   methods: {

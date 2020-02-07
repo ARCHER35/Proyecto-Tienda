@@ -18,7 +18,7 @@
                 <b-card-body v-bind:title="mayo.nombre"></b-card-body>
                 <b-card-text>{{mayo.descripcion}}</b-card-text>
                 <h3>Bs{{mayo.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                
               </b-col>
             </b-row>
           </b-card>
@@ -43,7 +43,6 @@
                 <b-card-body v-bind:title="a.nombre"></b-card-body>
                 <b-card-text>{{a.descripcion}}</b-card-text>
                 <h3>Bs{{a.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>
@@ -68,7 +67,6 @@
                 <b-card-body v-bind:title="moz.nombre"></b-card-body>
                 <b-card-text>{{moz.descripcion}}</b-card-text>
                 <h3>Bs{{moz.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>
@@ -94,7 +92,6 @@
                 <b-card-body v-bind:title="o.nombre"></b-card-body>
                 <b-card-text>{{o.descripcion}}</b-card-text>
                 <h3>Bs{{o.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>

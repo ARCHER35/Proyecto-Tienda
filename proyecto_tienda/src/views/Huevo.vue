@@ -13,7 +13,6 @@
                 <b-card-body v-bind:title="h.nombre">
                   <b-card-text>{{h.descripcion}}</b-card-text>
                   <h3>Bs {{h.precio}}</h3>
-                  <button class="btn btn-dark">Agregar</button>
                 </b-card-body>
               </b-col>
             </b-row>

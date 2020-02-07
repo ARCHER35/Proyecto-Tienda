@@ -18,7 +18,6 @@
                 <b-card-body v-bind:title="c.nombre">
                   <b-card-text>{{c.descripcion}}</b-card-text>
                   <h3>Bs{{c.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -45,7 +44,6 @@
                 <b-card-body v-bind:title="a.nombre">
                   <b-card-text>{{a.descripcion}}</b-card-text>
                   <h3>Bs{{a.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -72,7 +70,6 @@
                 <b-card-body v-bind:title="j.nombre">
                   <b-card-text>{{j.descripcion}}</b-card-text>
                   <h3>Bs{{j.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -98,7 +95,6 @@
                 <b-card-body v-bind:title="l.nombre">
                   <b-card-text>{{l.descripcion}}</b-card-text>
                   <h3>Bs{{l.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>

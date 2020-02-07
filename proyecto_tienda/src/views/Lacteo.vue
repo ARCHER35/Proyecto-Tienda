@@ -13,7 +13,6 @@
                 <b-card-body v-bind:title="l.nombre">
                   <b-card-text>{{l.descripcion}}</b-card-text>
                   <h3>Bs{{l.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -35,7 +34,6 @@
                 <b-card-body v-bind:title="q.nombre">
                   <b-card-text>{{q.descripcion}}</b-card-text>
                   <h3>Bs{{q.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -48,7 +46,7 @@
 </template>
 
 <script>
-import axios from "axios"
+import axios from "axios";
 export default {
   mounted() {
     this.getProducto();
@@ -59,10 +57,10 @@ export default {
         return p.variedad == "LECHE";
       });
     },
-    productoQueso(){
-      return this.producto.filter(function(p){
-        return p.variedad == "QUESO"
-      })
+    productoQueso() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "QUESO";
+      });
     }
   },
   methods: {
@@ -79,24 +77,21 @@ export default {
   },
   data() {
     return {
-      producto:[],
+      producto: [],
       leche: [
         {
           id: 1,
           nombre: "Leche Normal",
-          descripcion:
-            "Unidad",
+          descripcion: "Unidad",
           precio: 6,
-          imagen:
-          "leche1.jpg"
+          imagen: "leche1.jpg"
         },
         {
           id: 2,
           titulo: "Leche Deslactosada",
-          descripcion:"Unidad",
+          descripcion: "Unidad",
           precio: 7,
-          imagen:
-            "leche2.png"
+          imagen: "leche2.png"
         }
       ],
       queso: [
@@ -105,24 +100,21 @@ export default {
           nombre: "Queso Rio Grande",
           descripcion: "Kilo",
           precio: 28,
-          imagen:
-            "queso.jpg"
+          imagen: "queso.jpg"
         },
         {
           id: 2,
           nombre: "Queso Muzzarella",
           descripcion: "Kilo",
           precio: 23,
-          imagen:
-            "queso2.jpg"
+          imagen: "queso2.jpg"
         },
         {
           id: 3,
           nombre: "Quesillo",
           descripcion: "Unidad",
           precio: 5,
-          imagen:
-            "queso3.jpg"
+          imagen: "queso3.jpg"
         }
       ]
     };

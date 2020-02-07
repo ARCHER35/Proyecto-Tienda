@@ -17,7 +17,6 @@
                 <b-card-body v-bind:title="f.nombre"></b-card-body>
                 <b-card-text>{{f.descripcion}}</b-card-text>
                 <h3>Bs{{f.precio}}</h3>
-                <a href="#" class="btn btn-dark">Agregar al Carrito</a>
               </b-col>
             </b-row>
           </b-card>
@@ -25,32 +24,30 @@
       </div>
     </div>
     <h1>Agranel</h1>
-    <center>
-      <div class="container" v-for="(a,index) of productoAceite2" :key="index">
-        <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
-          <b-row no-gutters>
-            <b-col md="6">
-              <b-card-img
-                v-bind:src="require('../assets/'+a.portada)"
-                style="padding:10px"
-                class="rounded-circle"
-              ></b-card-img>
-            </b-col>
-            <b-col md="6">
-              <b-card-body v-bind:title="a.nombre"></b-card-body>
-              <b-card-text>{{a.descripcion}}</b-card-text>
-              <h3>Bs{{a.precio}}</h3>
-              <a href="#" class="btn btn-dark">Agregar al Carrito</a>
-            </b-col>
-          </b-row>
-        </b-card>
-      </div>
-    </center>
+    <div class="container" v-for="(a,index) of productoAceite2" :key="index">
+      <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+        <b-row no-gutters>
+          <b-col md="6">
+            <b-card-img
+              v-bind:src="require('../assets/'+a.portada)"
+              style="padding:10px"
+              class="rounded-circle"
+            ></b-card-img>
+          </b-col>
+          <b-col md="6">
+            <b-card-body v-bind:title="a.nombre"></b-card-body>
+            <b-card-text>{{a.descripcion}}</b-card-text>
+            <h3>Bs{{a.precio}}</h3>
+            <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+          </b-col>
+        </b-row>
+      </b-card>
+    </div>
   </div>
 </template>
 
 <script>
-import axios from "axios"
+import axios from "axios";
 export default {
   mounted() {
     this.getProducto();
@@ -81,7 +78,7 @@ export default {
   },
   data() {
     return {
-      producto:[],
+      producto: [],
       fino: [
         {
           nombre: "Aceite Fino",

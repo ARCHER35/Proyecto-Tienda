@@ -18,7 +18,6 @@
                 <b-card-body v-bind:title="s.nombre">
                   <b-card-text>{{s.descripcion}}</b-card-text>
                   <h3>Bs{{s.precio}}</h3>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -30,7 +29,7 @@
 </template>
 
 <script>
-import axios from "axios"
+import axios from "axios";
 export default {
   mounted() {
     this.getProducto();
@@ -40,7 +39,7 @@ export default {
       return this.producto.filter(function(p) {
         return p.variedad == "SAL";
       });
-    },
+    }
   },
   methods: {
     getProducto() {
@@ -56,7 +55,7 @@ export default {
   },
   data() {
     return {
-      producto:[],
+      producto: [],
       sal: [
         {
           nombre: "Sal Yodada",

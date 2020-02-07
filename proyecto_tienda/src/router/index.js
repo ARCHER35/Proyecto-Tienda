@@ -99,15 +99,10 @@ const routes = [
     component: () => import(/** */ '@/views/Carrito.vue')
   },
   {  
-    path: '/admi',
-    name:'admi',
-    component: () => import('../components/Admi.vue')
+    path: '/administrador',
+    name:'administrador',
+    component: () => import('../components/Administrador.vue')
   },
-  {
-    path: '/prueba',
-    name: 'prueba',
-    component: () => import('../components/Prueba.vue')
-  }
 ]
 
 const router = new VueRouter({

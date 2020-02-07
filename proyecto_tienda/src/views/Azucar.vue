@@ -13,11 +13,11 @@
                 <b-card-body v-bind:title="a.nombre">
                   <b-card-text>{{a.descripcion}}</b-card-text>
                   <h3>Bs{{a.precio}}</h3>
-                  <a href="#" class="btn btn-primary">Agregar al Carrito</a>
                 </b-card-body>
               </b-col>
             </b-row>
           </b-card>
+          <br/>
         </div>
       </div>
     </div>
