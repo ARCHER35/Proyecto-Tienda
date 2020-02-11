@@ -302,19 +302,23 @@
 
 <script>
 import axios from "axios";
+import ProductoModel from "../models/ProductoModel";
+
 export default {
+  name: "Administrador",
   data() {
     return {
       visible: true,
       newobjeto: [],
       producto: [],
       newProduc: {
-        variedad: "",
         nombre: "",
         descripcion: "",
         precio: 0,
-        portada: ""
+        portada: "",
+        variedad: "",
       },
+     model: null,
       editado: {},
       show: false
     };
@@ -514,7 +518,7 @@ export default {
 
     getProducto() {
       axios
-        .get("http://localhost:3500/api/producto")
+        .get("/api/producto")
         .then(respuesta => {
           console.log(respuesta.data);
           this.producto = respuesta.data;
@@ -523,13 +527,18 @@ export default {
         .catch(error => console.log(error));
     },
     postProducto() {
-      axios
+      if (this.model.validate()) {
+        this.model.save().then(() => console.log(JSON.stringify(this.model)));
+       /* 
+        axios
         .post("http://localhost:3500/api/nueva-producto", this.newProduc)
         .then(response => {
           console.log(response.data);
           this.getProducto();
         })
         .catch(error => console.log(error));
+        */
+      }
     },
     deleteProducto(t) {
       let url = "http://localhost:3500/api/producto/" + t._id;
@@ -564,7 +573,13 @@ export default {
         })
         .catch(error => console.log(error));
       this.show = false;
-    }
+    },
+    initialData() {
+      this.model = new ProductoModel();
+    },
+  },
+  beforeMount() {
+    this.initialData();
   }
 };
 </script>

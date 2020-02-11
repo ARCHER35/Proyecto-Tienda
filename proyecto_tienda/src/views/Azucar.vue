@@ -3,11 +3,11 @@
     <h1>Azucar</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(a,index) of azucar" :key="index" class="col-md-6">
+        <div v-for="(a,index) of productoAzucar" :key="index" class="col-md-6">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/azucar/'+a.portada)" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+a.portada)" height="230px" style="padding:10px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
@@ -25,9 +25,33 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
+   mounted() {
+    this.getProducto();
+  },
+  computed: {
+    productoAzucar() {
+      return this.producto.filter(function(p) {
+        return p.variedad == "AZUCAR";
+      });
+    }
+  },
+  methods: {
+    getProducto() {
+      axios
+        .get("http://localhost:3500/api/producto")
+        .then(respuesta => {
+          console.log(respuesta.data);
+          this.producto = respuesta.data;
+          console.log(this.producto);
+        })
+        .catch(error => console.log(error));
+    }
+  },
   data() {
     return {
+      producto: [],
       azucar: [
         {
           nombre: "Azucar Belgica",
