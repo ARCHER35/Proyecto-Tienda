@@ -104,11 +104,6 @@ Vue.use(VueRouter)
     name:'administrador',
     component: () => import('../components/Administrador.vue'),
     meta: { conectado: true }
-  },
-  {
-    path:'/car',
-    name:'car',
-    component: () => import('../components/Car')
   }
 ]
 
