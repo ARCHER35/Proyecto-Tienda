@@ -42,6 +42,7 @@
         </div>
       </div>
     </div>
+    <input type="file">
   </div>
 </template>
 <script>
@@ -65,7 +66,7 @@ export default {
   methods: {
     getProducto() {
       axios
-        .get("http://localhost:3500/api/producto")
+        .get("/api/producto")
         .then(respuesta => {
           console.log(respuesta.data);
           this.producto = respuesta.data;
