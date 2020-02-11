@@ -73,7 +73,7 @@ export default {
           console.log(this.producto);
         })
         .catch(error => console.log(error));
-    }
+    },
   },
   data() {
     return {
