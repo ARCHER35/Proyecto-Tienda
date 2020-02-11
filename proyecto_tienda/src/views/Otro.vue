@@ -3,20 +3,20 @@
     <h1>Salsasoya</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(s,index) of productoSalsaSoya" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div
+          v-for="(s,index) of productoSalsaSoya"
+          :key="index"
+          class="col-md-6 col-sm-6 col-xs-12"
+        >
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img
-                  v-bind:src="require('../assets/'+s.portada)"
-                  class="rounded-circle"
-                ></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+s.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="s.nombre">
                   <b-card-text>{{s.descripcion}}</b-card-text>
                   <h3>Bs{{s.precio}}</h3>
-                  
                 </b-card-body>
               </b-col>
             </b-row>
@@ -32,16 +32,13 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img
-                  v-bind:src="require('../assets/'+l.portada)"
-                  class="rounded-circle"
-                ></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+l.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre">
                   <b-card-text>{{l.descripcion}}</b-card-text>
                   <h3>Bs{{l.precio}}</h3>
-                  </b-card-body>
+                </b-card-body>
               </b-col>
             </b-row>
           </b-card>
@@ -56,10 +53,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img
-                  v-bind:src="require('../assets/'+v.portada)"
-                  class="rounded-circle"
-                ></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+v.portada)" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="v.nombre">
@@ -74,58 +68,52 @@
       </div>
     </div>
     <h1>Carbon</h1>
-      <div class="container">
-        <div class="row">
-          <div v-for="(c,index) of productoCarbon" :key="index" class="col-sm">
-            <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
-              <b-row no-gutters>
-                <b-col md="6">
-                  <b-card-img
-                    v-bind:src="require('../assets/'+c.portada)"
-                    class="rounded-circle"
-                  ></b-card-img>
-                </b-col>
-                <b-col md="6">
-                  <b-card-body v-bind:title="c.nombre">
-                    <b-card-text>{{c.descripcion}}</b-card-text>
-                    <h3>Bs{{c.precio}}</h3>
-                  </b-card-body>
-                </b-col>
-              </b-row>
-            </b-card>
-            <br />
-          </div>
+    <div class="container">
+      <div class="row">
+        <div v-for="(c,index) of productoCarbon" :key="index" class="col-sm">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="require('../assets/'+c.portada)" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="c.nombre">
+                  <b-card-text>{{c.descripcion}}</b-card-text>
+                  <h3>Bs{{c.precio}}</h3>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
         </div>
       </div>
+    </div>
     <h1>Servilletas</h1>
-      <div class="container">
-        <div class="row">
-          <div v-for="(s,index) of productoServilletas" :key="index" class="col-sm">
-            <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
-              <b-row no-gutters>
-                <b-col md="6">
-                  <b-card-img
-                    v-bind:src="require('../assets/'+s.portada)"
-                    class="rounded-circle"
-                  ></b-card-img>
-                </b-col>
-                <b-col md="6">
-                  <b-card-body v-bind:title="s.nombre">
-                    <b-card-text>{{s.descripcion}}</b-card-text>
-                    <h3>Bs{{s.precio}}</h3>
-                  </b-card-body>
-                </b-col>
-              </b-row>
-            </b-card>
-            <br />
-          </div>
+    <div class="container">
+      <div class="row">
+        <div v-for="(s,index) of productoServilletas" :key="index" class="col-sm">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img v-bind:src="require('../assets/'+s.portada)" class="rounded-circle"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body v-bind:title="s.nombre">
+                  <b-card-text>{{s.descripcion}}</b-card-text>
+                  <h3>Bs{{s.precio}}</h3>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+          <br />
         </div>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-import axios from "axios"
+import axios from "axios";
 export default {
   mounted() {
     this.getProducto();
@@ -171,7 +159,7 @@ export default {
   },
   data() {
     return {
-      producto:[],
+      producto: [],
       salsasoya: [
         {
           nombre: "Salsasoya Trisoy Toscana",

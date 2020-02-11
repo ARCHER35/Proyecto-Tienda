@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="container" align=right>
+      <button @click="salir()" class="btn btn-danger rounded-pill">Salir de la Vista</button>
+    </div>
     <h1>Bienvenido a la Vista Administrador</h1>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -169,7 +172,7 @@
         </div>
         <button
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary rounded-pill"
           data-toggle="modal"
           data-target="#basicExampleModal"
         >Agregar Producto 2.0</button>
@@ -302,6 +305,7 @@
 
 <script>
 import axios from "axios";
+import firebase from 'firebase'
 export default {
   data() {
     return {
@@ -323,6 +327,9 @@ export default {
     this.getProducto();
   },
   methods: {
+    salir(){
+      firebase.auth().signOut().then(() => this.$router.replace('login'))
+    },
     carne() {
       console.log(this.producto);
       let prueba = [];
