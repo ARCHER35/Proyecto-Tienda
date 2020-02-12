@@ -227,7 +227,7 @@
                     />
                     <br />Precio
                     <input
-                      type="text"
+                      type="number"
                       required
                       v-model="newProduc.precio"
                       class="form-control"
@@ -320,9 +320,9 @@ export default {
         descripcion: "",
         precio: 0,
         portada: "",
-        variedad: "",
+         variedad: "",
       },
-     model: null,
+      model: null,
       editado: {},
       show: false
     };
@@ -525,7 +525,7 @@ export default {
 
     getProducto() {
       axios
-        .get("/api/producto")
+        .get("http://localhost:3500/api/producto")
         .then(respuesta => {
           console.log(respuesta.data);
           this.producto = respuesta.data;
@@ -534,18 +534,13 @@ export default {
         .catch(error => console.log(error));
     },
     postProducto() {
-      if (this.model.validate()) {
-        this.model.save().then(() => console.log(JSON.stringify(this.model)));
-       /* 
-        axios
-        .post("http://localhost:3500/api/nueva-producto", this.newProduc)
+      axios.post("http://localhost:3500/api/nueva-producto", this.newProduc)
         .then(response => {
           console.log(response.data);
           this.getProducto();
         })
         .catch(error => console.log(error));
-        */
-      }
+
     },
     deleteProducto(t) {
       let url = "http://localhost:3500/api/producto/" + t._id;
@@ -580,13 +575,7 @@ export default {
         })
         .catch(error => console.log(error));
       this.show = false;
-    },
-    initialData() {
-      this.model = new ProductoModel();
-    },
-  },
-  beforeMount() {
-    this.initialData();
+    }
   }
 };
 </script>
