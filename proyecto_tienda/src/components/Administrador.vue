@@ -534,18 +534,14 @@ export default {
         .catch(error => console.log(error));
     },
     postProducto() {
-      if (this.model.validate()) {
-        this.model.save().then(() => console.log(JSON.stringify(this.model)));
-       /* 
+      console.log(JSON.stringify(this.model));
         axios
-        .post("http://localhost:3500/api/nueva-producto", this.newProduc)
+        .post("http://localhost:3500/api/nueva-producto", this.model)
         .then(response => {
           console.log(response.data);
           this.getProducto();
         })
         .catch(error => console.log(error));
-        */
-      }
     },
     deleteProducto(t) {
       let url = "http://localhost:3500/api/producto/" + t._id;
