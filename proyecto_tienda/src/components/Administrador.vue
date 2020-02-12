@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container" align=right>
+    <div class="container" align="right">
       <button @click="salir()" class="btn btn-danger rounded-pill">Salir de la Vista</button>
     </div>
     <h1>Bienvenido a la Vista Administrador</h1>
@@ -306,7 +306,7 @@
 <script>
 import axios from "axios";
 import ProductoModel from "../models/ProductoModel";
-import firebase from 'firebase';
+import firebase from "firebase";
 
 export default {
   name: "Administrador",
@@ -320,7 +320,7 @@ export default {
         descripcion: "",
         precio: 0,
         portada: "",
-         variedad: "",
+        variedad: ""
       },
       model: null,
       editado: {},
@@ -331,8 +331,11 @@ export default {
     this.getProducto();
   },
   methods: {
-    salir(){
-      firebase.auth().signOut().then(() => this.$router.replace('login'))
+    salir() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("login"));
     },
     carne() {
       console.log(this.producto);
@@ -525,7 +528,7 @@ export default {
 
     getProducto() {
       axios
-        .get("http://localhost:3500/api/producto")
+        .get("http://localhost:3500/api/nueva-producto")
         .then(respuesta => {
           console.log(respuesta.data);
           this.producto = respuesta.data;
@@ -534,13 +537,16 @@ export default {
         .catch(error => console.log(error));
     },
     postProducto() {
-      axios.post("http://localhost:3500/api/nueva-producto", this.newProduc)
+      console.log(JSON.stringify(this.model));
+        axios
+        .post("http://localhost:3500/api/nueva-producto", this.newProduc)
+        .post("http://localhost:3500/api/nueva-producto", this.newProduc)
         .then(response => {
           console.log(response.data);
           this.getProducto();
         })
         .catch(error => console.log(error));
-
+        
     },
     deleteProducto(t) {
       let url = "http://localhost:3500/api/producto/" + t._id;
