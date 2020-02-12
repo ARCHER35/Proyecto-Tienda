@@ -39,7 +39,7 @@ export default {
   methods: {
     getProducto() {
       axios
-        .get("http://localhost:3500/api/producto")
+        .get("http://frial-criss:frialcriss@cluster0-e5eku.mongodb.net/test")
         .then(respuesta => {
           console.log(respuesta.data);
           this.producto = respuesta.data;

@@ -546,7 +546,6 @@ export default {
           this.getProducto();
         })
         .catch(error => console.log(error));
-        
     },
     deleteProducto(t) {
       let url = "http://localhost:3500/api/producto/" + t._id;
