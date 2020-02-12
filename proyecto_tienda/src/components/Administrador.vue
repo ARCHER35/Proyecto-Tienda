@@ -525,7 +525,7 @@ export default {
 
     getProducto() {
       axios
-        .get("/api/producto")
+        .get("http://localhost:3500/api/nueva-producto")
         .then(respuesta => {
           console.log(respuesta.data);
           this.producto = respuesta.data;
@@ -536,7 +536,7 @@ export default {
     postProducto() {
       console.log(JSON.stringify(this.model));
         axios
-        .post("http://localhost:3500/api/nueva-producto", this.model)
+        .post("http://localhost:3500/api/nueva-producto", this.newProduc)
         .then(response => {
           console.log(response.data);
           this.getProducto();
