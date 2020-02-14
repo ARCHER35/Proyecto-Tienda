@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container" align=right>
+    <div class="container" align="right">
       <button @click="salir()" class="btn btn-danger rounded-pill">Salir de la Vista</button>
     </div>
     <h1>Bienvenido a la Vista Administrador</h1>
@@ -300,289 +300,224 @@
         </div>
       </div>
     </div>
+    <p>{{product}}</p>
   </div>
 </template>
-
 <script>
+import { mapState } from "vuex";
 import axios from "axios";
-import ProductoModel from "../models/ProductoModel";
-import firebase from 'firebase';
+import firebase from "firebase";
 
 export default {
   name: "Administrador",
+  computed: {
+    ...mapState(["product"])
+  },
   data() {
     return {
       visible: true,
       newobjeto: [],
-      producto: [],
       newProduc: {
         nombre: "",
         descripcion: "",
         precio: 0,
         portada: "",
-        variedad: "",
+        variedad: ""
       },
-     model: null,
+      model: null,
       editado: {},
       show: false
     };
   },
-  mounted() {
-    this.getProducto();
-  },
   methods: {
-    salir(){
-      firebase.auth().signOut().then(() => this.$router.replace('login'))
+    salir() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("login"));
     },
     carne() {
-      console.log(this.producto);
-      let prueba = [];
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad === "CARNE";
       });
-      console.log(prueba);
     },
     variedad() {
-      console.log(this.producto);
-      let prueba = [];
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad === "VARIEDAD";
       });
-      console.log(prueba);
     },
     pollo1() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "POLLO TROZADO";
       });
     },
     pollo2() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "POLLO SELECCIONADO";
       });
     },
     huevo() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "HUEVO";
       });
     },
     arroz() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "ARROZ";
       });
     },
     azucar() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "AZUCAR";
       });
     },
     fideos1() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "FIDEOS FAMOSA";
       });
     },
     fiedo2() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "FIDEOS LAZZARONI";
       });
     },
     sal() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "SAL";
       });
     },
     acetie1() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "ACEITE FINO";
       });
     },
     acetie2() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "ACEITE AGRANEL";
       });
     },
     adereso1() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "MAYONESA";
       });
     },
     adereso2() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "KETCHUP";
       });
     },
     adereso3() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "MOSTAZA";
       });
     },
 
     adereso4() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "OTROS ADEREZOS";
       });
     },
     salsasoya() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "SALSA SOYA";
       });
     },
     limonero() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "HARRY EL LIMONERO";
       });
     },
     vinagres() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "VINAGRE";
       });
     },
 
     carbon() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "CARBON";
       });
     },
     servilletas() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "SERVILLETAS";
       });
     },
     chorizo() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "CHORIZO";
       });
     },
     mortadela() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "MORTADELA";
       });
     },
     pasta() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "PASTA";
       });
     },
     condimentos() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "CONDIMENTOS";
       });
     },
     aji() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "AJI";
       });
     },
     ajo() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "AJO";
       });
     },
     canela() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "CANELA";
       });
     },
     leche() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "LECHE";
       });
     },
     queso() {
-      this.newobjeto = this.producto;
+      this.newobjeto = this.product;
       this.newobjeto = this.newobjeto.filter(p => {
         return p.variedad == "QUESO";
       });
-    },
-
-    getProducto() {
-      axios
-        .get("http://localhost:3500/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
-    },
-    postProducto() {
-      console.log(JSON.stringify(this.model));
-        axios
-        .post("http://localhost:3500/api/nueva-producto", this.newProduc)
-        .then(response => {
-          console.log(response.data);
-          this.getProducto();
-        })
-        .catch(error => console.log(error));
-    },
-    deleteProducto(t) {
-      let url = "http://localhost:3500/api/producto/" + t._id;
-      axios
-        .delete(url)
-        .then(response => {})
-        .catch(error => console.log(error));
-    },
-    edit(t) {
-      this.show = true;
-      console.log(t._id);
-      var url = "http://localhost:3500/api/producto/" + t._id;
-      axios.get(url).then(response => {
-        this.editado = response.data;
-      });
-    },
-    putProducto(t) {
-      var url = "http://localhost:3500/api/producto/" + t._id;
-      axios
-        .put(url, t)
-        .then(response => {
-          const index = this.producto.findIndex(
-            i => i._id === response.data._id
-          );
-          this.producto[index].variedad = response.data.variedad;
-          this.producto[index].nombre = response.data.nombre;
-          this.producto[index].descripcion = response.data.descripcion;
-          this.producto[index].precio = response.data.precio;
-          this.producto[index].portada = response.data.portada;
-          this.editado = {};
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
-      this.show = false;
-    },
-    initialData() {
-      this.model = new ProductoModel();
-    },
-  },
-  beforeMount() {
-    this.initialData();
+    }
   }
 };
 </script>
