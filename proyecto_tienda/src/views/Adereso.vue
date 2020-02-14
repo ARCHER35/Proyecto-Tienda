@@ -18,7 +18,6 @@
                 <b-card-body v-bind:title="mayo.nombre"></b-card-body>
                 <b-card-text>{{mayo.descripcion}}</b-card-text>
                 <h3>Bs{{mayo.precio}}</h3>
-                
               </b-col>
             </b-row>
           </b-card>
@@ -102,48 +101,35 @@
 </template>
 
 <script>
-import axios from "axios"
+import { mapState } from "vuex";
+import axios from "axios";
 export default {
-  mounted() {
-    this.getProducto();
-  },
   computed: {
+    ...mapState(["product"]),
     productoMayonesa() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "MAYONESA";
       });
     },
     productoKetchup() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "KETCHUP";
       });
     },
     productoMostaza() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "MOSTAZA";
       });
     },
     productoOtros() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "OTROS ADEREZOS";
       });
     }
   },
-  methods: {
-    getProducto() {
-      axios
-        .get("/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
-    }
-  },
   data() {
     return {
-      producto:[],
+      producto: [],
       ketchup: [
         {
           nombre: "Ketchup Pequeño",

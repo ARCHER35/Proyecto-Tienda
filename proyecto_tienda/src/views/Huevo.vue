@@ -24,28 +24,18 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
 import axios from "axios";
 export default {
   mounted() {
     this.getProducto();
   },
   computed: {
+    ...mapState(["product"]),
     productoHuevo() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "HUEVO";
       });
-    }
-  },
-  methods: {
-    getProducto() {
-      axios
-        .get("http://frial-criss:frialcriss@cluster0-e5eku.mongodb.net/test")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
     }
   },
   data() {

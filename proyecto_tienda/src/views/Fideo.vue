@@ -51,38 +51,25 @@
 </template>
 
 <script>
-import axios from "axios"
+import { mapState } from "vuex";
+import axios from "axios";
 export default {
-  mounted() {
-    this.getProducto();
-  },
   computed: {
+    ...mapState(["product"]),
     productoFideo1() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "FIDEOS FAMOSA";
       });
     },
     productoFideo2() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "FIDEOS LAZZARONI";
       });
     }
   },
-  methods: {
-    getProducto() {
-      axios
-        .get("/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
-    }
-  },
   data() {
     return {
-      producto:[],
+      producto: [],
       famosa: [
         {
           nombre: "Fideo Anillito",

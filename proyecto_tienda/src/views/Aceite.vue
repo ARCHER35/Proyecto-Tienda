@@ -38,7 +38,6 @@
             <b-card-body v-bind:title="a.nombre"></b-card-body>
             <b-card-text>{{a.descripcion}}</b-card-text>
             <h3>Bs{{a.precio}}</h3>
-            <a href="#" class="btn btn-dark">Agregar al Carrito</a>
           </b-col>
         </b-row>
       </b-card>
@@ -47,33 +46,20 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import axios from "axios";
 export default {
-  mounted() {
-    this.getProducto();
-  },
   computed: {
+    ...mapState(["product"]),
     productoAceite1() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "ACEITE FINO";
       });
     },
     productoAceite2() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "ACEITE AGRANEL";
       });
-    }
-  },
-  methods: {
-    getProducto() {
-      axios
-        .get("/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
     }
   },
   data() {

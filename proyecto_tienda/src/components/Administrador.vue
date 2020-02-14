@@ -525,7 +525,7 @@ export default {
 
     getProducto() {
       axios
-        .get("http://localhost:3500/api/nueva-producto")
+        .get("http://localhost:3500/api/producto")
         .then(respuesta => {
           console.log(respuesta.data);
           this.producto = respuesta.data;
