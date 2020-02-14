@@ -227,7 +227,7 @@
                     />
                     <br />Precio
                     <input
-                      type="text"
+                      type="number"
                       required
                       v-model="newProduc.precio"
                       class="form-control"
