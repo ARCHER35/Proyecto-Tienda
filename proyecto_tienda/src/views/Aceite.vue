@@ -1,20 +1,22 @@
 <template>
   <div>
-    <h1>Aceites</h1>
+    <h1>Aceite Fino</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(f,index) of fino" :key="index" class="col-md-6">
-          <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+        <div v-for="(f,index) of productoAceite1" :key="index" class="col-md-6">
+          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+f.portada)"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body title="Horizontal Card">
-                  <b-card-text>
-                    {{f.descripcion}}
-                  </b-card-text>
-                </b-card-body>
+                <b-card-body v-bind:title="f.nombre"></b-card-body>
+                <b-card-text>{{f.descripcion}}</b-card-text>
+                <h3>Bs{{f.precio}}</h3>
               </b-col>
             </b-row>
           </b-card>
@@ -22,18 +24,20 @@
       </div>
     </div>
     <h1>Agranel</h1>
-    <div class="container" v-for="(a,index) of agranel" :key="index">
-      <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+    <div class="container" v-for="(a,index) of productoAceite2" :key="index">
+      <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-0"></b-card-img>
+            <b-card-img
+              v-bind:src="require('../assets/'+a.portada)"
+              style="padding:10px"
+              class="rounded-circle"
+            ></b-card-img>
           </b-col>
           <b-col md="6">
-            <b-card-body v-bind:title="a.nombre">
-              <b-card-text>
-                {{a.descripcion}}
-              </b-card-text>
-            </b-card-body>
+            <b-card-body v-bind:title="a.nombre"></b-card-body>
+            <b-card-text>{{a.descripcion}}</b-card-text>
+            <h3>Bs{{a.precio}}</h3>
           </b-col>
         </b-row>
       </b-card>
@@ -42,21 +46,37 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+import axios from "axios";
 export default {
+  computed: {
+    ...mapState(["product"]),
+    productoAceite1() {
+      return this.product.filter(function(p) {
+        return p.variedad == "ACEITE FINO";
+      });
+    },
+    productoAceite2() {
+      return this.product.filter(function(p) {
+        return p.variedad == "ACEITE AGRANEL";
+      });
+    }
+  },
   data() {
     return {
+      producto: [],
       fino: [
         {
           nombre: "Aceite Fino",
           descripcion: "900 ml",
           precio: 15,
-          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "aceite1.jpg"
         },
         {
-          nombre: "Aceite Fino 2",
-          descripcion: "Ltrs",
-          precio: 0,
-          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          nombre: "Aceite Fino 4.5 Ltrs",
+          descripcion: "4.5 ltrs",
+          precio: 56,
+          portada: "aceite2.jpg"
         }
       ],
       agranel: [
@@ -64,7 +84,7 @@ export default {
           nombre: "Aceite Agranel",
           descripcion: "Litro",
           precio: 9,
-          portada: "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "aceite-agranel.jpg"
         }
       ]
     };

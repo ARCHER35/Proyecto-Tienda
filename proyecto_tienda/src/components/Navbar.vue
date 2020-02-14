@@ -2,12 +2,7 @@
   <div>
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info">
-        <img
-          src="https://edu.glogster.com/proxy?url=http%3A%2F%2Fwww.vender-online.org%2Fblog%2Fwp-content%2Fuploads%2F2014%2F02%2Ftienda.jpg"
-          alt
-          height="70px"
-          width="100px"
-        />
+        <b-img :src="require('../assets/logo-toro-2.png')" height="80px" width="130px"></b-img>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
@@ -24,7 +19,7 @@
               <b-dropdown-item to="/fideo">Fideos</b-dropdown-item>
               <b-dropdown-item to="/sal">Sal</b-dropdown-item>
               <b-dropdown-item to="/aceite">Aceite</b-dropdown-item>
-              <b-dropdown-item to="/adereso">Aderesos</b-dropdown-item>
+              <b-dropdown-item to="/adereso">Aderezos</b-dropdown-item>
               <b-dropdown-item to="/otro">Otros</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item to="/embutido">Embutidos</b-nav-item>
@@ -33,9 +28,6 @@
             <b-nav-item to="/contacto">Contactos</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
-        <a href="#" class="btn btn-danger" align="center"><i class="fas fa-cart-arrow-down"></i></a>
-        <h1>|</h1>
-        <h3 class="text-danger">Frial Cris</h3>
       </b-navbar>
     </div>
     <router-view />
@@ -43,7 +35,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    boton() {
+      this.$router.push("/carrito");
+    }
+  }
+};
 </script>
 <style>
+b {
+  background: black;
+}
 </style>

@@ -3,16 +3,20 @@
     <h1>Fideos Famosa</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(f,index) of famosa" :key="index" class="col-md-4">
+        <div v-for="(f,index) of productoFideo1" :key="index" class="col-md-6">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+f.portada)"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="f.nombre">
-                  <b-card-text>{{f.descripcion}}</b-card-text>
-                </b-card-body>
+                <b-card-body v-bind:title="f.nombre"></b-card-body>
+                <b-card-text>{{f.descripcion}}</b-card-text>
+                <h3>Bs{{f.precio}}</h3>
               </b-col>
             </b-row>
           </b-card>
@@ -22,35 +26,21 @@
     <h1>Fideos Lazzaroni</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(l,index) of lazzaroni" :key="index" class="col-md-6">
+        <div v-for="(l,index) of productoFideo2" :key="index" class="col-md-6">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+l.portada)"
+                  height="250px"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="l.nombre">
-                  <b-card-text>{{l.descripcion}}</b-card-text>
-                </b-card-body>
-              </b-col>
-            </b-row>
-          </b-card>
-        </div>
-      </div>
-    </div>
-    <h1>Fideos del Pais</h1>
-    <div class="container">
-      <div class="row">
-        <div v-for="(p,index) of pais" :key="index" class="col-md-6">
-          <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
-            <b-row no-gutters>
-              <b-col md="6">
-                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-circle"></b-card-img>
-              </b-col>
-              <b-col md="6">
-                <b-card-body v-bind:title="p.nombre">
-                  <b-card-text>{{p.descripcion}}</b-card-text>
-                </b-card-body>
+                <b-card-body v-bind:title="l.nombre"></b-card-body>
+                <b-card-text>{{l.descripcion}}</b-card-text>
+                <h3>Bs{{l.precio}}</h3>
               </b-col>
             </b-row>
           </b-card>
@@ -61,62 +51,92 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
+  computed: {
+    ...mapState(["product"]),
+    productoFideo1() {
+      return this.product.filter(function(p) {
+        return p.variedad == "FIDEOS FAMOSA";
+      });
+    },
+    productoFideo2() {
+      return this.product.filter(function(p) {
+        return p.variedad == "FIDEOS LAZZARONI";
+      });
+    }
+  },
   data() {
     return {
+      producto: [],
       famosa: [
         {
-          nombre: "Fideos Famosa",
-          descripcion: "Cuarilla",
-          precio: 20,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          nombre: "Fideo Anillito",
+          descripcion: "Unidad",
+          precio: 5,
+          portada: "fide1.jpg"
         },
         {
-          nombre: "Fideo 1",
+          nombre: "Fideo Codo Mediano Rigatti",
           descripcion: "Unidad",
-          precio: 4,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          precio: 5,
+          portada: "fide2.jpg"
         },
         {
-          nombre: "Fideo 2",
+          nombre: "Fideo Codo Grande Rigatti",
           descripcion: "Unidad",
-          precio: 4,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          precio: 5,
+          portada: "fide3.jpg"
+        },
+        {
+          nombre: "Fideo Tirabuzon",
+          descripcion: "Unidad",
+          precio: 5,
+          portada: "fide4.jpg"
+        },
+        {
+          nombre: "Fideo Espagueti",
+          descripcion: "Unidad",
+          precio: 5,
+          portada: "fide5.jpg"
+        },
+        {
+          nombre: "Fideo Corbatitas",
+          descripcion: "Unidad",
+          precio: 5,
+          portada: "fide6.jpg"
+        },
+        {
+          nombre: "Fideo Letritas",
+          descripcion: "Unidad",
+          precio: 5,
+          portada: "fide7.jpg"
         }
       ],
       lazzaroni: [
         {
           nombre: "Espageti Lazzaroni",
-          descripcion: "3 Unidades",
-          precio: 10,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
-        },
-        {
-          nombre: "Fideo 1",
           descripcion: "Unidad",
-          precio: 4,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
-        }
-      ],
-      pais: [
-        {
-          nombre: "Fideos del Pais",
-          descripcion: "Libra",
           precio: 5,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "fide10.jpg"
         },
         {
-          nombre: "Fideo 1",
-          descripcion: "Libra",
+          nombre: "Fideo Aritos",
+          descripcion: "Unidad",
           precio: 5,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "fide12.jpg"
+        },
+        {
+          nombre: "Fideo Moño",
+          descripcion: "Unidad",
+          precio: 5,
+          portada: "fide13.jpg"
+        },
+        {
+          nombre: "Fideos Nido",
+          descripcion: "Unidad",
+          precio: 5,
+          portada: "fide14.jpg"
         }
       ]
     };
@@ -125,6 +145,9 @@ export default {
 </script>
 
 <style>
+.card {
+  margin-bottom: 20px;
+}
 .efc:hover {
   background: #a0e4ff;
   color: #1d272b;

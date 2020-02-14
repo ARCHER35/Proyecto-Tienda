@@ -3,17 +3,16 @@
     <h1>Pollo Selccionado</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(p,index) of pollo" :key="index" class="col-md-6 col-xs-12">
+        <div v-for="(p,index) of productoPollo" :key="index" class="col-md-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p.imagen" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+p.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="p.titulo">
+                <b-card-body v-bind:title="p.nombre">
                   <b-card-text>{{p.descripcion}}</b-card-text>
-                  <p>Bs{{p.precio}}</p>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                  <h3>Bs{{p.precio}}</h3>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -25,17 +24,16 @@
     <h1>Pollo Trozado</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(p2,index) of pollo2" :key="index" class="col-md-4 col-sm-6 col-xs-12">
+        <div v-for="(p2,index) of productoPollo2" :key="index" class="col-md-6 col-sm-6 col-xs-12">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="p2.imagen" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+p2.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body v-bind:title="p2.titulo">
+                <b-card-body class="col-sm" v-bind:title="p2.nombre">
                   <b-card-text>{{p2.descripcion}}</b-card-text>
-                  <p>Bs{{p2.precio}}</p>
-                  <a href="#" class="btn btn-dark">Agregar al Carrito</a>
+                  <h3>Bs{{p2.precio}}</h3>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -48,23 +46,40 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import axios from "axios";
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    ...mapState(['product']),
+    productoPollo() {
+      return this.product.filter(function(p) {
+        return p.variedad == "POLLO SELECCIONADO";
+      });
+    },
+    productoPollo2() {
+      return this.product.filter(function(p) {
+        return p.variedad == "POLLO TROZADO";
+      });
+    }
+  },
   data() {
     return {
+      producto: [],
       pollo: [
         {
           nombre: "Pollos Enteros",
           descripcion: "kilo",
           precio: 15,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "pollo1.jpg"
         },
         {
-          nombre: "Tipos de Pollos",
+          nombre: "Pollo",
           descripcion: "Kilo",
           precio: 15,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "pollo2.jpg"
         }
       ],
       pollo2: [
@@ -72,36 +87,37 @@ export default {
           nombre: "Alitas",
           descripcion: "kilo",
           precio: 18,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "pollo3.jpg"
         },
         {
           nombre: "Piernas",
           descripcion: "kilo",
           precio: 18,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "pollo4.jpg"
         },
         {
           nombre: "Pecho",
           descripcion: "kilo",
           precio: 18,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
-        },
-        {
-          nombre: "Menudencia",
-          descripcion: "kilo",
-          precio: 7,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "pollo5.jpg"
         },
         {
           nombre: "Carne Molida de Pollo",
           descripcion: "kilo",
           precio: 22,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "pollo6.jpg"
+        },
+        {
+          nombre: "Filete de Pollo",
+          descripcion: "kilo",
+          precio: 20,
+          portada: "pollo7.jpg"
+        },
+        {
+          nombre: "Menudencia",
+          descripcion: "kilo",
+          precio: 7,
+          portada: "pollo8.png"
         }
       ]
     };

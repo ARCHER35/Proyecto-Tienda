@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import firebase from 'firebase/app'
 
 Vue.use(VueRouter)
 
-const routes = [
+  const routes= [
   {
     path: '/',
     name: 'home',
@@ -87,11 +88,42 @@ const routes = [
     path: '/contacto',
     name: 'contacto',
     component: () => import(/** */ '@/views/Contacto.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/** */ '@/views/Login.vue')
+  },
+  {
+    path: '/Carrito',
+    name: 'Carrito',
+    component: () => import(/** */ '@/views/Carrito.vue')
+  },
+  {  
+    path: '/administrador',
+    name:'administrador',
+    component: () => import('../components/Administrador.vue'),
+    meta: { conectado: true }
   }
 ]
 
+
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
+})  
+router.beforeEach((to, from, next) => {
+  const usuario = firebase.auth().currentUser
+  const autorizacion = to.matched.some(record => record.meta.conectado)
+  if (!usuario && autorizacion) {
+    next('login')
+  } else if (usuario && !autorizacion) {
+    next('administrador')
+  } else {
+    next()
+  }
 })
 
 export default router
+

@@ -3,19 +3,21 @@
     <h1>Arroz</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(a,index) of arroz" :key="index" class="col-md-12">
+        <div v-for="(a,index) of productoArroz" :key="index" class="col-md-6">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img src="https://picsum.photos/400/400/?image=20" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+a.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
                   <b-card-text>{{a.descripcion}}</b-card-text>
+                  <h3>Bs {{a.precio}}</h3>
                 </b-card-body>
               </b-col>
             </b-row>
           </b-card>
+          <br />
         </div>
       </div>
     </div>
@@ -23,15 +25,35 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+import axios from "axios";
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    ...mapState(["product"]),
+    productoArroz() {
+      return this.product.filter(function(p) {
+        return p.variedad == "ARROZ";
+      });
+    }
+  },
   data() {
     return {
+      producto: [],
       arroz: [
         {
-          nombre:"Arroz Frano de Oro",
-          descripcion:"Cuartilla",
-          precio:20,
-          portada:"https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          nombre: "Arroz Grano de Oro",
+          descripcion: "Cuartilla",
+          precio: 20,
+          portada: "arroz1.png"
+        },
+        {
+          nombre: "Arroz Grano de Oro",
+          descripcion: "Cuartilla",
+          precio: 20,
+          portada: "arroz2.jpg"
         }
       ]
     };

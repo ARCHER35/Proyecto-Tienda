@@ -3,21 +3,26 @@
     <h1>Azucar</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(a,index) of azucar" :key="index" class="col-md-6">
+        <div v-for="(a,index) of productoAzucar" :key="index" class="col-md-6">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="a.portada" class="rounded-circle"></b-card-img>
+                <b-card-img
+                  v-bind:src="require('../assets/'+a.portada)"
+                  height="230px"
+                  style="padding:10px"
+                  class="rounded-circle"
+                ></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="a.nombre">
                   <b-card-text>{{a.descripcion}}</b-card-text>
-                  <p>Bs{{a.precio}}</p>
-                  <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                  <h3>Bs{{a.precio}}</h3>
                 </b-card-body>
               </b-col>
             </b-row>
           </b-card>
+          <br />
         </div>
       </div>
     </div>
@@ -25,19 +30,38 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+import axios from "axios";
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    ...mapState(["product"]),
+    productoAzucar() {
+      return this.product.filter(function(p) {
+        return p.variedad == "AZUCAR";
+      });
+    }
+  },
   data() {
     return {
+      producto: [],
       azucar: [
         {
           nombre: "Azucar Belgica",
           descripcion: "Kilo",
           precio: 14,
-          portada:
-            "https://media.gettyimages.com/photos/raindrops-falling-down-on-black-background-picture-id94993245?s=612x612"
+          portada: "azu1.jpg"
+        },
+        {
+          nombre: "Azucar Belgica",
+          descripcion: "Kilo",
+          precio: 14,
+          portada: "zu2.jpg"
         }
-      ],
-    }
+      ]
+    };
   }
 };
 </script>

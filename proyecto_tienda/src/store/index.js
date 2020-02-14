@@ -5,6 +5,1008 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    product:[
+      {
+        estado: false,
+        _id: "5e3c24819f1c2b27a88e9e8c",
+        variedad: "CARNE",
+        nombre: "Carne Molida",
+        descripcion: "Kilo",
+        precio: 25,
+        portada: "carne/car1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c24f99f1c2b27a88e9e8d",
+        variedad: "CARNE",
+        nombre: "Chuleta",
+        descripcion: "Kilo",
+        precio: 28,
+        portada: "carne/car2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c25249f1c2b27a88e9e8e",
+        variedad: "CARNE",
+        nombre: "Churrasco",
+        descripcion: "Kilo",
+        precio: 28,
+        portada: "carne/car3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c253e9f1c2b27a88e9e8f",
+        variedad: "CARNE",
+        nombre: "Pulpa",
+        descripcion: "Kilo",
+        precio: 36,
+        portada: "carne/car4.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c254e9f1c2b27a88e9e90",
+        variedad: "CARNE",
+        nombre: "Lomo",
+        descripcion: "Kilo",
+        precio: 38,
+        portada: "carne/car5.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c25669f1c2b27a88e9e91",
+        variedad: "CARNE",
+        nombre: "Filete Lomo",
+        descripcion: "Kilo",
+        precio: 45,
+        portada: "carne/car6.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c25989f1c2b27a88e9e92",
+        variedad: "CARNE",
+        nombre: "Tira Asad",
+        descripcion: "Kilo",
+        precio: 25,
+        portada: "carne/car7.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c25b09f1c2b27a88e9e93",
+        variedad: "CARNE",
+        nombre: "Blandita",
+        descripcion: "Kilo",
+        precio: 36,
+        portada: "carne/car8.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c270a9f1c2b27a88e9e94",
+        variedad: "CARNE",
+        nombre: "Bife Chorizo",
+        descripcion: "Kilo",
+        precio: 45,
+        portada: "carne/car9.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c271f9f1c2b27a88e9e95",
+        variedad: "CARNE",
+        nombre: "Sice",
+        descripcion: "Kilo",
+        precio: 28,
+        portada: "carne/car10.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c27569f1c2b27a88e9e96",
+        variedad: "VARIEDAD",
+        nombre: "Carne de Cerdo",
+        descripcion: "Kilo",
+        precio: 22,
+        portada: "carne/car11.jpeg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c276e9f1c2b27a88e9e97",
+        variedad: "VARIEDAD",
+        nombre: "Higado",
+        descripcion: "Kilo",
+        precio: 16,
+        portada: "carne/car12.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c27909f1c2b27a88e9e98",
+        variedad: "VARIEDAD",
+        nombre: "Panza",
+        descripcion: "Kilo",
+        precio: 20,
+        portada: "carne/car13.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c332a9f1c2b27a88e9e99",
+        variedad: "POLLO SELECCIONADO",
+        nombre: "Pollo Entero",
+        descripcion: "Kilo",
+        precio: 15,
+        portada: "pollo/pollo1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c33509f1c2b27a88e9e9a",
+        variedad: "POLLO SELECCIONADO",
+        nombre: "Pollo",
+        descripcion: "Kilo",
+        precio: 15,
+        portada: "pollo/pollo2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c336b9f1c2b27a88e9e9b",
+        variedad: "POLLO TROZADO",
+        nombre: "Alitas",
+        descripcion: "Kilo",
+        precio: 18,
+        portada: "pollo/pollo3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c337f9f1c2b27a88e9e9c",
+        variedad: "POLLO TROZADO",
+        nombre: "Piernas",
+        descripcion: "Kilo",
+        precio: 18,
+        portada: "pollo/pollo4.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c33959f1c2b27a88e9e9d",
+        variedad: "POLLO TROZADO",
+        nombre: "Pecho",
+        descripcion: "Kilo",
+        precio: 18,
+        portada: "pollo/pollo5.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c33b79f1c2b27a88e9e9e",
+        variedad: "POLLO TROZADO",
+        nombre: "Carne Molida de Pollo",
+        descripcion: "Kilo",
+        precio: 22,
+        portada: "pollo/pollo6.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c33d39f1c2b27a88e9e9f",
+        variedad: "POLLO TROZADO",
+        nombre: "Filete de Pollo",
+        descripcion: "Kilo",
+        precio: 20,
+        portada: "pollo/pollo7.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c33ed9f1c2b27a88e9ea0",
+        variedad: "POLLO TROZADO",
+        nombre: "Menudencia",
+        descripcion: "Kilo",
+        precio: 7,
+        portada: "pollo/pollo8.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c398b6cc28523bca73af0",
+        variedad: "HUEVO",
+        nombre: "Maple de Huevo",
+        descripcion: "Rolon",
+        precio: 20,
+        portada: "huevo/hue1.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c39aa6cc28523bca73af1",
+        variedad: "HUEVO",
+        nombre: "Maple de Huevo",
+        descripcion: "Rolon",
+        precio: 18,
+        portada: "huevo/hue2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c39b96cc28523bca73af2",
+        variedad: "HUEVO",
+        nombre: "Maple de Huevo",
+        descripcion: "Rolon",
+        precio: 16,
+        portada: "huevo/hue3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c5d586cc28523bca73af3",
+        variedad: "ARROZ",
+        nombre: "Arroz Grano de Oro",
+        descripcion: "Cuartilla",
+        precio: 20,
+        portada: "arroz/arroz1.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c5d6b6cc28523bca73af4",
+        variedad: "ARROZ",
+        nombre: "Arroz Grano de Oro",
+        descripcion: "Cuartilla",
+        precio: 20,
+        portada: "arroz/arroz2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c5f076cc28523bca73af5",
+        variedad: "AZUCAR",
+        nombre: "Azucar Belgica",
+        descripcion: "Kilo",
+        precio: 14,
+        portada: "azucar/azu1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c5f786cc28523bca73af6",
+        variedad: "AZUCAR",
+        nombre: "Azucar Belgica",
+        descripcion: "Kilo",
+        precio: 14,
+        portada: "azucar/zu2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c61056cc28523bca73af7",
+        variedad: "FIDEOS FAMOSA",
+        nombre: "Fideo Anillito",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c61266cc28523bca73af8",
+        variedad: "FIDEOS FAMOSA",
+        nombre: "Fideo Codo Mediano Rigatti",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c61406cc28523bca73af9",
+        variedad: "FIDEOS FAMOSA",
+        nombre: "Fideo Codo Grande Rigatti",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c61556cc28523bca73afa",
+        variedad: "FIDEOS FAMOSA",
+        nombre: "Fideo Tirabuzon",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide4.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c61756cc28523bca73afb",
+        variedad: "FIDEOS FAMOSA",
+        nombre: "Fideo Espagueti",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide5.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c618a6cc28523bca73afc",
+        variedad: "FIDEOS FAMOSA",
+        nombre: "Fideo Corbatitas",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide6.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c61a26cc28523bca73afd",
+        variedad: "FIDEOS FAMOSA",
+        nombre: "Fideo Letritas",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide7.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c63226cc28523bca73aff",
+        variedad: "FIDEOS LAZZARONI",
+        nombre: "Espagueti Lazzaroni",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide10.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c63376cc28523bca73b00",
+        variedad: "FIDEOS LAZZARONI",
+        nombre: "Fideos Aritos",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide12.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c634a6cc28523bca73b01",
+        variedad: "FIDEOS LAZZARONI",
+        nombre: "Fideo Moño",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide13.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c635a6cc28523bca73b02",
+        variedad: "FIDEOS LAZZARONI",
+        nombre: "Fideo Nido",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "fideo/fide14.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c64756cc28523bca73b03",
+        variedad: "SAL",
+        nombre: "Sal Yodada",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "sal/sal1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c64c26cc28523bca73b04",
+        variedad: "SAL",
+        nombre: "Sal Yodada",
+        descripcion: "5 Kilos",
+        precio: 6,
+        portada: "sal/sal5k.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c64e46cc28523bca73b05",
+        variedad: "SAL",
+        nombre: "Sal Parrillera el Torito",
+        descripcion: "Unidad",
+        precio: 3,
+        portada: "sal/torito.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c64fd6cc28523bca73b06",
+        variedad: "SAL",
+        nombre: "Sal Parrillera Alnat",
+        descripcion: "Unidad",
+        precio: 15,
+        portada: "sal/alnat.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c65d56cc28523bca73b07",
+        variedad: "ACEITE FINO",
+        nombre: "Aceite Fino",
+        descripcion: "Unidad",
+        precio: 15,
+        portada: "aceite/aceite1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c66076cc28523bca73b08",
+        variedad: "ACEITE FINO",
+        nombre: "Aceite Fino 4.5 Ltrs",
+        descripcion: "Unidad",
+        precio: 56,
+        portada: "aceite/aceite2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c66346cc28523bca73b09",
+        variedad: "ACEITE AGRANEL",
+        nombre: "Aceite Agranel",
+        descripcion: "Litro",
+        precio: 9,
+        portada: "aceite/aceite-agranel.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c675e6cc28523bca73b0a",
+        variedad: "MAYONESA",
+        nombre: "Mayonesa Pequeña",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "aderezos/mayo1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c676c6cc28523bca73b0b",
+        variedad: "MAYONESA",
+        nombre: "Mayonesa Mediana",
+        descripcion: "Unidad",
+        precio: 7,
+        portada: "aderezos/mayo2.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c67916cc28523bca73b0c",
+        variedad: "MAYONESA",
+        nombre: "Mayonesa 500 gr",
+        descripcion: "Unidad",
+        precio: 12,
+        portada: "aderezos/mayo3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c67a56cc28523bca73b0d",
+        variedad: "MAYONESA",
+        nombre: "Mayonesa Grande",
+        descripcion: "Unidad",
+        precio: 28,
+        portada: "aderezos/mayo4.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c67ca6cc28523bca73b0e",
+        variedad: "KETCHUP",
+        nombre: "Ketchup Pequeño",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "aderezos/ketchup1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c67dd6cc28523bca73b0f",
+        variedad: "KETCHUP",
+        nombre: "Ketchup Mediano",
+        descripcion: "Unidad",
+        precio: 7,
+        portada: "aderezos/ketchup2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c67f26cc28523bca73b10",
+        variedad: "KETCHUP",
+        nombre: "Ketchup 500 gr",
+        descripcion: "Unidad",
+        precio: 12,
+        portada: "aderezos/ketchup3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c68056cc28523bca73b11",
+        variedad: "KETCHUP",
+        nombre: "Ketchup Grande",
+        descripcion: "Unidad",
+        precio: 28,
+        portada: "aderezos/ketchup4.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c68326cc28523bca73b12",
+        variedad: "MOSTAZA",
+        nombre: "Mostaza Pequeña",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "aderezos/mos1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c68476cc28523bca73b13",
+        variedad: "MOSTAZA",
+        nombre: "Mostaza Mediana",
+        descripcion: "Unidad",
+        precio: 7,
+        portada: "aderezos/mos2.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c685d6cc28523bca73b14",
+        variedad: "MOSTAZA",
+        nombre: "Mostaza 500 gr",
+        descripcion: "Unidad",
+        precio: 12,
+        portada: "aderezos/mos3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c68706cc28523bca73b15",
+        variedad: "MOSTAZA",
+        nombre: "Mostaza Grande",
+        descripcion: "Unidad",
+        precio: 28,
+        portada: "aderezos/mos4.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c68ac6cc28523bca73b16",
+        variedad: "OTROS ADEREZOS",
+        nombre: "Extracto de Tomate Cajamar",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "aderezos/cajamar.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6c676cc28523bca73b18",
+        variedad: "SALSA SOYA",
+        nombre: "Salsasoya Trisoy Toscana",
+        descripcion: "Unidad",
+        precio: 2.5,
+        portada: "otros/soya1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6c7a6cc28523bca73b19",
+        variedad: "SALSA SOYA",
+        nombre: "Salsasoya Trisoy Toscana",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "otros/soya2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6c936cc28523bca73b1a",
+        variedad: "SALSA SOYA",
+        nombre: "Salsasoya Trisoy Toscana",
+        descripcion: "Unidad",
+        precio: 15,
+        portada: "otros/soya3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6cea6cc28523bca73b1b",
+        variedad: "HARRY EL LIMONERO",
+        nombre: "Harry El Limonero",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "otros/harry1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6cfb6cc28523bca73b1c",
+        variedad: "HARRY EL LIMONERO",
+        nombre: "Harry El Limonero",
+        descripcion: "Unidad",
+        precio: 7,
+        portada: "otros/harry2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6d536cc28523bca73b1d",
+        variedad: "VINAGRE",
+        nombre: "Vinagre Blanco Trisoy Toscana",
+        descripcion: "Unidad",
+        precio: 12,
+        portada: "otros/vina3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6d926cc28523bca73b1e",
+        variedad: "VINAGRE",
+        nombre: "Vinagre Rojo Trisoy Toscana",
+        descripcion: "Unidad",
+        precio: 3,
+        portada: "otros/vina1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6dc16cc28523bca73b1f",
+        variedad: "VINAGRE",
+        nombre: "Vinagre Rojo Trisoy Toscana",
+        descripcion: "Unidad",
+        precio: 12,
+        portada: "otros/vina2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6ea96cc28523bca73b20",
+        variedad: "CARBON",
+        nombre: "Carbon la Preferida",
+        descripcion: "Unidad",
+        precio: 10,
+        portada: "otros/carbon.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c6ee76cc28523bca73b21",
+        variedad: "SERVILLETAS",
+        nombre: "Servilletas Perlita",
+        descripcion: "Unidad",
+        precio: 10,
+        portada: "otros/servi.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c707a6cc28523bca73b22",
+        variedad: "CHORIZO",
+        nombre: "Chorizo Sofia",
+        descripcion: "Unidad",
+        precio: 10,
+        portada: "enbutidos/chori1.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c70976cc28523bca73b23",
+        variedad: "CHORIZO",
+        nombre: "Chorizo Sofia Agranel",
+        descripcion: "Kilo",
+        precio: 28,
+        portada: "enbutidos/chori2.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c70f46cc28523bca73b24",
+        variedad: "CHORIZO",
+        nombre: "Chorizo Sofia Agranel Viena",
+        descripcion: "Kilo",
+        precio: 32,
+        portada: "enbutidos/chori3.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c710f6cc28523bca73b25",
+        variedad: "CHORIZO",
+        nombre: "Chorizo Parrillero",
+        descripcion: "Kilo",
+        precio: 36,
+        portada: "enbutidos/chori4.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c714a6cc28523bca73b26",
+        variedad: "MORTADELA",
+        nombre: "Mortadela Jamonada al Vacio",
+        descripcion: "Unidad",
+        precio: 8,
+        portada: "enbutidos/chori5.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c71636cc28523bca73b27",
+        variedad: "MORTADELA",
+        nombre: "Mortadela de Pollo al Vacio",
+        descripcion: "Unidad",
+        precio: 8,
+        portada: "enbutidos/chori6.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c71856cc28523bca73b28",
+        variedad: "MORTADELA",
+        nombre: "Mortadela de Gallina en Barra",
+        descripcion: "Kilo",
+        precio: 30,
+        portada: "enbutidos/chori7.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c719d6cc28523bca73b29",
+        variedad: "MORTADELA",
+        nombre: "Mortadela Jamonada en Barra",
+        descripcion: "Kilo",
+        precio: 30,
+        portada: "enbutidos/chori8.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c71ce6cc28523bca73b2a",
+        variedad: "PASTA",
+        nombre: "Pate de Pollo",
+        descripcion: "Unidad",
+        precio: 6,
+        portada: "enbutidos/chori9.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c71db6cc28523bca73b2b",
+        variedad: "PASTA",
+        nombre: "Pate de Cerdo",
+        descripcion: "Unidad",
+        precio: 6,
+        portada: "enbutidos/chori10.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c73d96cc28523bca73b2c",
+        variedad: "CONDIMENTOS",
+        nombre: "Comino",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/comi.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c73ec6cc28523bca73b2d",
+        variedad: "CONDIMENTOS",
+        nombre: "Oregano",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/ore.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c73fe6cc28523bca73b2e",
+        variedad: "CONDIMENTOS",
+        nombre: "Colorante",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/condi1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c74166cc28523bca73b2f",
+        variedad: "CONDIMENTOS",
+        nombre: "Pasas de Uva",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "condimentos/uva.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c74316cc28523bca73b30",
+        variedad: "CONDIMENTOS",
+        nombre: "Anis",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/anis.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c74616cc28523bca73b31",
+        variedad: "CONDIMENTOS",
+        nombre: "Dña Gusta",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/condi2.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c74866cc28523bca73b32",
+        variedad: "CONDIMENTOS",
+        nombre: "Locoto en Polvo",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/cond.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c749c6cc28523bca73b33",
+        variedad: "CONDIMENTOS",
+        nombre: "Comino",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/comino.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c74c36cc28523bca73b34",
+        variedad: "AJI",
+        nombre: "Aji Panquita",
+        descripcion: "Unidad",
+        precio: 1.5,
+        portada: "condimentos/aji1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c74dc6cc28523bca73b35",
+        variedad: "AJI",
+        nombre: "Aji Amarillo",
+        descripcion: "Unidad",
+        precio: 1.5,
+        portada: "condimentos/aji2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c74fd6cc28523bca73b36",
+        variedad: "AJO",
+        nombre: "Ajo en Polvo",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "condimentos/ajo1.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c75226cc28523bca73b37",
+        variedad: "AJO",
+        nombre: "Diente de Ajo",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "condimentos/ajo2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c75546cc28523bca73b38",
+        variedad: "AJO",
+        nombre: "Ajo",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/ajo.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c75736cc28523bca73b39",
+        variedad: "CANELA",
+        nombre: "Canela Normal",
+        descripcion: "Unidad",
+        precio: 1,
+        portada: "condimentos/canela1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c757f6cc28523bca73b3a",
+        variedad: "CANELA",
+        nombre: "Canela Molida",
+        descripcion: "Unidad",
+        precio: 2,
+        portada: "condimentos/canela2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c78b86cc28523bca73b3b",
+        variedad: "LECHE",
+        nombre: "Leche Normal",
+        descripcion: "Unidad",
+        precio: 6,
+        portada: "lacteos/leche1.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c78cd6cc28523bca73b3c",
+        variedad: "LECHE",
+        nombre: "Leche Deslactosada",
+        descripcion: "Unidad",
+        precio: 7,
+        portada: "lacteos/leche2.png",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c791d6cc28523bca73b3d",
+        variedad: "QUESO",
+        nombre: "Queso Rio Grande",
+        descripcion: "Kilo",
+        precio: 28,
+        portada: "lacteos/queso.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c79336cc28523bca73b3e",
+        variedad: "QUESO",
+        nombre: "Queso Muzzarella",
+        descripcion: "Kilo",
+        precio: 23,
+        portada: "lacteos/queso2.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3c79336cc28523bca73b3f",
+        variedad: "QUESO",
+        nombre: "Quesillo",
+        descripcion: "Unidad",
+        precio: 5,
+        portada: "lacteos/queso3.jpg",
+        __v: 0
+      },
+      {
+        estado: false,
+        _id: "5e3dbe59a5249f15d4334800",
+        variedad: "CARNE",
+        nombre: "prueba",
+        descripcion: "22",
+        precio: 2,
+        portada: "carne/car1.jpg",
+        __v: 0
+      }
+    ]
   },
   mutations: {
   },

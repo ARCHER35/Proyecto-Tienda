@@ -3,15 +3,16 @@
     <h1>Huevo</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(h,index) of huevo" :key="index" class="col-md-4">
+        <div v-for="(h,index) of productoHuevo" :key="index" class="col-md-4">
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
-              <b-col md="6">
-                <b-card-img v-bind:src="h.imagen" class="rounded-circle"></b-card-img>
+              <b-col md="7">
+                <b-card-img v-bind:src="require('../assets/'+h.portada)" class="rounded-circle"></b-card-img>
               </b-col>
-              <b-col md="6">
-                <b-card-body v-bind:title="h.titulo">
+              <b-col md="5">
+                <b-card-body v-bind:title="h.nombre">
                   <b-card-text>{{h.descripcion}}</b-card-text>
+                  <h3>Bs {{h.precio}}</h3>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -23,33 +24,44 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
+import axios from "axios";
 export default {
+  mounted() {
+    this.getProducto();
+  },
+  computed: {
+    ...mapState(["product"]),
+    productoHuevo() {
+      return this.product.filter(function(p) {
+        return p.variedad == "HUEVO";
+      });
+    }
+  },
   data() {
     return {
+      producto: [],
       huevo: [
         {
-          id: 1,
-          titulo: "Maple de Huevo",
+          id_huevo: 1,
+          nombre: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 20,
-          imagen:
-            "http://www.avicolacarger.com.bo/avicolacarger/wp-content/uploads/2015/03/eggs-3.png"
+          portada: "hue2.jpg"
         },
         {
-          id: 2,
-          titulo: "Maple de Huevo",
+          id_huevo: 2,
+          nombre: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 18,
-          imagen:
-            "https://paralelo32.com.ar/wp-content/uploads/2017/12/huevos.jpg"
+          portada: "hue3.jpg"
         },
         {
-          id: 3,
-          titulo: "Maple de Huevo",
+          id_huevo: 3,
+          nombre: "Maple de Huevo",
           descripcion: "Rolon",
           precio: 16,
-          imagen:
-            "https://www.tradeguayana.co.ve/wp-content/uploads/2019/05/carton-huevos-640x375.jpg"
+          portada: "hue1.png"
         }
       ]
     };

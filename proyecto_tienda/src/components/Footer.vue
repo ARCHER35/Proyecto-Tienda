@@ -1,54 +1,46 @@
 <template>
-  <footer class="bg-dark">
-    <div class="container-fluid text-center text-md-left">
+  <footer class="fondo">
+    <div class="container-fluid text-center text-md-left col-sm">
       <div class="row text-light" style="padding:15px">
-        <div class="col-md-4 mt-md-0 mt-3">
-          <img class="col-sm text-monospace" src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.15752-9/82224605_612882182613239_6994560468685684736_n.png?_nc_cat=102&_nc_oc=AQk7xVm6wA7uhWDnTkc2CZmP3sgG1ZW9gPkAB4DDq4NuE99Ss3EKN3vYG2lxBBxcfJA&_nc_ht=scontent.fvvi1-2.fna&oh=09c32db08f2f613bdd89f82c704c05b6&oe=5EA0D4A8" height="100px" width="300px"/>
+        <div class="col-md-3 mt-md-0 mt-3">
+          <center>
+            <b-img :src="require('../assets/logo-toro.png')" height="100px"></b-img>
+          </center>
           <p>Pedidos por Mayor y Menor Horarios de Atencion 6:00 am a 17:00 pm</p>
         </div>
         <hr class="clearfix w-100 d-md-none pb-3" />
-        <div class="col-4">
+        <div class="col-md-4">
           <h5 class="text-uppercase">Frial Cris</h5>
           <ul class="list-unstyled">
-            <li>
-              <a href="#!" class="text-light">Direccion: Capitan Victor Ustaris Km 4 1/2</a>
+            <li class="col">
+            <p class="text-light"><img src="../assets/spacefm_103907.png" height="50px" alt="">Direccion: Capitan Victor Ustaris Km 4 1/2</p>
             </li>
           </ul>
+          <div class="footer-copyright text-center py-3 text-light">
+      © 2020 Copyright:
+      <p href="#">Derechos Reservados</p>
+    </div>
         </div>
         <div class="col-md-4 mb-md-6 mb-6">
           <h5 class="text-uppercase">Contactanos Por</h5>
           <ul class="list-unstyled">
             <li>
-              <img
-                class="img"
-                src="https://cdn.icon-icons.com/icons2/306/PNG/512/Facebook-Icon_34072.png"
-                height="50px"
-              />
+              <b-img :src="require('../assets/Facebook-Icon_34072.png')" height="50px" width="50px"></b-img>
               <a
                 href="https://www.facebook.com/cristina.zenteno.1675?epa=SEARCH_BOX"
-                class="text-light"
-              >Facebook</a>
+                class="text-primary"
+              >Facebook <i class="fas fa-cart-arrow-down text-primary"></i></a>
             </li>
-            |
             <li>
-              <img
-                class="img"
-                src="https://cdn.icon-icons.com/icons2/306/PNG/512/Whatsapp-Icon_33936.png"
-                height="50px"
-                alt
-              />
+              <b-img :src="require('../assets/Whatsapp-Icon_33936.png')" height="50px" width="50px"></b-img>
               <a class="text-light">
                 72783477
-                <i class="fas fa-cart-arrow-down"></i>
+                <i class="fas fa-cart-arrow-down text-primary"></i>
               </a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright text-center py-3 text-light">
-      © 2020 Copyright:
-      <a href="#">Derechos Reservados</a>
     </div>
   </footer>
 </template>
@@ -58,4 +50,7 @@ export default {};
 </script>
 
 <style>
+.fondo {
+  background: black
+}
 </style>
