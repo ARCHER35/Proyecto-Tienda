@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container" align=right>
+    <div class="container" align="right">
       <button @click="salir()" class="btn btn-danger rounded-pill">Salir de la Vista</button>
     </div>
     <h1>Bienvenido a la Vista Administrador</h1>
@@ -227,7 +227,7 @@
                     />
                     <br />Precio
                     <input
-                      type="text"
+                      type="number"
                       required
                       v-model="newProduc.precio"
                       class="form-control"
@@ -306,7 +306,7 @@
 <script>
 import axios from "axios";
 import ProductoModel from "../models/ProductoModel";
-import firebase from 'firebase';
+import firebase from "firebase";
 
 export default {
   name: "Administrador",
@@ -320,9 +320,9 @@ export default {
         descripcion: "",
         precio: 0,
         portada: "",
-        variedad: "",
+        variedad: ""
       },
-     model: null,
+      model: null,
       editado: {},
       show: false
     };
@@ -331,8 +331,11 @@ export default {
     this.getProducto();
   },
   methods: {
-    salir(){
-      firebase.auth().signOut().then(() => this.$router.replace('login'))
+    salir() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("login"));
     },
     carne() {
       console.log(this.producto);
@@ -537,6 +540,7 @@ export default {
       console.log(JSON.stringify(this.model));
         axios
         .post("http://localhost:3500/api/nueva-producto", this.newProduc)
+        .post("http://localhost:3500/api/nueva-producto", this.newProduc)
         .then(response => {
           console.log(response.data);
           this.getProducto();
@@ -576,13 +580,7 @@ export default {
         })
         .catch(error => console.log(error));
       this.show = false;
-    },
-    initialData() {
-      this.model = new ProductoModel();
-    },
-  },
-  beforeMount() {
-    this.initialData();
+    }
   }
 };
 </script>
