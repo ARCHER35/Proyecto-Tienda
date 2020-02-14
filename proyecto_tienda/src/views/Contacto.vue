@@ -30,7 +30,7 @@
             <b-row no-gutters>
               <b-col md="6">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.307569896888!2d-66.19925888512351!3d-17.397021188072895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzQ5LjMiUyA2NsKwMTEnNDkuNSJX!5e0!3m2!1ses!2sbo!4v1580672038337!5m2!1ses!2sbo"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.308619243086!2d-66.19943188512356!3d-17.396970788072842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373c1504be7cd%3A0x7e5c588c049aec98!2sFrial%20Cris!5e0!3m2!1ses-419!2sbo!4v1581716466947!5m2!1ses-419!2sbo"
                   width="280"
                   height="240"
                   frameborder="0"

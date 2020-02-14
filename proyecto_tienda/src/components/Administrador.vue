@@ -300,7 +300,6 @@
         </div>
       </div>
     </div>
-    <p>{{product}}</p>
   </div>
 </template>
 <script>
