@@ -28,7 +28,11 @@
     <h1>Mortadela</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(m,index) of productoMortadela" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div
+          v-for="(m,index) of productoMortadela"
+          :key="index"
+          class="col-md-6 col-sm-6 col-xs-12"
+        >
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
@@ -80,38 +84,25 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import axios from "axios";
 export default {
-  mounted() {
-    this.getProducto();
-  },
   computed: {
+    ...mapState(["product"]),
     productoChorizo() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "CHORIZO";
       });
     },
     productoMortadela() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "MORTADELA";
       });
     },
     productoPasta() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "PASTA";
       });
-    }
-  },
-  methods: {
-    getProducto() {
-      axios
-        .get("/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
     }
   },
   data() {

@@ -3,7 +3,11 @@
     <h1>Condimentos</h1>
     <div class="container">
       <div class="row">
-        <div v-for="(c,index) of productoCondimentos" :key="index" class="col-md-6 col-sm-6 col-xs-12">
+        <div
+          v-for="(c,index) of productoCondimentos"
+          :key="index"
+          class="col-md-6 col-sm-6 col-xs-12"
+        >
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
@@ -107,43 +111,30 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import axios from "axios";
 export default {
-  mounted() {
-    this.getProducto();
-  },
   computed: {
+    ...mapState(["product"]),
     productoCondimentos() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "CONDIMENTOS";
       });
     },
     productoAji() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "AJI";
       });
     },
     productoAjo() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "AJO";
       });
     },
     productoCanela() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "CANELA";
       });
-    }
-  },
-  methods: {
-    getProducto() {
-      axios
-        .get("/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
     }
   },
   data() {

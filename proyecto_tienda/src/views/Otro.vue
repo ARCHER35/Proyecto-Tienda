@@ -11,7 +11,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/'+s.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+s.portada)" height="270px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="s.nombre">
@@ -32,7 +32,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/'+l.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+l.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="l.nombre">
@@ -53,7 +53,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/'+v.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+v.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="v.nombre">
@@ -74,7 +74,7 @@
           <b-card no-body class="overflow-hidden efc" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col md="6">
-                <b-card-img v-bind:src="require('../assets/'+c.portada)" class="rounded-circle"></b-card-img>
+                <b-card-img v-bind:src="require('../assets/'+c.portada)" height="250px" class="rounded-circle"></b-card-img>
               </b-col>
               <b-col md="6">
                 <b-card-body v-bind:title="c.nombre">
@@ -113,48 +113,35 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import axios from "axios";
 export default {
-  mounted() {
-    this.getProducto();
-  },
   computed: {
+    ...mapState(["product"]),
     productoSalsaSoya() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "SALSA SOYA";
       });
     },
     productoLimonero() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "HARRY EL LIMONERO";
       });
     },
     productoVinagre() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "VINAGRE";
       });
     },
     productoCarbon() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "CARBON";
       });
     },
     productoServilletas() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "SERVILLETAS";
       });
-    }
-  },
-  methods: {
-    getProducto() {
-      axios
-        .get("/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
     }
   },
   data() {

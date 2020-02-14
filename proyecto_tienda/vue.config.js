@@ -7,7 +7,7 @@ module.exports = {
     devServer: {
       proxy: {
         '/*': {
-          target: 'mongodb+srv://frial-criss:frialcriss@cluster0-e5eku.mongodb.net/test',
+          target: '',
           ws: false,
           changeOrigin: true,
         },

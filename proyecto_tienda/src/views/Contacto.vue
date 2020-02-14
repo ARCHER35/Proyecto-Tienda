@@ -3,7 +3,7 @@
     <h1>Infomacion</h1>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-md-6">
           <b-card no-body class="overflow-hidden" style="max-width: 540px;">
             <b-row no-gutters>
               <b-col>
@@ -24,6 +24,7 @@
             </b-row>
           </b-card>
         </div>
+        <br />
         <div class="col-md-6">
           <b-card no-body class="overflow-hidden" style="max-width: 540px;">
             <b-row no-gutters>
@@ -43,7 +44,7 @@
                   <b-card-text>Capitan Victor Ustaris Km 4 1/2</b-card-text>
                 </b-card-body>
               </b-col>
-              </b-row>
+            </b-row>
           </b-card>
         </div>
       </div>

@@ -45,33 +45,20 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 import axios from "axios";
 export default {
-  mounted() {
-    this.getProducto();
-  },
   computed: {
+    ...mapState(['product']),
     productoCarne() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "CARNE";
       });
     },
     productoVariedad() {
-      return this.producto.filter(function(p) {
+      return this.product.filter(function(p) {
         return p.variedad == "VARIEDAD";
       });
-    }
-  },
-  methods: {
-    getProducto() {
-      axios
-        .get("http://localhost:3500/api/producto")
-        .then(respuesta => {
-          console.log(respuesta.data);
-          this.producto = respuesta.data;
-          console.log(this.producto);
-        })
-        .catch(error => console.log(error));
     }
   },
   data() {
